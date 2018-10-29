@@ -1,0 +1,241 @@
+﻿body {
+    background-color: #e68f0e;
+    background-image: linear-gradient(to right, rgba(255,255,255,.3) 1px, transparent 1px);
+    background-size: 5px 5px;
+}
+
+
+/*Design responsivo*/
+@media only screen and (max-width: 600px) {
+    body {
+        margin: 0px;
+        padding-top: 28%;
+    }
+
+    .container {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        border-radius: 5px;
+    }
+
+    #form {
+        width: 100%;
+        height: 100%;
+        padding: 15px;
+        padding-top: 80px;
+        border-radius: 7px;
+        margin: 0 0 15px;
+        position: relative;
+        filter: alpha(opacity=60);
+        -moz-opacity: 0.6;
+        opacity: 0.6;
+        background-color: #000000;
+    }
+}
+/*fim*/
+
+
+/*Começo*/
+
+@media only screen and (min-width: 601px) {
+    body {
+        margin: 0px;
+        padding-top: 120px;
+    }
+
+    .container {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        border-radius: 5px;
+    }
+
+    #form {
+        width: 60%;
+        height: 100%;
+        background: #fff;
+        padding: 15px;
+        padding-top: 70px;
+        border-radius: 7px;
+        margin: 0 0 15px;
+        position: relative;
+        filter: alpha(opacity=60);
+        -moz-opacity: 0.6;
+        opacity: 0.6;
+        background-color: #080303;
+    }
+
+    #btnLogar {
+        width: 50%;
+    }
+
+    .mensagem {
+        margin: 20px 0 0;
+        color: #b3b3b3;
+        font-size: 16px;
+    }
+
+        .mensagem a {
+            color: #007fff;
+            text-decoration: none;
+        }
+}
+
+/*fim*/
+
+/*responsivo*/
+
+@media only screen and (min-width: 900px) {
+    body {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+    }
+
+    #form {
+        padding-top: 70px;
+        filter: alpha(opacity=60);
+        -moz-opacity: 0.6;
+        opacity: 0.6;
+        background-color: #080303;
+    }
+
+    #txtEmail {
+        font-family: sans-serif;
+        outline: 0;
+        background: #f2f2f2;
+        width: 100%;
+        border: 0;
+        font-size: 26px;
+        border-radius: 5px;
+        margin: 0 0 15px;
+    }
+
+    #txtSenha {
+        font-family: sans-serif;
+        outline: 0;
+        background: #f2f2f2;
+        width: 100%;
+        border: 0;
+        font-size: 26px;
+        border-radius: 5px;
+        margin: 0 0 15px;
+    }
+
+    #btnLogar {
+        width: 50%;
+        font-size: 20px;
+    }
+
+    .mensagem {
+        margin: 20px 0 0;
+        color: #b3b3b3;
+        font-size: 24px;
+    }
+
+        .mensagem a {
+            color: #007fff;
+            text-decoration: none;
+        }
+}
+
+/*responsivo*/
+@media only screen and (min-width: 1100px) {
+    body {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+    }
+
+    .container {
+        width: 40%;
+        height: 50%;
+        display: flex;
+        border-radius: 5px;
+    }
+
+    #form {
+        width: 100%;
+        height: 100%;
+        background: #fff;
+        padding: 15px;
+        padding-top: 70px;
+        margin: 0 0 15px;
+        position: relative;
+        filter: alpha(opacity=60);
+        -moz-opacity: 0.6;
+        opacity: 0.6;
+        background-color: #080303;
+    }
+}
+
+#txtEmail {
+    font-family: sans-serif;
+    outline: 0;
+    background: #f2f2f2;
+    width: 90%;
+    border: 0;
+    padding: 15px;
+    box-sizing: border-box;
+    font-size: 16px;
+    border-radius: 5px;
+    box-sizing: border-box;
+    margin: 0 0 15;
+}
+
+#txtSenha {
+    font-family: sans-serif;
+    outline: 0;
+    background: #f2f2f2;
+    width: 90%;
+    border: 0;
+    padding: 15px;
+    box-sizing: border-box;
+    font-size: 16px;
+    border-radius: 5px;
+    box-sizing: border-box;
+    margin: 0 0 15;
+}
+
+#btnLogar {
+    font-family: sans-serif;
+    text-transform: uppercase;
+    outline: 0;
+    background: #0397ec;
+    width: 50%;
+    border: 0;
+    padding: 15px;
+    color: #FFFFFF;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 10px;
+    box-sizing: border-box;
+}
+
+#btnLogar {
+    font-weight: bold;
+}
+
+.mensagem {
+    margin: 16px 0 0;
+    color: #b3b3b3;
+    font-size: 12px;
+}
+
+    .mensagem a {
+        color: #007fff;
+        text-decoration: none;
+    }
