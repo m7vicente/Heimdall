@@ -18,10 +18,11 @@
             <asp:TextBox ID="txtNome" runat="server" placeholder="Nome"></asp:TextBox><br/><br/>			
 			<asp:TextBox ID="txtEmail" TextMode="Email" runat="server" placeholder="E-mail"></asp:TextBox><br/><br/>
 			<asp:TextBox ID="txtCargo" runat="server" placeholder="Cargo"></asp:TextBox><br/><br/>
-			<asp:TextBox ID="txtSenha" TextMode="Password" runat="server" placeholder="Senha"></asp:TextBox><br><br>
-			<asp:Button ID="btnCadastrar" runat="server" Text="CADASTRAR" />
+			<asp:TextBox ID="txtSenha" TextMode="Password" runat="server" placeholder="Senha"></asp:TextBox><br/><br/>
+			<asp:Button ID="btnCadastrar" runat="server" Text="CADASTRAR" OnClick="btnCadastrar_Click"/>
+            <asp:Label ID="lblError" runat="server" Text=""/>
     
-			<p class="mensagem">Você já é cadastrado? <a href="Login.aspx">Clique aqui para fazer login.</a><br>
+			<p class="mensagem">Você já é cadastrado? <a href="Login.aspx">Clique aqui para fazer login.</a><br/>
 			<a href="#">Recuperação de senha</a></p>    
     </form>
     </div>
