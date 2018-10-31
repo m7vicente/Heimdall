@@ -5,18 +5,18 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
-            <meta charset="utf-8">
-            <link rel="stylesheet" href="css/normalize.css">
-			<link rel="stylesheet" href="css/reset.css">
-			<link rel="stylesheet" href="css/grid.css">
-			<link rel="stylesheet" href="css/style.css">
-            <link rel="stylesheet" href="css/contato.css">
-            <link rel="stylesheet" href="css/responsivo.css">   
+            <meta charset="utf-8"/>
+            <link rel="stylesheet" href="css/normalize.css"/>
+			<link rel="stylesheet" href="css/reset.css"/>
+			<link rel="stylesheet" href="css/grid.css"/>
+			<link rel="stylesheet" href="css/style.css"/>
+            <link rel="stylesheet" href="css/responsivo.css"/>
+            
     <title>Bifrosts</title>
 </head>
 <body>
     <form id="form1" runat="server">
-                 <!-- menu do site-->
+        <!-- menu do site-->
         <header class="header">
             <div>
                 <a href="index.html" class="grid-4">
@@ -152,7 +152,7 @@
 	
             
     <section class="contato" id="contato">
-        <div class="container">
+        <div class="container contato_form">
             <h2 class="subtitulo">suporte</h2>
             <form id="form_orcamento" class="contato_form grid-8">
                 <label for="nome">nome</label>
@@ -173,9 +173,9 @@
                 <samp>sao paulo-SP - Brasil</samp>
                 <h3>redes sociais</h3>
                 <ul>
-                  <li><a href="http://facebok.com" target="_blank"><img src="img/redes-sociais/facebook.png" alt="Facebook bifrost" ></a></li>
-                  <li><a href="http://instagram.com" target="_blank"><img src="img/redes-sociais/instagram.png" alt="Instagran bifrost"></a></li>
-                  <li><a href="http://teitter.com" target="_blank"><img src="img/redes-sociais/twitter.png" alt="Twitter bifrost"></a></li>
+                  <li><a href="http://facebok.com" target="_blank"><img src="img/facebook.png" alt="Facebook bifrost" ></a></li>
+                  <li><a href="http://instagram.com" target="_blank"><img src="img/instagram.png" alt="Instagran bifrost"></a></li>
+                  <li><a href="http://teitter.com" target="_blank"><img src="img/twitter.png" alt="Twitter bifrost"></a></li>
                 </ul>
             </div>
         </div>

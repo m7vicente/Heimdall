@@ -82,9 +82,22 @@
   <ItemGroup>
     <Content Include="Cadastro.aspx" />
     <Content Include="css\cadastro.css" />
+    <Content Include="css\contato.css" />
+    <Content Include="css\grid.css" />
     <Content Include="css\login.css" />
+    <Content Include="css\normalize.css" />
+    <Content Include="css\reset.css" />
+    <Content Include="css\responsivo.css" />
+    <Content Include="css\style.css" />
     <Content Include="Default.aspx" />
     <Content Include="Global.asax" />
+    <Content Include="img\bg.jpg" />
+    <Content Include="img\bifrost.png" />
+    <Content Include="img\facebook.png" />
+    <Content Include="img\heimdall.png" />
+    <Content Include="img\instagram.png" />
+    <Content Include="img\twitter.png" />
+    <Content Include="Inicio.aspx" />
     <Content Include="Login.aspx" />
     <Content Include="Web.config" />
   </ItemGroup>
@@ -108,6 +121,13 @@
     </Compile>
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="Inicio.aspx.cs">
+      <DependentUpon>Inicio.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Inicio.aspx.designer.cs">
+      <DependentUpon>Inicio.aspx</DependentUpon>
     </Compile>
     <Compile Include="Login.aspx.cs">
       <DependentUpon>Login.aspx</DependentUpon>
