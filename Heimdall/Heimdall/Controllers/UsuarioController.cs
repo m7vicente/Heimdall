@@ -11,6 +11,8 @@ namespace Heimdall.Controllers
 {
     public class UsuarioController : ApiController
     {
+        UsuarioDO banco = new UsuarioDO();
+
         // GET api/<controller>
         public IEnumerable<string> Get()
         {
@@ -40,9 +42,25 @@ namespace Heimdall.Controllers
 
         public bool Cadastrar(Usuario novoUsuario)
         {
-            using (UsuarioDO banco = new UsuarioDO())
+            return banco.Inserir(novoUsuario);
+
+        }
+
+        public bool Login(Usuario usuario)
+        {
+
+            Criptografar criptografar = new Criptografar();
+            usuario.senha = criptografar.GenerateSHA256String(usuario.senha);
+
+            usuario = banco.buscar(usuario);
+
+            if(usuario.ativo && usuario.nomeCompleto != null)
             {
-                return banco.inserir(novoUsuario);
+                return true;
+            }
+            else
+            {
+                return false;
             }
         }
 

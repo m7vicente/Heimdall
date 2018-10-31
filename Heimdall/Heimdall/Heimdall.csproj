@@ -86,7 +86,9 @@
     <Content Include="Default.aspx" />
     <Content Include="Global.asax" />
     <Content Include="Login.aspx" />
-    <Content Include="Web.config" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="App_Start\WebApiConfig.cs" />
@@ -98,6 +100,8 @@
       <DependentUpon>Cadastro.aspx</DependentUpon>
     </Compile>
     <Compile Include="Controllers\UsuarioController.cs" />
+    <Compile Include="DataObjects\Criptografar.cs" />
+    <Compile Include="DataObjects\DataObject.cs" />
     <Compile Include="DataObjects\UsuarioDO.cs" />
     <Compile Include="Default.aspx.cs">
       <DependentUpon>Default.aspx</DependentUpon>
