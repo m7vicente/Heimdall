@@ -15,6 +15,7 @@ img {
 
 .btn {
     border: 3px solid #fec63e;
+    background-color:transparent;
     padding: 10px 30px;
     color: #fec63e;
     font-size: 14px;
@@ -304,3 +305,120 @@ img {
     background: #fec63e;
     padding: 20px 0;
 }
+
+/*contatinho*/
+/*Formulario*/
+
+.contato {
+    background: #000;
+    width: 100%;
+    margin-top: 60px;
+    padding: 40px 0;
+}
+
+.orcamento h2 {
+    color: royalblue;
+}
+
+    .orcamento h2:after {
+        background: royalblue;
+    }
+
+.contato_form {
+    padding-right: 60px;
+}
+
+.contato_form label {
+    display: block;
+    color: #fff;
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 18px;
+    line-height: 25px;
+    margin-bottom: 4px;
+ 
+}
+
+    .contato_form input {
+        display: block;
+        width: 50%;
+        border: 4px solid #fff;
+        background: none;
+        color: #fff;
+        padding: 7px 10px;
+        margin-bottom: 10px;
+        outline: none;
+        font-size: 14px;
+        font-family: Georgia, "Times New Roman", serif;
+        
+    }
+
+    .contato_form textarea {
+        display: block;
+        width: 50%;
+        height: 120px;
+        border: 4px solid #fff;
+        background: none;
+        color: #fff;
+        padding: 7px 10px;
+        margin-bottom: 10px;
+        outline: none;
+        font-size: 14px;
+        font-family: Georgia, "Times New Roman", serif;
+    }
+
+    .contato_form button {
+        padding: 7px 40px;
+        background: none;
+    }
+
+.contato_dados {
+    color: #fff;
+    
+}
+
+    .contato_dados h3 {
+        font-size: 18px;
+        line-height: 25px;
+        text-transform: uppercase;
+        color: royalblue;
+        font-weight: bold;
+    }
+
+
+    .contato_dados span {
+        display: block;
+        font-size: 18px;
+        font-family: Georgia, "Times New Roman", serif;
+        line-height: 30px;
+    }
+
+.dado_email {
+    margin-bottom: 40px;
+}
+
+.contato_dados ul li {
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 14px;
+    padding: 10px 10px;
+}
+
+.contato_dados ul {
+    margin-top: 10px;
+}
+
+.contato_dados ul li {
+    display: inline-block;
+    margin-right: 10px;
+}
+
+.contato_dados ul li a {
+    border: 3px solid #fec63e;
+    display: block;
+    padding: 10px;
+}
+
+.contato_dados ul li a:hover {
+    border-color: #fff;
+}
+
+
