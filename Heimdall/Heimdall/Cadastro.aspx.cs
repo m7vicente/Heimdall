@@ -26,10 +26,6 @@ namespace Heimdall
             novoUsuario.cargo = txtCargo.Text;
             novoUsuario.email = txtEmail.Text;
             novoUsuario.senha = txtSenha.Text;
-            //using (MD5 md5 = MD5.Create())
-            //{
-            //    novoUsuario.senha = (md5.ComputeHash(Encoding.UTF8.GetBytes(txtSenha.Text))).ToString();
-            //}                
 
             UsuarioController c1 = new UsuarioController();
 

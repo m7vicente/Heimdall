@@ -2,8 +2,6 @@
 using System;
 using System.Collections.Generic;
 using System.Data.SqlClient;
-using System.Linq;
-using System.Web;
 using System.Web.Configuration;
 
 namespace Heimdall.DataObjects
@@ -59,8 +57,8 @@ namespace Heimdall.DataObjects
                 connection.Open();
 
                 string sql = ($"SELECT TOP(1) [CodUsuario],[NomeCompleto],[Email],[Cargo],[Senha],[Ativo],[DataCadastro] FROM[dbo].[Usuario]"+
-                                $"WHERE Email = {usuario.email} "+
-                                $"AND Senha = {usuario.senha}");
+                                $"WHERE Email = '{usuario.email}' "+
+                                $"AND Senha = '{usuario.senha}'");
 
                 SqlCommand command = new SqlCommand(sql, connection);
 

@@ -42,8 +42,10 @@ namespace Heimdall.Controllers
 
         public bool Cadastrar(Usuario novoUsuario)
         {
-            return banco.Inserir(novoUsuario);
+            Criptografar criptografar = new Criptografar();
+            novoUsuario.senha = criptografar.GenerateSHA256String(novoUsuario.senha);
 
+            return banco.Inserir(novoUsuario);
         }
 
         public bool Login(Usuario usuario)
