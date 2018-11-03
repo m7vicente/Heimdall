@@ -1,57 +1,38 @@
 package heimdall;
 
+import java.awt.List;
+import java.util.ArrayList;
+
+import oshi.SystemInfo;
+import oshi.hardware.HardwareAbstractionLayer;
+import oshi.software.os.OSFileStore;
+import oshi.software.os.OperatingSystem;
+
 public class main {
 	public static void main(String[] args) {
 		
-		Computador pc = new Computador();
+		//Sistema Operacional
+        SistemaOperacional sistemaOperacional = new SistemaOperacional();
         
-        System.out.println(pc.getNomeComputador());
-        System.out.println(pc.getModeloComputador());
-        System.out.println(pc.getMarcaComputador());
-        System.out.println(pc.getIpv4Computador());
-        System.out.println(pc.getVersaoFinware());
+        //Processador
+        Processador processador = new Processador();	
         
-        SistemaOperacional so = new SistemaOperacional();
+        //Memoria RAM
+        HistoricoEstadoRam RAM = new HistoricoEstadoRam();
         
-        System.out.println("--------------");
-        System.out.println(so.getFabricanteSO());
-        System.out.println(so.getFamiliaSO());
-        System.out.println(so.getVersaoSO());
-        
-        
-        Processador pr = new Processador();
-        
-        System.out.println("--------------");
-        
-        System.out.println(pr.getNomeFabricante());
-        System.out.println(pr.getModelo());
-        System.out.println(pr.getNucleos());
-        System.out.println(pr.getSerial());
-        System.out.println(pr.getFrequenciaBase());
-        
-        
-        HistoricoEstadoRam hpr = new HistoricoEstadoRam();
-        
-        System.out.println("--------------");
-        
-        System.out.println(hpr.getMemoriaTotal());
-        System.out.println(hpr.getMemoriaDisponivel());
-        System.out.println(hpr.getMemoriaUtilizada());
-        System.out.println(hpr.getSwapTotal());
-        System.out.println(hpr.getSwapUtilizada());
-        System.out.println(hpr.getPorcentagemUtilizacao());
-        
-        HistoricoEstadoProcessador hep = new HistoricoEstadoProcessador();
-        
-        System.out.println("--------------");
-        
-        System.out.println(hep.getTemperaturaCpu());
-        System.out.println(hep.getTempoExecucao());
-        System.out.println(hep.getThreadsExecucao());
-        System.out.println(hep.getProcessosExecucao());
-        System.out.println(hep.getPorcentagemUtilizacao());
+        //Armazenamentos
+		OSFileStore[] hds = new SystemInfo().getOperatingSystem().getFileSystem().getFileStores();
+		ArrayList<Armazenamento> ListaDeArmazenamentos = new ArrayList<Armazenamento>();
 		
+		for(int i = 0; i < hds.length ; i++) {
+			Armazenamento armazenamento = new Armazenamento(hds[i]);
+			
+			ListaDeArmazenamentos.add(armazenamento);	
+		}
 		
+		//Maquina como um todo
+		Computador pc = new Computador(sistemaOperacional,processador,ListaDeArmazenamentos,RAM);
+
 		
 	}
 }

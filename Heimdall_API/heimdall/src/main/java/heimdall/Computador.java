@@ -6,44 +6,52 @@ import oshi.hardware.ComputerSystem;
 import oshi.software.os.OperatingSystem;
 
 public class Computador {
+	
+	OperatingSystem operacao = new SystemInfo().getOperatingSystem();
+	ComputerSystem computador = new SystemInfo().getHardware().getComputerSystem();
     
-        private String nomeComputador;
+    private String nomeComputador;
 	private String marcaComputador;
 	private String modeloComputador;
 	private String ipv4Computador;
 	private String versaoFirmware;
         
-        private List<Processador> processadores;
-        private List<Armazenamento> armazenamentos;
+    private Processador processadores;
+    private List<Armazenamento> armazenamentos;
 	private SistemaOperacional OS;
-        //private GPU gpu
+	private HistoricoEstadoRam RAM;
+
         
-        
-	OperatingSystem operacao = new SystemInfo().getOperatingSystem();
-	ComputerSystem computador = new SystemInfo().getHardware().getComputerSystem();
-	
-	public String getNomeComputador() {
-		this.nomeComputador = operacao.getNetworkParams().getDomainName();
-		return nomeComputador;
+	public Computador(SistemaOperacional OS,Processador processadores,List<Armazenamento> armazenamentos,HistoricoEstadoRam RAM) {
+		this.processadores = processadores;
+		this.armazenamentos = armazenamentos;
+		this.OS = OS;
+		
+		this.nomeComputador = this.ObterNomeComputador();
+		this.marcaComputador = this.ObterMarcaComputador();
+		this.modeloComputador = this.ObterModeloComputador();
+		this.ipv4Computador = this.ObterIpv4Computador();
+		this.versaoFirmware = this.ObterVersaoFinware();
+		this.RAM = RAM;
 	}
 	
-	public String getMarcaComputador() {
-		this.marcaComputador = computador.getManufacturer();
-		return marcaComputador;
+	private String ObterNomeComputador() {
+		return operacao.getNetworkParams().getDomainName();
 	}
 	
-	public String getModeloComputador() {
-		this.modeloComputador = computador.getModel();
-		return modeloComputador;
+	private String ObterMarcaComputador() {
+		return computador.getManufacturer();
 	}
 	
-	public String getIpv4Computador() {
-		this.ipv4Computador = operacao.getNetworkParams().getIpv4DefaultGateway();
-		return ipv4Computador;
+	private String ObterModeloComputador() {
+		return computador.getModel();
 	}
 	
-	public String getVersaoFinware() {
-		this.versaoFirmware = computador.getFirmware().getVersion();
-		return versaoFirmware;
-	}        
+	private String ObterIpv4Computador() {
+		return operacao.getNetworkParams().getIpv4DefaultGateway();
+	}
+	
+	private String ObterVersaoFinware() {
+		return computador.getFirmware().getVersion();
+	}     
 }

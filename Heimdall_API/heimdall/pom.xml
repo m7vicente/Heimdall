@@ -4,19 +4,14 @@
   <artifactId>heimdall</artifactId>
   <version>0.0.1-SNAPSHOT</version>
   
+  
   <dependencies>
   	<dependency>
             <groupId>com.github.dblock</groupId>
             <artifactId>oshi-core</artifactId>
             <version>3.4.0</version>
 	</dependency>
-	
-  	<dependency>
-	    <groupId>com.microsoft.sqlserver</groupId>
-	    <artifactId>mssql-jdbc</artifactId>
-	    <version>6.4.0.jre8</version>
-	</dependency>
-  	
+		  	
   	<dependency>
             <groupId>org.jhardware</groupId>
             <artifactId>jHardware</artifactId>

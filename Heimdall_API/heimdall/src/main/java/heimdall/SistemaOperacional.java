@@ -10,17 +10,20 @@ public class SistemaOperacional {
     private String familiaSO;
 
     OperatingSystem so = new SystemInfo().getOperatingSystem();
+    
+    public SistemaOperacional() {
+    	this.fabricanteSO = this.ObterFabricanteSO();
+    	this.versaoSO = this.ObterVersaoSO();
+    	this.familiaSO = this.ObterFamiliaSO();
+    }
 
-    public String getFabricanteSO() {
-        this.fabricanteSO = so.getManufacturer();
-        return fabricanteSO; 
+    private String ObterFabricanteSO() {
+        return so.getManufacturer(); 
     }
-    public String getVersaoSO() {
-        this.versaoSO = ""+so.getVersion();
-        return versaoSO;
+    private String ObterVersaoSO() {
+        return ""+so.getVersion();
     }
-    public String getFamiliaSO() {
-        this.familiaSO = so.getFamily();
-        return familiaSO;
+    private String ObterFamiliaSO() {
+        return so.getFamily();
     }
 }

@@ -5,45 +5,46 @@ import oshi.SystemInfo;
 import oshi.software.os.OSFileStore;
 import oshi.util.FormatUtil;
 
-public class Armazenamento {
+public class Armazenamento implements Historico{
 	
-    private String codUUID[];
-    private String tipoArmazenamento[];
-    private double capacidadeTotal[];
+    private String codUUID;
+    private String tipoArmazenamento;
+    private double capacidadeTotal;
+    private double capacidadeUtilizada;
+    private String letraLocal;
     
-    OSFileStore[] hds = new SystemInfo().getOperatingSystem().getFileSystem().getFileStores();
+    private OSFileStore hd;
     DecimalFormat df = new DecimalFormat("#0.0");
     
-    public double[] getCapacidadeTotal() {
-        
-        capacidadeTotal = new double[hds.length];
-
-        for (int i = 0; i < capacidadeTotal.length; i++) {
-          capacidadeTotal[i] = Double.parseDouble(FormatUtil.formatBytes(hds[i].getTotalSpace()).split(" ")[0].replace(",", "."));
-        }
-
-        return capacidadeTotal;
+    public Armazenamento(OSFileStore hd) {
+    	this.hd = hd;
+    	this.codUUID = this.ObtertCodUUID();
+    	this.capacidadeTotal = this.ObterCapacidadeTotal();
+    }
+    
+    private double ObterCapacidadeTotal() {
+    	return Double.parseDouble(FormatUtil.formatBytes(hd.getTotalSpace()).split(" ")[0].replace(",", "."));        
     }
 
-    public String[] getCodUUID() {
-        
-        codUUID = new String[hds.length];
-		
-        for (int i = 0; i < codUUID.length; i++) {
-	codUUID[i] = hds[i].getUUID();
-        }
-        
-        return codUUID;
+    private String ObtertCodUUID() {
+    	return hd.getUUID();     
     }
 
-    public String[] getTipoArmazenamento() {
-        
-        tipoArmazenamento = new String[hds.length];
-		
-        for (int i = 0; i < tipoArmazenamento.length; i++) {
-                tipoArmazenamento[i] = hds[i].getName();	
-        }
-
-        return tipoArmazenamento;
+    private String ObterTipoArmazenamento() {
+    	return hd.getName();	        
     }
+    
+    private double ObterCapacidadeUtilizada() {       
+    	return Double.parseDouble(FormatUtil.formatBytesDecimal(hd.getUsableSpace()).split(" ")[0].replace(",", "."));
+    }
+
+    private String ObterLetraLocal() {
+    	return hd.getMount();
+    }
+    
+    public void Atualizar() {
+    	this.capacidadeUtilizada = this.ObterCapacidadeUtilizada();
+    	this.letraLocal = this.ObterLetraLocal();
+    }
+
 }
