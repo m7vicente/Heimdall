@@ -1,4 +1,4 @@
-﻿using Heimdall.Controllers;
+﻿using Heimdall.ModelController;
 using Heimdall.Models;
 using System;
 
@@ -19,7 +19,7 @@ namespace Heimdall
             usuario.email = txtEmail.Text;
             usuario.senha = txtSenha.Text;
 
-            UsuarioController controller = new UsuarioController();
+            UsuarioC controller = new UsuarioC();
             if (controller.Login(usuario))
             {
                 Session["usuario"] = usuario;

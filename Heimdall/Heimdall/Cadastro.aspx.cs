@@ -1,13 +1,7 @@
-﻿using Heimdall.Controllers;
+﻿using Heimdall.ModelController;
 using Heimdall.Models;
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Security.Cryptography;
-using System.Text;
-using System.Web;
-using System.Web.UI;
-using System.Web.UI.WebControls;
+
 
 namespace Heimdall
 {
@@ -27,7 +21,7 @@ namespace Heimdall
             novoUsuario.email = txtEmail.Text;
             novoUsuario.senha = txtSenha.Text;
 
-            UsuarioController c1 = new UsuarioController();
+            UsuarioC c1 = new UsuarioC();
 
             if (c1.Cadastrar(novoUsuario))
             {

@@ -69,7 +69,8 @@ namespace Heimdall.DataObjects
                         usuario.codUsuario = int.Parse(reader["CodUsuario"].ToString());
                         usuario.nomeCompleto = reader["NomeCompleto"].ToString();
                         usuario.email = reader["Email"].ToString();
-                        usuario.senha = reader["Cargo"].ToString();
+                        usuario.cargo = reader["Cargo"].ToString();
+                        usuario.senha = reader["senha"].ToString();
                         usuario.ativo = bool.Parse(reader["Ativo"].ToString());
                         usuario.dataCadastro = DateTime.Parse(reader["DataCadastro"].ToString());
                     }

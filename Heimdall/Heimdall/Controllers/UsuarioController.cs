@@ -1,17 +1,17 @@
 ﻿using Heimdall.DataObjects;
+using Heimdall.ModelController;
 using Heimdall.Models;
-using System;
+using Newtonsoft.Json;
+using Newtonsoft.Json.Linq;
 using System.Collections.Generic;
-using System.Linq;
-using System.Net;
-using System.Net.Http;
 using System.Web.Http;
 
 namespace Heimdall.Controllers
 {
     public class UsuarioController : ApiController
     {
-        UsuarioDO banco = new UsuarioDO();
+
+        private UsuarioC usuarioController = new UsuarioC();
 
         // GET api/<controller>
         public IEnumerable<string> Get()
@@ -20,14 +20,25 @@ namespace Heimdall.Controllers
         }
 
         // GET api/<controller>/5
-        public string Get(int id)
-        {
-            return "value";
-        }
+        //public Usuario Get(JObject jsonResult)
+        //{
+        //    Usuario usuario = JsonConvert.DeserializeObject<Usuario>(jsonResult.ToString());
+        //    Login(usuario);
 
-        // POST api/<controller>
-        public void Post([FromBody]string value)
+        //    return usuario;
+        //}
+
+        public Usuario Post(JObject jsonResult)
         {
+            Usuario usuario = JsonConvert.DeserializeObject<Usuario>(jsonResult.ToString());
+
+            if (usuarioController.Login(usuario)){
+                return usuario;
+            }
+            else
+            {
+                return null;
+            }
         }
 
         // PUT api/<controller>/5
@@ -39,33 +50,6 @@ namespace Heimdall.Controllers
         public void Delete(int id)
         {
         }
-
-        public bool Cadastrar(Usuario novoUsuario)
-        {
-            Criptografar criptografar = new Criptografar();
-            novoUsuario.senha = criptografar.GenerateSHA256String(novoUsuario.senha);
-
-            return banco.Inserir(novoUsuario);
-        }
-
-        public bool Login(Usuario usuario)
-        {
-
-            Criptografar criptografar = new Criptografar();
-            usuario.senha = criptografar.GenerateSHA256String(usuario.senha);
-
-            usuario = banco.buscar(usuario);
-
-            if(usuario.ativo && usuario.nomeCompleto != null)
-            {
-                return true;
-            }
-            else
-            {
-                return false;
-            }
-        }
-
 
     }
 }

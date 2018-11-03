@@ -113,6 +113,7 @@
     <Compile Include="Cadastro.aspx.designer.cs">
       <DependentUpon>Cadastro.aspx</DependentUpon>
     </Compile>
+    <Compile Include="ModelController\UsuarioC.cs" />
     <Compile Include="Controllers\UsuarioController.cs" />
     <Compile Include="DataObjects\Criptografar.cs" />
     <Compile Include="DataObjects\DataObject.cs" />
