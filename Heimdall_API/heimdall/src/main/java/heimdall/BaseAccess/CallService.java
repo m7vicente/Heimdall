@@ -14,11 +14,12 @@ import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
 import com.google.gson.reflect.TypeToken;
 
+import heimdall.Computador;
 import heimdall.Usuario;
 
 public class CallService extends ServiceURL{
 	
-	public boolean ObterUsuario(Usuario login) {
+	public Usuario ObterUsuario(Usuario login) {
 		
 		//login = new Usuario("Pedro@bifrost.com.br","12345");
 		
@@ -47,18 +48,59 @@ public class CallService extends ServiceURL{
   		login = gson.fromJson(output, login.getClass());
   		
   		conn.disconnect();
+  		
+  		return login;
 
-  	  } catch (MalformedURLException e) {
+  	  } 
+  	  catch (MalformedURLException e) {
   		e.printStackTrace();
-  	  } catch (IOException e) {
+  	  } 
+  	  catch (IOException e) {
   		e.printStackTrace();
   	  }
-		if(login.getCodUsuario() > 0 && !login.getNomeCompleto().equals("")) {
-			return true;
-		}
-		else {
-			return false;
-		}
+  	  return login;
+
+	}
+	
+	public void CadastrarComputador(Usuario usuario) {
+		
+		Gson gson = new GsonBuilder().excludeFieldsWithModifiers(Modifier.STATIC).create();
+        String json = gson.toJson(usuario);
+        
+        System.out.println(json);
+		
+		
+  	  try {
+
+    		URL url = new URL(this.sevicoMonitorar);
+    		HttpURLConnection conn = (HttpURLConnection) url.openConnection();
+    		conn.setDoOutput(true);
+    		conn.setRequestMethod("POST");
+    		conn.setRequestProperty("Content-Type", "application/json");
+
+    		OutputStream os = conn.getOutputStream();
+    		os.write(json.getBytes());
+    		os.flush();
+    		System.out.println(conn.getOutputStream().toString());
+
+    		if (conn.getResponseCode() != 200) {
+    			throw new RuntimeException("Failed : HTTP error code : "
+    				+ conn.getResponseCode());
+    		}
+    		
+    		
+
+    		//String output = new BufferedReader(new InputStreamReader((conn.getInputStream()))).readLine();
+    		  		
+    		//login = gson.fromJson(output, login.getClass());
+    		
+    		conn.disconnect();
+
+    	  } catch (MalformedURLException e) {
+    		e.printStackTrace();
+    	  } catch (IOException e) {
+    		e.printStackTrace();
+    	  }
 	}
 
 }

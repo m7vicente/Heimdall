@@ -22,10 +22,12 @@ public class main {
 		
 	public static void main(String[] args) {
 		
+		
+		//Usuario login = new Usuario("Pedro@bifrost.com.br","12345");
 		Usuario login = new Usuario("","");
 		CallService service = new CallService();
 		
-		do {
+		while(true){
 			login.setEmail(JOptionPane.showInputDialog("Insira seu Email: "));
 			
 			while(login.getEmail().equals("")) {
@@ -47,7 +49,14 @@ public class main {
 					System.exit(0);
 				}
 			}
-		}while(service.ObterUsuario(login) == false);
+			
+			login = service.ObterUsuario(login);
+			
+			if(login.getCodUsuario() > 0 && !login.getNomeCompleto().equals("")) {
+				break;
+			}
+			
+		}
 
 		//Sistema Operacional
         SistemaOperacional sistemaOperacional = new SistemaOperacional();
@@ -72,6 +81,8 @@ public class main {
 		Computador pc = new Computador(sistemaOperacional,processador,ListaDeArmazenamentos,RAM);
 		
 		login.setComputador(pc);
+		
+		service.CadastrarComputador(login);
 		
 	    }
 

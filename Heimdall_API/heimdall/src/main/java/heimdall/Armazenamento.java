@@ -17,9 +17,12 @@ public class Armazenamento implements Historico{
     private static DecimalFormat df = new DecimalFormat("#0.0");
     
     public Armazenamento(OSFileStore hd) {
-    	this.hd = hd;
+    	this.setHd(hd);
     	this.codUUID = this.ObtertCodUUID();
     	this.capacidadeTotal = this.ObterCapacidadeTotal();
+    	this.tipoArmazenamento = this.ObterTipoArmazenamento();
+    	this.capacidadeUtilizada = this.ObterCapacidadeUtilizada();
+    	this.letraLocal = this.ObterLetraLocal();
     }
     
     private double ObterCapacidadeTotal() {
@@ -46,5 +49,11 @@ public class Armazenamento implements Historico{
     	this.capacidadeUtilizada = this.ObterCapacidadeUtilizada();
     	this.letraLocal = this.ObterLetraLocal();
     }
+
+	public static void setHd(OSFileStore hd) {
+		Armazenamento.hd = hd;
+	}
+    
+    
 
 }

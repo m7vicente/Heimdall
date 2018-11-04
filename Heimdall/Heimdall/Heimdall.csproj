@@ -113,6 +113,7 @@
     <Compile Include="Cadastro.aspx.designer.cs">
       <DependentUpon>Cadastro.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Controllers\MonitorarController.cs" />
     <Compile Include="ModelController\UsuarioC.cs" />
     <Compile Include="Controllers\UsuarioController.cs" />
     <Compile Include="DataObjects\Criptografar.cs" />
@@ -142,6 +143,11 @@
     <Compile Include="Login.aspx.designer.cs">
       <DependentUpon>Login.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Models\Armazenamento.cs" />
+    <Compile Include="Models\Computador.cs" />
+    <Compile Include="Models\HistoricoEstadoRam.cs" />
+    <Compile Include="Models\Processador.cs" />
+    <Compile Include="Models\SistemaOperacional.cs" />
     <Compile Include="Models\Usuario.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

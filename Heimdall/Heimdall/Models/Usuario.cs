@@ -20,5 +20,9 @@ namespace Heimdall.Models
         public bool ativo { get; set; }
 
         public DateTime dataCadastro {get;set;}
+
+        public Computador computador { get; set; }
+
+        private List<Computador> Computadores { get; set; }
     }
 }

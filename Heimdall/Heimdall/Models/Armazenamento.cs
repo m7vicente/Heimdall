@@ -7,8 +7,11 @@ namespace Heimdall.Models
 {
     public class Armazenamento
     {
-        public string fabricanteSO { get; set; }
-        public string versaoSO { get; set; }
-        public string familiaSO { get; set; }
+        public string codUUID { get; set; }
+        public string tipoArmazenamento { get; set; }
+        public double capacidadeTotal { get; set; }
+        public double capacidadeUtilizada { get; set; }
+        public string letraLocal { get; set; }
+
     }
 }

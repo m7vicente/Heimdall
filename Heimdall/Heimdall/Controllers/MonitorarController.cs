@@ -27,7 +27,10 @@ namespace Heimdall.Controllers
         // POST api/<controller>
         public void Post(JObject jsonResult)
         {
-            JsonConvert.DeserializeObject<Computador>(jsonResult.ToString());
+            Usuario user = new Usuario();
+            user = JsonConvert.DeserializeObject<Usuario>(jsonResult.ToString());
+           
+
         }
 
         // PUT api/<controller>/5
