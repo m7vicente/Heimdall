@@ -49,7 +49,6 @@ public class main {
 			}
 		}while(service.ObterUsuario(login) == false);
 
-		System.out.println("erro");
 		//Sistema Operacional
         SistemaOperacional sistemaOperacional = new SistemaOperacional();
         
