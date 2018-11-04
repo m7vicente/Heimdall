@@ -17,6 +17,12 @@ public class Usuario {
         this.cargo = cargo;
         this.senha = senha;
     }
+    
+    
+    public Usuario(String email,String senha) {
+        this.email = email;
+        this.senha = senha;
+    }
 
     public Computador getComputador() {
         return computador;

@@ -7,8 +7,8 @@ import oshi.software.os.OperatingSystem;
 
 public class Computador {
 	
-	OperatingSystem operacao = new SystemInfo().getOperatingSystem();
-	ComputerSystem computador = new SystemInfo().getHardware().getComputerSystem();
+	private static OperatingSystem operacao = new SystemInfo().getOperatingSystem();
+	private static ComputerSystem computador = new SystemInfo().getHardware().getComputerSystem();
     
     private String nomeComputador;
 	private String marcaComputador;

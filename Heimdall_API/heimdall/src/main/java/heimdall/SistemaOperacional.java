@@ -9,7 +9,7 @@ public class SistemaOperacional {
     private String versaoSO;
     private String familiaSO;
 
-    OperatingSystem so = new SystemInfo().getOperatingSystem();
+    private static OperatingSystem so = new SystemInfo().getOperatingSystem();
     
     public SistemaOperacional() {
     	this.fabricanteSO = this.ObterFabricanteSO();

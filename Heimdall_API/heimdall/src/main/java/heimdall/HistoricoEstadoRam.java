@@ -9,7 +9,7 @@ import oshi.util.FormatUtil;
 
 public class HistoricoEstadoRam implements Historico{
 
-    HardwareAbstractionLayer hardware = new SystemInfo().getHardware();
+    private static  HardwareAbstractionLayer hardware = new SystemInfo().getHardware();
 	
     private double memoriaUtilizada;
     private double memoriaDisponivel;

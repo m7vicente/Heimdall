@@ -13,8 +13,8 @@ public class Armazenamento implements Historico{
     private double capacidadeUtilizada;
     private String letraLocal;
     
-    private OSFileStore hd;
-    DecimalFormat df = new DecimalFormat("#0.0");
+    private static OSFileStore hd;
+    private static DecimalFormat df = new DecimalFormat("#0.0");
     
     public Armazenamento(OSFileStore hd) {
     	this.hd = hd;

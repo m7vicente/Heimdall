@@ -37,7 +37,9 @@ namespace Heimdall.Controllers
             }
             else
             {
-                return null;
+                usuario.email = "";
+                usuario.senha = "";
+                return usuario;
             }
         }
 
