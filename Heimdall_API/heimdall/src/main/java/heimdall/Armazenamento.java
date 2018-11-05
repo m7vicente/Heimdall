@@ -34,7 +34,7 @@ public class Armazenamento implements Historico{
     }
 
     private String ObterTipoArmazenamento() {
-    	return hd.getName();	        
+    	return hd.getName().replace("í", "i");	        
     }
     
     private double ObterCapacidadeUtilizada() {       
