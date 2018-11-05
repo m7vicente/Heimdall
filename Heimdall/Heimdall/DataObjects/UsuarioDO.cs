@@ -118,5 +118,10 @@ namespace Heimdall.DataObjects
 
             }
         }
+
+        public Usuario buscar(Usuario obj, int cod)
+        {
+            throw new NotImplementedException();
+        }
     }
 }

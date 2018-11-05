@@ -17,5 +17,6 @@ namespace Heimdall.DataObjects
         List<TEntity> Selecionar();
 
         TEntity buscar(TEntity obj);
+
     }
 }

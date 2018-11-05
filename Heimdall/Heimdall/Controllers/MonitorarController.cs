@@ -1,4 +1,5 @@
-﻿using Heimdall.Models;
+﻿using Heimdall.ModelController;
+using Heimdall.Models;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Linq;
 using System;
@@ -25,11 +26,19 @@ namespace Heimdall.Controllers
         }
 
         // POST api/<controller>
-        public void Post(JObject jsonResult)
+        public Computador Post(JObject jsonResult)
         {
             Usuario user = new Usuario();
+            
             user = JsonConvert.DeserializeObject<Usuario>(jsonResult.ToString());
+
+            MonitorarC monitorarC = new MonitorarC(user);
+
+            monitorarC.VerificarComputador(user);
+
+            return user.computador;
            
+           // monitorarC.Monitorar(Usuario);
 
         }
 

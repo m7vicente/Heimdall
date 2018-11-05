@@ -114,6 +114,19 @@
       <DependentUpon>Cadastro.aspx</DependentUpon>
     </Compile>
     <Compile Include="Controllers\MonitorarController.cs" />
+    <Compile Include="DataObjects\ArmazenamentoDO.cs" />
+    <Compile Include="DataObjects\ComputadorDO.cs" />
+    <Compile Include="DataObjects\HistoricoEstadoArmazenamentoDO.cs" />
+    <Compile Include="DataObjects\HistoricoEstadoProcessadorDO.cs" />
+    <Compile Include="DataObjects\HistoricoRAMDO.cs" />
+    <Compile Include="DataObjects\ProcessadorDO.cs" />
+    <Compile Include="DataObjects\SistemaOperacionalDO.cs" />
+    <Compile Include="ModelController\ArmazenamentoC.cs" />
+    <Compile Include="ModelController\ComputadorC.cs" />
+    <Compile Include="ModelController\HistoricoEstadoRAMC.cs" />
+    <Compile Include="ModelController\MonitorarC.cs" />
+    <Compile Include="ModelController\ProcessadorC.cs" />
+    <Compile Include="ModelController\SistemaOperacionalC.cs" />
     <Compile Include="ModelController\UsuarioC.cs" />
     <Compile Include="Controllers\UsuarioController.cs" />
     <Compile Include="DataObjects\Criptografar.cs" />

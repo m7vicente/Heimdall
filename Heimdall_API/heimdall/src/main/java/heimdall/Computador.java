@@ -10,8 +10,9 @@ public class Computador {
 	private static OperatingSystem operacao = new SystemInfo().getOperatingSystem();
 	private static ComputerSystem computador = new SystemInfo().getHardware().getComputerSystem();
     
+	private int codComputador;
     private String nomeComputador;
-	private String marcaComputador;
+	private String fabricanteComputador;
 	private String modeloComputador;
 	private String ipv4Computador;
 	private String versaoFirmware;
@@ -28,13 +29,39 @@ public class Computador {
 		this.OS = OS;
 		
 		this.nomeComputador = this.ObterNomeComputador();
-		this.marcaComputador = this.ObterMarcaComputador();
+		this.fabricanteComputador = this.ObterMarcaComputador();
 		this.modeloComputador = this.ObterModeloComputador();
 		this.ipv4Computador = this.ObterIpv4Computador();
 		this.versaoFirmware = this.ObterVersaoFinware();
 		this.RAM = RAM;
 	}
 	
+	
+	
+	public static ComputerSystem getComputador() {
+		return computador;
+	}
+
+
+	public static void setComputador(ComputerSystem computador) {
+		Computador.computador = computador;
+	}
+	
+	
+
+
+	public int getCodComputador() {
+		return codComputador;
+	}
+
+
+
+	public void setCodComputador(int codComputador) {
+		this.codComputador = codComputador;
+	}
+
+
+
 	private String ObterNomeComputador() {
 		return operacao.getNetworkParams().getDomainName();
 	}

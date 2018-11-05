@@ -62,7 +62,7 @@ public class CallService extends ServiceURL{
 
 	}
 	
-	public void CadastrarComputador(Usuario usuario) {
+	public Usuario CadastrarComputador(Usuario usuario) {
 		
 		Gson gson = new GsonBuilder().excludeFieldsWithModifiers(Modifier.STATIC).create();
         String json = gson.toJson(usuario);
@@ -90,9 +90,9 @@ public class CallService extends ServiceURL{
     		
     		
 
-    		//String output = new BufferedReader(new InputStreamReader((conn.getInputStream()))).readLine();
+    		String output = new BufferedReader(new InputStreamReader((conn.getInputStream()))).readLine();
     		  		
-    		//login = gson.fromJson(output, login.getClass());
+    		usuario.setComputador(gson.fromJson(output, usuario.getComputador().getClass()));
     		
     		conn.disconnect();
 
@@ -101,6 +101,8 @@ public class CallService extends ServiceURL{
     	  } catch (IOException e) {
     		e.printStackTrace();
     	  }
+  	  
+  	  return usuario;
 	}
 
 }

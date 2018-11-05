@@ -8,6 +8,7 @@ public class SistemaOperacional {
     private String fabricanteSO;
     private String versaoSO;
     private String familiaSO;
+    private int codSO;
 
     private static OperatingSystem so = new SystemInfo().getOperatingSystem();
     
@@ -26,4 +27,14 @@ public class SistemaOperacional {
     private String ObterFamiliaSO() {
         return so.getFamily();
     }
+
+	public int getCodSO() {
+		return codSO;
+	}
+
+	public void setCodSO(int codSO) {
+		this.codSO = codSO;
+	}
+    
+    
 }

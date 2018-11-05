@@ -24,17 +24,17 @@ public class main {
 		
 		
 		//Usuario login = new Usuario("Pedro@bifrost.com.br","12345");
-		Usuario login = new Usuario("","");
+		Usuario user = new Usuario("","");
 		CallService service = new CallService();
 		
 		while(true){
-			login.setEmail(JOptionPane.showInputDialog("Insira seu Email: "));
+			user.setEmail(JOptionPane.showInputDialog("Insira seu Email: "));
 			
-			while(login.getEmail().equals("")) {
-				 login.setEmail(JOptionPane.showInputDialog("Insira seu Email: ").toLowerCase());
+			while(user.getEmail().equals("")) {
+				 user.setEmail(JOptionPane.showInputDialog("Insira seu Email: ").toLowerCase());
 			}
 					
-			while(login.getSenha().equals("")) {
+			while(user.getSenha().equals("")) {
 			
 				JPasswordField jpf = new JPasswordField(24);
 				JLabel jl = new JLabel("Insira sua senha: ");
@@ -44,19 +44,21 @@ public class main {
 				int x = JOptionPane.showConfirmDialog(null, box, "Senha", JOptionPane.OK_CANCEL_OPTION);
 				    
 				if (x == JOptionPane.OK_OPTION) {
-				    login.setSenha(jpf.getText());
+				    user.setSenha(jpf.getText());
 				}else {
 					System.exit(0);
 				}
 			}
 			
-			login = service.ObterUsuario(login);
+			user = service.ObterUsuario(user);
 			
-			if(login.getCodUsuario() > 0 && !login.getNomeCompleto().equals("")) {
+			if(user.getCodUsuario() > 0 && !user.getNomeCompleto().equals("")) {
 				break;
 			}
 			
 		}
+		
+		user = service.ObterUsuario(user);
 
 		//Sistema Operacional
         SistemaOperacional sistemaOperacional = new SistemaOperacional();
@@ -80,9 +82,9 @@ public class main {
 		//Maquina como um todo
 		Computador pc = new Computador(sistemaOperacional,processador,ListaDeArmazenamentos,RAM);
 		
-		login.setComputador(pc);
+		user.setComputador(pc);
 		
-		service.CadastrarComputador(login);
+		user = service.CadastrarComputador(user);
 		
 	    }
 

@@ -11,6 +11,7 @@ public class Processador implements Historico{
 	private static HardwareAbstractionLayer processador = new SystemInfo().getHardware();
 	private static OperatingSystem operacao = new SystemInfo().getOperatingSystem();
     
+	private int CodProcessador;
     public String nomeFabricante;
     private String modelo;
     private double frequenciaBase;
@@ -38,7 +39,21 @@ public class Processador implements Historico{
     	this.porcentagemUtilizacao = this.ObterPorcentagemUtilizacao();
     }
     
-    private double ObterFrequenciaBase() {
+    
+    
+    public int getCodProcessador() {
+		return CodProcessador;
+	}
+
+
+
+	public void setCodProcessador(int codProcessador) {
+		CodProcessador = codProcessador;
+	}
+
+
+
+	private double ObterFrequenciaBase() {
         return Double.parseDouble(FormatUtil.formatHertz(processador
         		.getProcessor()
         		.getVendorFreq())

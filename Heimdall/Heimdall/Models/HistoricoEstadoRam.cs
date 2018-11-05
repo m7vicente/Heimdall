@@ -7,6 +7,8 @@ namespace Heimdall.Models
 {
     public class HistoricoEstadoRam
     {
+        public int codUsuario { get; set; }
+        public int codComputador { get; set; }
         public double memoriaUtilizada { get; set; }
         public double memoriaDisponivel { get; set; }
         public double memoriaTotal { get; set; }
