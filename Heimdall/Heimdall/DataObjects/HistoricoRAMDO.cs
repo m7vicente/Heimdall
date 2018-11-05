@@ -26,8 +26,8 @@ namespace Heimdall.DataObjects
                 connection.Open();
 
                 string sql = ($" INSERT INTO[dbo].[HistoricoEstadoRam] ([Ultilizada], [Disponivel], [SwapTotal], [SwapDisponivel], [QuantidadeTotal], [PorcentagemUltilizada],[FKCodComputador],[FKCodUsuario]) VALUES " +
-                            $"('{obj.memoriaUtilizada}'" +
-                            $",'{obj.memoriaDisponivel}'" +
+                            $"('{obj.memoriaUtilizada.ToString().Replace(",", ".")}'" +
+                            $",'{obj.memoriaDisponivel.ToString().Replace(",", ".")}'" +
                             $",'{obj.swapTotal.ToString().Replace(",",".")}'" +
                             $",'{obj.swapUtilizada.ToString().Replace(",", ".")}'" +//informação esta errada, favor corrigir
                             $",'{obj.memoriaTotal.ToString().Replace(",", ".")}'" +
