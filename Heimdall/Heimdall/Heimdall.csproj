@@ -80,12 +80,58 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Cadastro.aspx" />
+    <Content Include="css\cadastro.css" />
+    <Content Include="css\contato.css" />
+    <Content Include="css\grid.css" />
+    <Content Include="css\login.css" />
+    <Content Include="css\normalize.css" />
+    <Content Include="css\reset.css" />
+    <Content Include="css\responsivo.css" />
+    <Content Include="css\style.css" />
     <Content Include="Default.aspx" />
     <Content Include="Global.asax" />
-    <Content Include="Web.config" />
+    <Content Include="img\bg-sobre.jpg" />
+    <Content Include="img\bg.jpg" />
+    <Content Include="img\bifrost.png" />
+    <Content Include="img\facebook.png" />
+    <Content Include="img\heimdall.png" />
+    <Content Include="img\instagram.png" />
+    <Content Include="img\twitter.png" />
+    <Content Include="Inicio.aspx" />
+    <Content Include="Login.aspx" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="App_Start\WebApiConfig.cs" />
+    <Compile Include="Cadastro.aspx.cs">
+      <DependentUpon>Cadastro.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Cadastro.aspx.designer.cs">
+      <DependentUpon>Cadastro.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Controllers\MonitorarController.cs" />
+    <Compile Include="DataObjects\ArmazenamentoDO.cs" />
+    <Compile Include="DataObjects\ComputadorDO.cs" />
+    <Compile Include="DataObjects\HistoricoEstadoArmazenamentoDO.cs" />
+    <Compile Include="DataObjects\HistoricoEstadoProcessadorDO.cs" />
+    <Compile Include="DataObjects\HistoricoRAMDO.cs" />
+    <Compile Include="DataObjects\ProcessadorDO.cs" />
+    <Compile Include="DataObjects\SistemaOperacionalDO.cs" />
+    <Compile Include="ModelController\ArmazenamentoC.cs" />
+    <Compile Include="ModelController\ComputadorC.cs" />
+    <Compile Include="ModelController\HistoricoEstadoRAMC.cs" />
+    <Compile Include="ModelController\MonitorarC.cs" />
+    <Compile Include="ModelController\ProcessadorC.cs" />
+    <Compile Include="ModelController\SistemaOperacionalC.cs" />
+    <Compile Include="ModelController\UsuarioC.cs" />
+    <Compile Include="Controllers\UsuarioController.cs" />
+    <Compile Include="DataObjects\Criptografar.cs" />
+    <Compile Include="DataObjects\DataObject.cs" />
+    <Compile Include="DataObjects\UsuarioDO.cs" />
     <Compile Include="Default.aspx.cs">
       <DependentUpon>Default.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -96,6 +142,26 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Inicio.aspx.cs">
+      <DependentUpon>Inicio.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Inicio.aspx.designer.cs">
+      <DependentUpon>Inicio.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Login.aspx.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Login.aspx.designer.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Armazenamento.cs" />
+    <Compile Include="Models\Computador.cs" />
+    <Compile Include="Models\HistoricoEstadoRam.cs" />
+    <Compile Include="Models\Processador.cs" />
+    <Compile Include="Models\SistemaOperacional.cs" />
+    <Compile Include="Models\Usuario.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -109,8 +175,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="Controllers\" />
-    <Folder Include="Models\" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
