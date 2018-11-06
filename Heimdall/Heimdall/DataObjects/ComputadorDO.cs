@@ -40,7 +40,22 @@ namespace Heimdall.DataObjects
 
         public void Deletar(Computador obj)
         {
-            throw new NotImplementedException();
+            using (SqlConnection connection = new SqlConnection(WebConfigurationManager.ConnectionStrings["ConnectionString"].ConnectionString))
+            {
+
+                connection.Open();
+
+                string sql = ($" DELETE [dbo].[Computador]" +
+                    $"WHERE " +
+                    $"[FKCodUsuario]) = {obj.codUsuario} " +
+                    $"AND CodComputador = {obj.codComputador}");
+
+                SqlCommand command = new SqlCommand(sql, connection);
+
+                command.ExecuteNonQuery();
+                connection.Close();
+
+            }
         }
 
         public bool Inserir(Computador obj)
@@ -106,12 +121,55 @@ namespace Heimdall.DataObjects
 
         public List<Computador> Selecionar()
         {
-            throw new NotImplementedException();
+            using (SqlConnection connection = new SqlConnection(WebConfigurationManager.ConnectionStrings["ConnectionString"].ConnectionString))
+            {
+                string sql = ($"SELECT [CodComputador],[NomePersonalizado],[NomeComputador],[NomeFrabricante],[IPV4],[VersaoFirmeware],[FKCodUsuario] FROM[dbo].[Computador]");
+
+                SqlCommand command = new SqlCommand(sql, connection);
+                List<Computador> computadores = new List<Computador>();
+                using (SqlDataReader reader = command.ExecuteReader())
+                {
+                    while (reader.Read())
+                    {
+                        Computador computador = new Computador();
+                        computador.codComputador = int.Parse(reader["CodComputador"].ToString());
+                        computador.fabricanteComputador = reader["NomeFrabricante"].ToString();
+                        computador.nomeComputador = reader["NomeComputador"].ToString();
+                        computador.nomePersonalizado = reader["NomePersonalizado"].ToString();
+                        computador.ipv4Computador = reader["IPV4"].ToString();
+                        computador.versaoFirmware = reader["VersaoFirmeware"].ToString();
+                        computadores.Add(computador);
+                    }
+                    reader.Close();
+                }
+                return computadores;
+            }
         }
 
         public void Update(Computador obj)
         {
-            throw new NotImplementedException();
+            using (SqlConnection connection = new SqlConnection(WebConfigurationManager.ConnectionStrings["ConnectionString"].ConnectionString))
+            {
+
+                connection.Open();
+
+                string sql = ($" UPDATE [dbo].[Computador]" +
+                    $"SET " +
+                    $"([NomePersonalizado] = '{obj.nomePersonalizado}'" +
+                    $",[NomeComputador] = '{obj.nomeComputador}'" +
+                    $",[NomeFrabricante] = '{obj.fabricanteComputador}" +
+                    $",[IPV4] = '{obj.ipv4Computador}'" +
+                    $",[VersaoFirmeware] = '{obj.versaoFirmware}'" +
+                    $"WHERE " +
+                    $"[FKCodUsuario]) = {obj.codUsuario} " +
+                    $"AND CodComputador = {obj.codComputador}");
+
+                SqlCommand command = new SqlCommand(sql, connection);
+                
+                command.ExecuteNonQuery();
+                connection.Close();
+
+            }
         }
     }
 }
