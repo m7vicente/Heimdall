@@ -2,8 +2,6 @@
 using System;
 using System.Collections.Generic;
 using System.Data.SqlClient;
-using System.Linq;
-using System.Web;
 using System.Web.Configuration;
 
 namespace Heimdall.DataObjects
@@ -62,7 +60,7 @@ namespace Heimdall.DataObjects
 
                 SqlCommand command = new SqlCommand(sql, connection);
 
-                
+
                 if (command.ExecuteNonQuery() != 0)
                 {
                     connection.Close();
@@ -76,6 +74,34 @@ namespace Heimdall.DataObjects
 
             }
 
+        }
+
+        public List<Computador> Selecionar(int codUsuario)
+        {
+            using (SqlConnection connection = new SqlConnection(WebConfigurationManager.ConnectionStrings["ConnectionString"].ConnectionString))
+            {
+                string sql = ($"SELECT [CodComputador],[NomePersonalizado],[NomeComputador],[NomeFrabricante],[IPV4],[VersaoFirmeware],[FKCodUsuario] FROM[dbo].[Computador]" +
+                $"WHERE FKCodUsuario = {codUsuario}'");
+
+                SqlCommand command = new SqlCommand(sql, connection);
+                List<Computador> computadores = new List<Computador>();
+                using (SqlDataReader reader = command.ExecuteReader())
+                {
+                    while (reader.Read())
+                    {
+                        Computador computador = new Computador();
+                        computador.codComputador = int.Parse(reader["CodComputador"].ToString());
+                        computador.fabricanteComputador = reader["NomeFrabricante"].ToString();
+                        computador.nomeComputador = reader["NomeComputador"].ToString();
+                        computador.nomePersonalizado = reader["NomePersonalizado"].ToString();
+                        computador.ipv4Computador = reader["IPV4"].ToString();
+                        computador.versaoFirmware = reader["VersaoFirmeware"].ToString();
+                        computadores.Add(computador);
+                    }
+                    reader.Close();
+                }
+                return computadores;
+            }
         }
 
         public List<Computador> Selecionar()

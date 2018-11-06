@@ -113,6 +113,7 @@
     <Compile Include="Cadastro.aspx.designer.cs">
       <DependentUpon>Cadastro.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Controllers\ComputadorController.cs" />
     <Compile Include="Controllers\MonitorarController.cs" />
     <Compile Include="DataObjects\ArmazenamentoDO.cs" />
     <Compile Include="DataObjects\ComputadorDO.cs" />
