@@ -18,11 +18,11 @@ namespace Heimdall.Controllers
         }
 
         // GET api/<controller>/5
-        public List<Computador> Get(int id,int codUsuairo)
+        public List<Computador> Get(int id,int codUsuario)
         {
             List<Computador> computadores = new List<Computador>();
             ComputadorC c1 = new ComputadorC();
-            computadores = c1.MontarVisualizacao(codUsuairo);
+            computadores = c1.MontarVisualizacao(codUsuario);
             
             return computadores;
         }
