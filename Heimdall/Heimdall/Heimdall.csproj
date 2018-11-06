@@ -88,18 +88,36 @@
     <Content Include="css\normalize.css" />
     <Content Include="css\reset.css" />
     <Content Include="css\responsivo.css" />
+    <Content Include="css\sistema.css" />
     <Content Include="css\style.css" />
     <Content Include="Default.aspx" />
     <Content Include="Global.asax" />
     <Content Include="img\bg-sobre.jpg" />
     <Content Include="img\bg.jpg" />
     <Content Include="img\bifrost.png" />
+    <Content Include="img\computador.png" />
     <Content Include="img\facebook.png" />
     <Content Include="img\heimdall.png" />
     <Content Include="img\instagram.png" />
     <Content Include="img\twitter.png" />
     <Content Include="Inicio.aspx" />
+    <Content Include="js\gulpfile.js" />
     <Content Include="Login.aspx" />
+    <Content Include="Sistema.aspx" />
+    <Content Include="vendor\bootstrap\css\bootstrap-grid.css" />
+    <Content Include="vendor\bootstrap\css\bootstrap-grid.min.css" />
+    <Content Include="vendor\bootstrap\css\bootstrap-reboot.css" />
+    <Content Include="vendor\bootstrap\css\bootstrap-reboot.min.css" />
+    <Content Include="vendor\bootstrap\css\bootstrap.css" />
+    <Content Include="vendor\bootstrap\css\bootstrap.min.css" />
+    <Content Include="vendor\bootstrap\js\bootstrap.bundle.js" />
+    <Content Include="vendor\bootstrap\js\bootstrap.bundle.min.js" />
+    <Content Include="vendor\bootstrap\js\bootstrap.js" />
+    <Content Include="vendor\bootstrap\js\bootstrap.min.js" />
+    <Content Include="vendor\jquery\jquery.js" />
+    <Content Include="vendor\jquery\jquery.min.js" />
+    <Content Include="vendor\jquery\jquery.slim.js" />
+    <Content Include="vendor\jquery\jquery.slim.min.js" />
     <Content Include="Web.config">
       <SubType>Designer</SubType>
     </Content>
@@ -143,9 +161,29 @@
     </Compile>
     <Compile Include="Models\Usuario.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Sistema.aspx.cs">
+      <DependentUpon>Sistema.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Sistema.aspx.designer.cs">
+      <DependentUpon>Sistema.aspx</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="js\.travis.yml" />
+    <Content Include="js\LICENSE" />
+    <Content Include="js\package-lock.json" />
+    <Content Include="js\package.json" />
+    <Content Include="js\README.md" />
     <None Include="packages.config" />
+    <Content Include="vendor\bootstrap\css\bootstrap.css.map" />
+    <Content Include="vendor\bootstrap\css\bootstrap.min.css.map" />
+    <Content Include="vendor\bootstrap\js\bootstrap.bundle.js.map" />
+    <Content Include="vendor\bootstrap\js\bootstrap.bundle.min.js.map" />
+    <Content Include="vendor\bootstrap\js\bootstrap.js.map" />
+    <Content Include="vendor\bootstrap\js\bootstrap.min.js.map" />
+    <Content Include="vendor\jquery\jquery.min.map" />
+    <Content Include="vendor\jquery\jquery.slim.min.map" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
