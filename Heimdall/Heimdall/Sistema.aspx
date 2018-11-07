@@ -61,74 +61,13 @@
             <div id="contComputadores">
                 <div id="computador">
                     <div id="imgPc">
-                        <img src="img/computador.png"></div>
-
+                    <img src="img/computador.png"></div>
                     <div id="informacoesPc">
-                        <p>Identificação</p>
-                        <p>Nome do computador</p>
-                        <p>Modelo computador</p>
-                        <p>IPV4</p>
-                        <button class="btnInfos">Exibir detalhes</button>
-
-                    </div>
-                </div>
-                <div id="computador">
-                    <div id="imgPc">
-                        <img src="img/computador.png">
-                        <div id="informacoesPc">
-                            <p>Identificação</p>
-                            <p>Nome do computador</p>
-                            <p>Modelo computador</p>
-                            <p>IPV4</p>
-                            <button class="btnInfos">Exibir detalhes</button>
-                        </div>
-                    </div>
-                </div>
-                <div id="computador">
-                    <div id="imgPc">
-                        <img src="img/computador.png">
-                        <div id="informacoesPc">
-                            <p>Identificação</p>
-                            <p>Nome do computador</p>
-                            <p>Modelo computador</p>
-                            <p>IPV4</p>
-                            <button class="btnInfos">Exibir detalhes</button>
-                        </div>
-                    </div>
-                </div>
-                <div id="computador">
-                    <div id="imgPc">
-                        <img src="img/computador.png">
-                        <div id="informacoesPc">
-                            <p>Identificação</p>
-                            <p>Nome do computador</p>
-                            <p>Modelo computador</p>
-                            <p>IPV4</p>
-                            <button class="btnInfos">Exibir detalhes</button>
-                        </div>
-                    </div>
-                </div>
-                <div id="computador">
-                    <div id="imgPc">
-                        <img src="img/computador.png"></div>
-                    <div id="informacoesPc">
-                        <p>Identificação</p>
-                        <p>Nome do computador</p>
-                        <p>Modelo computador</p>
-                        <p>IPV4</p>
-                        <button class="btnInfos">Exibir detalhes</button>
-                    </div>
-                </div>
-                <div id="computador">
-                    <div id="imgPc">
-                        <img src="img/computador.png"></div>
-                    <div id="informacoesPc">
-                        <p>Identificação</p>
-                        <p>Nome do computador</p>
-                        <p>Modelo computador</p>
-                        <p>IPV4</p>
-                        <button class="btnInfos">Exibir detalhes</button>
-
+                        <p><asp:Label ID="lbIdentificacao" runat="server" Text="Identificação"></asp:Label></p>
+                        <p><asp:Label ID="lbNomeComputador" runat="server" Text="Nome do computador"></asp:Label></p>
+                        <p><asp:Label ID="lbModeloComputador" runat="server" Text="Modelo computador"></asp:Label></p>
+                        <p><asp:Label ID="lbIpv4" runat="server" Text="IPV4"></asp:Label></p>
+                        <asp:Button ID="btnInfos" CssClass="btnInfos" runat="server" Text="Exibir detalhes"/>
                     </div>
                 </div>
             </div>
@@ -140,7 +79,7 @@
                     e.preventDefault();
                     $("#wrapper").toggleClass("toggled");
                 });
-    </script>
+            </script>
     </form>
 </body>
 </html>
