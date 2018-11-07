@@ -10,7 +10,7 @@ namespace Heimdall.DataObjects
     {
         public Armazenamento buscar(Armazenamento obj)
         {
-            throw new NotImplementedException();
+            return obj;
         }
 
         public void Deletar(Armazenamento obj)
@@ -50,7 +50,68 @@ namespace Heimdall.DataObjects
 
         public List<Armazenamento> Selecionar()
         {
-            throw new NotImplementedException();
+            using (SqlConnection connection = new SqlConnection(WebConfigurationManager.ConnectionStrings["ConnectionString"].ConnectionString))
+            {
+
+                connection.Open();
+
+                string sql = ($"SELECT * FROM Armazenamento");
+
+                SqlCommand command = new SqlCommand(sql, connection);
+
+                List<Armazenamento> armazenamentos = new List<Armazenamento>();
+                using (SqlDataReader reader = command.ExecuteReader())
+                {
+                    while (reader.Read())
+                    {
+                        Armazenamento armazenamento = new Armazenamento();
+                        armazenamento.codComputador = int.Parse(reader["FKcodComputador"].ToString());
+                        armazenamento.codUUID = reader["CodUUId"].ToString();
+                        armazenamento.codUsuario = int.Parse(reader["FKCodUsuario"].ToString());
+                        armazenamento.capacidadeTotal = double.Parse(reader["CapacidadeTotal"].ToString());
+                        armazenamento.tipoArmazenamento = reader["TipoArmazenamento"].ToString();
+                        armazenamentos.Add(armazenamento);
+                    }
+                    reader.Close();
+                }
+                connection.Close();
+                return armazenamentos;
+            }
+        }
+
+        public List<Armazenamento> Selecionar(int codUsuario, int codComputador)
+        {
+            using (SqlConnection connection = new SqlConnection(WebConfigurationManager.ConnectionStrings["ConnectionString"].ConnectionString))
+            {
+
+                connection.Open();
+
+                string sql = ($"SELECT * FROM Armazenamento" +
+                    $"WHERE FKCodUsuario = {codUsuario}" +
+                    $"AND FKCodComputador = {codComputador}");
+
+                SqlCommand command = new SqlCommand(sql, connection);
+
+                List<Armazenamento> armazenamentos = new List<Armazenamento>();
+
+                using (SqlDataReader reader = command.ExecuteReader())
+                {
+                    while (reader.Read())
+                    {
+                        Armazenamento armazenamento = new Armazenamento();
+                        armazenamento.codComputador = int.Parse(reader["FKcodComputador"].ToString());
+                        armazenamento.codUUID = reader["CodUUId"].ToString();
+                        armazenamento.codUsuario = int.Parse(reader["FKCodUsuario"].ToString());
+                        armazenamento.capacidadeTotal = double.Parse(reader["CapacidadeTotal"].ToString());
+                        armazenamento.tipoArmazenamento = reader["TipoArmazenamento"].ToString();
+                        armazenamentos.Add(armazenamento);
+                    }
+                    reader.Close();
+                }
+
+                connection.Close();
+                return armazenamentos;
+            }
         }
 
         public void Update(Armazenamento obj)

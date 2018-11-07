@@ -96,7 +96,9 @@ namespace Heimdall.DataObjects
             using (SqlConnection connection = new SqlConnection(WebConfigurationManager.ConnectionStrings["ConnectionString"].ConnectionString))
             {
                 string sql = ($"SELECT [CodComputador],[NomePersonalizado],[NomeComputador],[NomeFrabricante],[IPV4],[VersaoFirmeware],[FKCodUsuario] FROM[dbo].[Computador]" +
-                $"WHERE FKCodUsuario = {codUsuario}'");
+                $"WHERE FKCodUsuario = '{codUsuario}'");
+
+                connection.Open();
 
                 SqlCommand command = new SqlCommand(sql, connection);
                 List<Computador> computadores = new List<Computador>();
@@ -111,6 +113,8 @@ namespace Heimdall.DataObjects
                         computador.nomePersonalizado = reader["NomePersonalizado"].ToString();
                         computador.ipv4Computador = reader["IPV4"].ToString();
                         computador.versaoFirmware = reader["VersaoFirmeware"].ToString();
+                        computador.modeloComputador = reader[""]
+        
                         computadores.Add(computador);
                     }
                     reader.Close();
