@@ -113,7 +113,7 @@ namespace Heimdall.DataObjects
                         computador.nomePersonalizado = reader["NomePersonalizado"].ToString();
                         computador.ipv4Computador = reader["IPV4"].ToString();
                         computador.versaoFirmware = reader["VersaoFirmeware"].ToString();
-                        computador.modeloComputador = reader[""]
+                        //computador.modeloComputador = reader[""]
         
                         computadores.Add(computador);
                     }
