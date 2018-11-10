@@ -18,7 +18,6 @@ public class Processador implements Historico{
     private int nucleos;
     private String serial;
     private long processosExecucao;
-    private double velocidade;
     private int porcentagemUtilizacao;
     private int threadsExecucao;
     private String tempoExecucao;
@@ -32,7 +31,6 @@ public class Processador implements Historico{
     	this.nucleos = this.obterNucleos();
     	this.serial = this.ObterSerial();
     	this.processosExecucao = this.ObterProcessosExecucao();
-    	this.velocidade = this.ObterVelocidade();
     	this.threadsExecucao = this.ObterThreadsExecucao();
     	this.tempoExecucao = this.ObterTempoExecucao();
     	this.temperaturaCpu = this.ObterTemperaturaCpu();
@@ -96,13 +94,9 @@ public class Processador implements Historico{
         return operacao.getThreadCount();
     }
 
-    private double ObterVelocidade() {
-        return velocidade;
-    }
     
 	public void Atualizar() {
     	this.processosExecucao = this.ObterProcessosExecucao();
-    	this.velocidade = this.ObterVelocidade();
     	this.threadsExecucao = this.ObterThreadsExecucao();
     	this.tempoExecucao = this.ObterTempoExecucao();
     	this.temperaturaCpu = this.ObterTemperaturaCpu();

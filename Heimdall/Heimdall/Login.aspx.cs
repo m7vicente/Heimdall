@@ -23,7 +23,7 @@ namespace Heimdall
             if (controller.Login(usuario))
             {
                 Session["usuario"] = usuario;
-                //Response.Redirect("Login.aspx");
+                Response.Redirect("Sistema.aspx");
             }
         }
     }

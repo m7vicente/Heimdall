@@ -101,6 +101,7 @@
     <Content Include="img\instagram.png" />
     <Content Include="img\twitter.png" />
     <Content Include="Inicio.aspx" />
+    <Content Include="js\computadores.js" />
     <Content Include="js\gulpfile.js" />
     <Content Include="Login.aspx" />
     <Content Include="Sistema.aspx" />
