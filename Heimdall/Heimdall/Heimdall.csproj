@@ -84,6 +84,7 @@
     <Content Include="css\cadastro.css" />
     <Content Include="css\contato.css" />
     <Content Include="css\grid.css" />
+    <Content Include="css\infoRam.css" />
     <Content Include="css\login.css" />
     <Content Include="css\normalize.css" />
     <Content Include="css\reset.css" />
@@ -100,7 +101,9 @@
     <Content Include="img\heimdall.png" />
     <Content Include="img\instagram.png" />
     <Content Include="img\twitter.png" />
+    <Content Include="InfoRam.aspx" />
     <Content Include="Inicio.aspx" />
+    <Content Include="js\graficoRam.js" />
     <Content Include="js\gulpfile.js" />
     <Content Include="Login.aspx" />
     <Content Include="Sistema.aspx" />
@@ -144,6 +147,13 @@
     </Compile>
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="InfoRam.aspx.cs">
+      <DependentUpon>InfoRam.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="InfoRam.aspx.designer.cs">
+      <DependentUpon>InfoRam.aspx</DependentUpon>
     </Compile>
     <Compile Include="Inicio.aspx.cs">
       <DependentUpon>Inicio.aspx</DependentUpon>
