@@ -84,6 +84,7 @@
     <Content Include="css\cadastro.css" />
     <Content Include="css\contato.css" />
     <Content Include="css\grid.css" />
+    <Content Include="css\infoArmazenamento.css" />
     <Content Include="css\infoCPU.css" />
     <Content Include="css\infoRam.css" />
     <Content Include="css\login.css" />
@@ -102,9 +103,11 @@
     <Content Include="img\heimdall.png" />
     <Content Include="img\instagram.png" />
     <Content Include="img\twitter.png" />
+    <Content Include="InfoArmazenamento.aspx" />
     <Content Include="InfoCPU.aspx" />
     <Content Include="InfoRam.aspx" />
     <Content Include="Inicio.aspx" />
+    <Content Include="js\graficoArmazenamento.js" />
     <Content Include="js\graficoCPU.js" />
     <Content Include="js\graficoRam.js" />
     <Content Include="js\gulpfile.js" />
@@ -150,6 +153,13 @@
     </Compile>
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="InfoArmazenamento.aspx.cs">
+      <DependentUpon>InfoArmazenamento.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="InfoArmazenamento.aspx.designer.cs">
+      <DependentUpon>InfoArmazenamento.aspx</DependentUpon>
     </Compile>
     <Compile Include="InfoCPU.aspx.cs">
       <DependentUpon>InfoCPU.aspx</DependentUpon>
