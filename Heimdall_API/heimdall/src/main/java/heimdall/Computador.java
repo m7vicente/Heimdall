@@ -11,16 +11,16 @@ public class Computador {
 	private static ComputerSystem computador = new SystemInfo().getHardware().getComputerSystem();
     
 	private int codComputador;
-    private String nomeComputador;
-	private String fabricanteComputador;
-	private String modeloComputador;
-	private String ipv4Computador;
-	private String versaoFirmware;
+    private final String nomeComputador;
+	private final String fabricanteComputador;
+	private final String modeloComputador;
+	private final String ipv4Computador;
+	private final String versaoFirmware;
         
-    private Processador processadores;
+    private final Processador processadores;
     private List<Armazenamento> armazenamentos;
-	private SistemaOperacional OS;
-	private HistoricoEstadoRam RAM;
+	private final SistemaOperacional OS;
+	private final HistoricoEstadoRam RAM;
 
         
 	public Computador(SistemaOperacional OS,Processador processadores,List<Armazenamento> armazenamentos,HistoricoEstadoRam RAM) {

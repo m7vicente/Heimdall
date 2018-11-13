@@ -1,4 +1,5 @@
-﻿using Heimdall.DataObjects;
+﻿using System;
+using Heimdall.DataObjects;
 using Heimdall.Models;
 
 namespace Heimdall.ModelController
@@ -14,5 +15,17 @@ namespace Heimdall.ModelController
             processador = dataAccess.buscar(processador);
             HdataAccess.Inserir(processador);
         }
-    }
+
+        internal void Update(Processador processador)
+        {
+            dataAccess.Update(processador);
+        }
+
+        internal void InserirEstado(Processador processador)
+        {
+            HdataAccess.Inserir(processador);
+        }
+
+    }       
+            
 }

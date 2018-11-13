@@ -15,11 +15,11 @@ namespace Heimdall.DataObjects
 
                 connection.Open();
 
-                string sql = ($"SELECT TOP (1) [CodProcessador],[NomeFabricante],[Modelo],[FrequenciaBase],[Nucleos],[Serial],[FKCodComputador],[FKCodUsuario] FROM [dbo].[Processador] "+
+                string sql = ($"SELECT TOP (1) [CodProcessador],[NomeFabricante],[Modelo],[FrequenciaBase],[Nucleos],[Serial],[FKCodComputador],[FKCodUsuario] FROM [dbo].[Processador] " +
                               $"WHERE [FKCodComputador] = {obj.codComputador} " +
-                              $"AND [FKCodUsuario] = {obj.codUsuario} "+
+                              $"AND [FKCodUsuario] = {obj.codUsuario} " +
                               $"OR Serial = '{obj.serial}'");
-                               
+
                 SqlCommand command = new SqlCommand(sql, connection);
 
                 using (SqlDataReader reader = command.ExecuteReader())
@@ -43,7 +43,19 @@ namespace Heimdall.DataObjects
 
         public void Deletar(Processador obj)
         {
-            throw new NotImplementedException();
+            using (SqlConnection connection = new SqlConnection(WebConfigurationManager.ConnectionStrings["ConnectionString"].ConnectionString))
+            {
+                connection.Open();
+
+                string sql = ($" DELETE FROM Processador " +
+                               $"WHERE" +
+                               $"FKCodComputador = {obj.codComputador}" +
+                               $"AND FKCodUsuario = {obj.codUsuario})");
+
+                SqlCommand command = new SqlCommand(sql, connection);
+
+                connection.Close();
+            }
         }
 
         public bool Inserir(Processador obj)
@@ -53,10 +65,10 @@ namespace Heimdall.DataObjects
 
                 connection.Open();
 
-                string sql = ($" INSERT INTO[dbo].[Processador]([NomeFabricante],[Modelo],[FrequenciaBase],[Nucleos],[Serial],[FKCodComputador],[FKCodUsuario]) VALUES"+
+                string sql = ($" INSERT INTO[dbo].[Processador]([NomeFabricante],[Modelo],[FrequenciaBase],[Nucleos],[Serial],[FKCodComputador],[FKCodUsuario]) VALUES" +
                                $"('{obj.nomeFabricante}'" +
                                $",'{obj.modelo}'" +
-                               $",'{obj.frequenciaBase.ToString().Replace(',','.')}'" +
+                               $",'{obj.frequenciaBase.ToString().Replace(',', '.')}'" +
                                $", {obj.nucleos}" +
                                $",'{obj.serial}'" +
                                $", {obj.codComputador}" +
@@ -80,12 +92,96 @@ namespace Heimdall.DataObjects
 
         public List<Processador> Selecionar()
         {
-            throw new NotImplementedException();
+
+            using (SqlConnection connection = new SqlConnection(WebConfigurationManager.ConnectionStrings["ConnectionString"].ConnectionString))
+            {
+
+                connection.Open();
+
+                string sql = ($"SELECT [CodProcessador],[NomeFabricante],[Modelo],[FrequenciaBase],[Nucleos],[Serial],[FKCodComputador],[FKCodUsuario] FROM [dbo].[Processador] ");
+
+                List<Processador> processadores = new List<Processador>();
+
+                SqlCommand command = new SqlCommand(sql, connection);
+
+                using (SqlDataReader reader = command.ExecuteReader())
+                {
+                    while (reader.Read())
+                    {
+                        Processador processador = new Processador();
+                        processador.codProcessador = int.Parse(reader["CodProcessador"].ToString());
+                        processador.nomeFabricante = reader["NomeFabricante"].ToString();
+                        processador.modelo = reader["Modelo"].ToString();
+                        processador.frequenciaBase = float.Parse(reader["FrequenciaBase"].ToString());
+                        processador.nucleos = int.Parse(reader["Nucleos"].ToString());
+                        processador.serial = reader["Serial"].ToString();
+                        processador.codComputador = int.Parse(reader["FKCodComputador"].ToString());
+                        processador.codUsuario = int.Parse(reader["FKCodUsuario"].ToString());
+                        processadores.Add(processador);
+                    }
+                    reader.Close();
+                }
+                return processadores;
+            }
+        }
+
+        public List<Processador> Selecionar(int codUsuario, int codComputador)
+        {
+            using (SqlConnection connection = new SqlConnection(WebConfigurationManager.ConnectionStrings["ConnectionString"].ConnectionString))
+            {
+
+                connection.Open();
+
+                string sql = ($"SELECT [CodProcessador],[NomeFabricante],[Modelo],[FrequenciaBase],[Nucleos],[Serial],[FKCodComputador],[FKCodUsuario] FROM [dbo].[Processador] " +
+                    $"WHERE FKCodUsuairo = {codUsuario}" +
+                    $"AND FKCodComputador = {codComputador}");
+
+                List<Processador> processadores = new List<Processador>();
+
+                SqlCommand command = new SqlCommand(sql, connection);
+
+                using (SqlDataReader reader = command.ExecuteReader())
+                {
+                    while (reader.Read())
+                    {
+                        Processador processador = new Processador();
+                        processador.codProcessador = int.Parse(reader["CodProcessador"].ToString());
+                        processador.nomeFabricante = reader["NomeFabricante"].ToString();
+                        processador.modelo = reader["Modelo"].ToString();
+                        processador.frequenciaBase = float.Parse(reader["FrequenciaBase"].ToString());
+                        processador.nucleos = int.Parse(reader["Nucleos"].ToString());
+                        processador.serial = reader["Serial"].ToString();
+                        processador.codComputador = int.Parse(reader["FKCodComputador"].ToString());
+                        processador.codUsuario = int.Parse(reader["FKCodUsuario"].ToString());
+                        processadores.Add(processador);
+                    }
+                    reader.Close();
+                }
+                return processadores;
+            }
         }
 
         public void Update(Processador obj)
         {
-            throw new NotImplementedException();
+            using (SqlConnection connection = new SqlConnection(WebConfigurationManager.ConnectionStrings["ConnectionString"].ConnectionString))
+            {
+
+                connection.Open();
+
+                string sql = ($"UPDATE Processador SET " +
+                    $"NomeFabricante = '{obj.nomeFabricante}', " +
+                    $"Modelo = '{obj.modelo}' ," +
+                    $"FrequenciaBase = '{obj.frequenciaBase.ToString().Replace(',','.')}' ," +
+                    $"Serial = '{obj.serial}'" +
+                    $" WHERE FKCodUsuario = {obj.codUsuario}" +
+                    $" AND FKCodComputador = {obj.codComputador}");
+
+                SqlCommand command = new SqlCommand(sql, connection);
+
+                command.ExecuteNonQuery();
+                connection.Close();
+
+            }
         }
     }
 }

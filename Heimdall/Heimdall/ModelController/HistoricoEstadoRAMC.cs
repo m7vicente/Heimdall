@@ -11,5 +11,10 @@ namespace Heimdall.ModelController
         {
             dataAccess.Inserir(RAM);
         }
+
+        internal void Update(HistoricoEstadoRam RAM)
+        {
+            dataAccess.Inserir(RAM);
+        }
     }
 }

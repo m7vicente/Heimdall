@@ -15,7 +15,7 @@ namespace Heimdall.ModelController
         {
             computador = dataAccess.buscar(computador);
 
-            if(!(computador.codComputador == 0))
+            if (!(computador.codComputador == 0))
             {
                 return true;
             }
@@ -29,6 +29,16 @@ namespace Heimdall.ModelController
         {
             dataAccess.Inserir(computador);
             computador = dataAccess.buscar(computador);
+        }
+
+        internal List<Computador> MontarVisualizacao(int codUsuairo)
+        {
+            return dataAccess.Selecionar(codUsuairo);
+        }
+
+        internal void Update(Computador computador)
+        {
+            dataAccess.Inserir(computador);
         }
     }
 }

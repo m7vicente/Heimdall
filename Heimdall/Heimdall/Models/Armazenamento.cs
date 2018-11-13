@@ -7,6 +7,7 @@ namespace Heimdall.Models
 {
     public class Armazenamento
     {
+        public DateTime dataEstado { get; set; }
         public int codUsuario { get; set; }
         public int codComputador { get; set; }
         public string codUUID { get; set; }

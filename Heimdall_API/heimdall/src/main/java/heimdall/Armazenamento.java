@@ -7,9 +7,9 @@ import oshi.util.FormatUtil;
 
 public class Armazenamento implements Historico{
 	
-    private String codUUID;
-    private String tipoArmazenamento;
-    private double capacidadeTotal;
+    private final String codUUID;
+    private final String tipoArmazenamento;
+    private final double capacidadeTotal;
     private double capacidadeUtilizada;
     private String letraLocal;
     
@@ -34,7 +34,7 @@ public class Armazenamento implements Historico{
     }
 
     private String ObterTipoArmazenamento() {
-    	return hd.getName();	        
+    	return hd.getName().replace("í", "i");	        
     }
     
     private double ObterCapacidadeUtilizada() {       

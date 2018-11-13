@@ -1,4 +1,5 @@
-﻿using Heimdall.DataObjects;
+﻿using System;
+using Heimdall.DataObjects;
 using Heimdall.Models;
 
 namespace Heimdall.ModelController
@@ -9,6 +10,11 @@ namespace Heimdall.ModelController
         internal void Cadastrar(SistemaOperacional OS)
         {
             DataAccess.Inserir(OS);
+        }
+
+        internal void Update(SistemaOperacional OS)
+        {
+            DataAccess.Update(OS);
         }
     }
 }

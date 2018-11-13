@@ -107,6 +107,7 @@
     <Content Include="InfoCPU.aspx" />
     <Content Include="InfoRam.aspx" />
     <Content Include="Inicio.aspx" />
+    <Content Include="js\computadores.js" />
     <Content Include="js\graficoArmazenamento.js" />
     <Content Include="js\graficoCPU.js" />
     <Content Include="js\graficoRam.js" />
@@ -140,6 +141,7 @@
     <Compile Include="Cadastro.aspx.designer.cs">
       <DependentUpon>Cadastro.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Controllers\ComputadorController.cs" />
     <Compile Include="Controllers\MonitorarController.cs" />
     <Compile Include="DataObjects\ArmazenamentoDO.cs" />
     <Compile Include="DataObjects\ComputadorDO.cs" />
