@@ -1,82 +1,81 @@
 package heimdall;
 
 public class Usuario {
-    
-    private int codUsuario;
-    private String nomeCompleto;
-    private String email;
-    private String cargo;
-    private String senha;
-    private boolean ativo = true;
-    private Computador computador;
-    
-    public Usuario(int codUsuario, String nomeCompleto, String email, String cargo, String senha) {
-        this.codUsuario = codUsuario;
-        this.nomeCompleto = nomeCompleto;
-        this.email = email;
-        this.cargo = cargo;
-        this.senha = senha;
-    }
-    
-    
-    public Usuario(String email,String senha) {
-        this.email = email;
-        this.senha = senha;
-    }
 
-    public Computador getComputador() {
-        return computador;
-    }
+	private int codUsuario;
+	private String nomeCompleto;
+	private String email;
+	private String cargo;
+	private String senha;
+	private boolean ativo = true;
+	private Computador computador;
 
-    public void setComputador(Computador computador) {
-        this.computador = computador;
-    }
-    
-    public int getCodUsuario() {
-        return codUsuario;
-    }
+	public Usuario(int codUsuario, String nomeCompleto, String email, String cargo, String senha) {
+		this.codUsuario = codUsuario;
+		this.nomeCompleto = nomeCompleto;
+		this.email = email;
+		this.cargo = cargo;
+		this.senha = senha;
+	}
 
-    public void setCodUsuario(int codUsuario) {
-        this.codUsuario = codUsuario;
-    }
-    
-    public String getNomeCompleto() {
-        return nomeCompleto;
-    }
+	public Usuario(String email, String senha) {
+		this.email = email;
+		this.senha = senha;
+	}
 
-    public void setNomeCompleto(String nomeCompleto) {
-        this.nomeCompleto = nomeCompleto;
-    }
+	public Computador getComputador() {
+		return computador;
+	}
 
-    public String getEmail() {
-        return email;
-    }
+	public void setComputador(Computador computador) {
+		this.computador = computador;
+	}
 
-    public void setEmail(String email) {
-        this.email = email;
-    }
+	public int getCodUsuario() {
+		return codUsuario;
+	}
 
-    public String getCargo() {
-        return cargo;
-    }
+	public void setCodUsuario(int codUsuario) {
+		this.codUsuario = codUsuario;
+	}
 
-    public void setCargo(String cargo) {
-        this.cargo = cargo;
-    }
+	public String getNomeCompleto() {
+		return nomeCompleto;
+	}
 
-    public String getSenha() {
-        return senha;
-    }
+	public void setNomeCompleto(String nomeCompleto) {
+		this.nomeCompleto = nomeCompleto;
+	}
 
-    public void setSenha(String senha) {
-        this.senha = senha;
-    }
+	public String getEmail() {
+		return email;
+	}
 
-    public boolean isAtivo() {
-        return ativo;
-    }
+	public void setEmail(String email) {
+		this.email = email;
+	}
 
-    public void setAtivo(boolean ativo) {
-        this.ativo = ativo;
-    }    
+	public String getCargo() {
+		return cargo;
+	}
+
+	public void setCargo(String cargo) {
+		this.cargo = cargo;
+	}
+
+	public String getSenha() {
+		return senha;
+	}
+
+	public void setSenha(String senha) {
+		this.senha = senha;
+	}
+
+	public boolean isAtivo() {
+		return ativo;
+	}
+
+	public void setAtivo(boolean ativo) {
+		this.ativo = ativo;
+	}
 }

@@ -17,92 +17,117 @@ import com.google.gson.reflect.TypeToken;
 import heimdall.Computador;
 import heimdall.Usuario;
 
-public class CallService extends ServiceURL{
-	
+public class CallService extends ServiceURL {
+
+	private Gson gson = new GsonBuilder().excludeFieldsWithModifiers(Modifier.STATIC).create();
+
 	public Usuario ObterUsuario(Usuario login) {
-		
-		//login = new Usuario("Pedro@bifrost.com.br","12345");
-		
-		Gson gson = new GsonBuilder().excludeFieldsWithModifiers(Modifier.STATIC).create();
-        String json = gson.toJson(login);
-        
-  	  try {
 
-  		URL url = new URL(this.sevicoLogin);
-  		HttpURLConnection conn = (HttpURLConnection) url.openConnection();
-  		conn.setDoOutput(true);
-  		conn.setRequestMethod("POST");
-  		conn.setRequestProperty("Content-Type", "application/json");
 
-  		OutputStream os = conn.getOutputStream();
-  		os.write(json.getBytes());
-  		os.flush();
+		String json = gson.toJson(login);
 
-  		if (conn.getResponseCode() != 200) {
-  			throw new RuntimeException("Failed : HTTP error code : "
-  				+ conn.getResponseCode());
-  		}
+		try {
 
-  		String output = new BufferedReader(new InputStreamReader((conn.getInputStream()))).readLine();
-  		  		
-  		login = gson.fromJson(output, login.getClass());
-  		
-  		conn.disconnect();
-  		
-  		return login;
+			URL url = new URL(this.sevicoLogin);
+			HttpURLConnection conn = (HttpURLConnection) url.openConnection();
+			conn.setDoOutput(true);
+			conn.setRequestMethod("POST");
+			conn.setRequestProperty("Content-Type", "application/json");
 
-  	  } 
-  	  catch (MalformedURLException e) {
-  		e.printStackTrace();
-  	  } 
-  	  catch (IOException e) {
-  		e.printStackTrace();
-  	  }
-  	  return login;
+			OutputStream os = conn.getOutputStream();
+			os.write(json.getBytes());
+			os.flush();
+
+			if (conn.getResponseCode() != 200) {
+				throw new RuntimeException("Failed : HTTP error code : " + conn.getResponseCode());
+			}
+
+			String output = new BufferedReader(new InputStreamReader((conn.getInputStream()))).readLine();
+
+			login = gson.fromJson(output, login.getClass());
+
+			conn.disconnect();
+
+			return login;
+
+		} catch (MalformedURLException e) {
+			e.printStackTrace();
+		} catch (IOException e) {
+			e.printStackTrace();
+		}
+		return login;
 
 	}
-	
+
 	public Usuario CadastrarComputador(Usuario usuario) {
-		
-		Gson gson = new GsonBuilder().excludeFieldsWithModifiers(Modifier.STATIC).create();
-        String json = gson.toJson(usuario);
-        
-        System.out.println(json);
-		
-		
-  	  try {
 
-    		URL url = new URL(this.sevicoMonitorar);
-    		HttpURLConnection conn = (HttpURLConnection) url.openConnection();
-    		conn.setDoOutput(true);
-    		conn.setRequestMethod("POST");
-    		conn.setRequestProperty("Content-Type", "application/json");
+		String json = gson.toJson(usuario);
 
-    		OutputStream os = conn.getOutputStream();
-    		os.write(json.getBytes());
-    		os.flush();
-    		System.out.println(conn.getOutputStream().toString());
+		System.out.println(json);
 
-    		if (conn.getResponseCode() != 200) {
-    			throw new RuntimeException("Failed : HTTP error code : "
-    				+ conn.getResponseCode());
-    		}
-    		
-    		
+		try {
 
-    		String output = new BufferedReader(new InputStreamReader((conn.getInputStream()))).readLine();
-    		  		
-    		usuario.setComputador(gson.fromJson(output, usuario.getComputador().getClass()));
-    		
-    		conn.disconnect();
+			URL url = new URL(this.sevicoMonitorar);
+			HttpURLConnection conn = (HttpURLConnection) url.openConnection();
+			conn.setDoOutput(true);
+			conn.setRequestMethod("POST");
+			conn.setRequestProperty("Content-Type", "application/json");
 
-    	  } catch (MalformedURLException e) {
-    		e.printStackTrace();
-    	  } catch (IOException e) {
-    		e.printStackTrace();
-    	  }
-  	  
-  	  return usuario;
+			OutputStream os = conn.getOutputStream();
+			os.write(json.getBytes());
+			os.flush();
+			System.out.println(conn.getOutputStream().toString());
+
+			if (conn.getResponseCode() != 200) {
+				throw new RuntimeException("Failed : HTTP error code : " + conn.getResponseCode());
+			}
+
+			String output = new BufferedReader(new InputStreamReader((conn.getInputStream()))).readLine();
+
+			usuario.setComputador(gson.fromJson(output, usuario.getComputador().getClass()));
+
+			conn.disconnect();
+
+		} catch (MalformedURLException e) {
+			e.printStackTrace();
+		} catch (IOException e) {
+			e.printStackTrace();
+		}
+
+		return usuario;
+	}
+
+	public void Atualizar(Usuario usuario) {
+
+		String json = gson.toJson(usuario);
+
+		System.out.println(json);
+
+		try {
+
+			URL url = new URL(this.servicoAtualizar);
+			HttpURLConnection conn = (HttpURLConnection) url.openConnection();
+			conn.setDoOutput(true);
+			conn.setRequestMethod("POST");
+			conn.setRequestProperty("Content-Type", "application/json");
+
+			OutputStream os = conn.getOutputStream();
+			os.write(json.getBytes());
+			os.flush();
+			System.out.println(conn.getOutputStream().toString());
+
+			if (conn.getResponseCode() != 200) {
+				throw new RuntimeException("Failed : HTTP error code : " + conn.getResponseCode());
+			}
+
+			conn.disconnect();
+
+		} catch (MalformedURLException e) {
+			e.printStackTrace();
+		} catch (IOException e) {
+			e.printStackTrace();
+		}
+
 	}
 
 }
