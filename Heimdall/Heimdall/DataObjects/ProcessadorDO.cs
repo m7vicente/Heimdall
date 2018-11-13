@@ -168,15 +168,13 @@ namespace Heimdall.DataObjects
 
                 connection.Open();
 
-                string sql = ($"UPDATE Processador SET" +
-                    $"NomeFabricante = '{obj.nomeFabricante}'" +
-                    $"Modelo = '{obj.modelo}'" +
-                    $"FrequenciaBase = '{obj.frequenciaBase}'" +
+                string sql = ($"UPDATE Processador SET " +
+                    $"NomeFabricante = '{obj.nomeFabricante}', " +
+                    $"Modelo = '{obj.modelo}' ," +
+                    $"FrequenciaBase = '{obj.frequenciaBase.ToString().Replace(',','.')}' ," +
                     $"Serial = '{obj.serial}'" +
-                    $"WHERE FKCodUsuario = {obj.codUsuario}" +
-                    $"AND FKCodComputador = {obj.codComputador}");
-
-                List<Processador> processadores = new List<Processador>();
+                    $" WHERE FKCodUsuario = {obj.codUsuario}" +
+                    $" AND FKCodComputador = {obj.codComputador}");
 
                 SqlCommand command = new SqlCommand(sql, connection);
 

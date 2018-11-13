@@ -54,7 +54,25 @@ namespace Heimdall.DataObjects
 
         public void Update(SistemaOperacional obj)
         {
-            throw new NotImplementedException();
+            using (SqlConnection connection = new SqlConnection(WebConfigurationManager.ConnectionStrings["ConnectionString"].ConnectionString))
+            {
+                connection.Open();
+
+                string sql = ("UPDATE [dbo].[SistemaOperacional] SET " +
+                    "[NomeFrabricante]" + $" = '{obj.fabricanteSO}'" +
+                    ",[NomeVersao]" + $" = '{obj.versaoSO}'" +
+                    ",[Familia]" + $",'{obj.familiaSO}'" +
+                    "WHERE " +
+                    "[FKCodComputador]" + $" = {obj.codComputador}" +
+                    "AND [FKCodUsuario] " + $" = {obj.codUsuario}");
+
+
+                SqlCommand command = new SqlCommand(sql, connection);
+
+                command.ExecuteNonQuery();
+                connection.Close();
+
+            }
         }
     }
 }
