@@ -1,9 +1,11 @@
-﻿function BuscarProcessador() {
+﻿function BuscarProcessador(codUsuario) {
+
+    var URL = "http://localhost:52121/api/Computador/?id=5&codUsuario="+codUsuario+"";
 
     var settings = {
         "async": true,
         "crossDomain": true,
-        "url": "http://localhost:52121/api/Computador/?id=5&codUsuario=4",
+        "url": URL,
         "method": "GET"
     };
 
@@ -30,8 +32,14 @@ function success(obj) {
             '<p>' +
             '<label ID="lbModeloComputador"> Modelo computador: ' + obj[i].fabricanteComputador + '<label></p>' +
             '<p>' +
+            '<label ID="lblProcessador" onclick="monitorarProcessador('+obj[i].codComputador+')"> Processador : ' + i + '<label></p>' +
+            '<p>' +
             '<label ID="lbIpv4"> IPV4: ' + obj[i].ipv4Computador + ' <label></p>' +
             '</div>' +
             '</div>');
     }
+}
+
+function monitorarProcessador(codComputador) {
+    window.location.href = "Default.aspx?codComputador="+codComputador;
 }
