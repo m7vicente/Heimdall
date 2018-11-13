@@ -1,0 +1,55 @@
+﻿
+#graficoCPU {
+    background-color: #f1f8e9;
+    width: 660px;
+    height: 450px;
+    margin: 20px;
+    float: left;
+    display: flex;
+    flex-wrap: wrap;
+    padding: 20px 0;
+}
+
+#informacoesProcessador {
+    background-color: #f1f8e9;
+    width: 250px;
+    height: 450px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    padding: 20px 0;
+}
+
+    #informacoesProcessador ul {
+        margin: 20px;
+        float: left;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        padding: 20px 0;
+    }
+
+#informacoesProcessador2 {
+    background-color: #f1f8e9;
+    width: 250px;
+    height: 450px;
+    float: left;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 20px 0;
+}
+
+    #informacoesProcessador2 ul {
+        margin: 20px;
+        float: left;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        padding: 65px 0;
+    }
+
+h3 {
+    font-size: 25px;
+}

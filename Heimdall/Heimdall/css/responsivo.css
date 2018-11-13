@@ -1,0 +1,57 @@
+﻿/*tablet*/
+@media only screen and (min-width:768px) and (max-width:959px) {
+    /*qualidade*/
+    .qualidade:after {
+        right: 66px;
+    }
+
+    .qualidade_lista li {
+        padding: 0 10px;
+    }
+    /*call*/
+
+    .call {
+        padding-top: 10px;
+    }
+}
+
+
+
+
+/*celular*/
+@media only screen and (max-width:767px) {
+
+    .header {
+        position: relative;
+    }
+
+        .header img {
+            margin: 0 auto 20px auto;
+        }
+
+    .header_menu {
+        position: relative;
+        margin: 0 auto;
+        text-align: center;
+    }
+
+        .header_menu ul li {
+            margin: 0;
+        }
+
+            .header_menu ul li a {
+                color: #fff; /*branco*/
+                border: 4px solid #fff;
+                width: 140px;
+                display: block;
+                float: left;
+            }
+
+                .header_menu ul li a:hover {
+                    border-color: #fec63e;
+                }
+
+    .qualidade:after {
+        display: none;
+    }
+}
