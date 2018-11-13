@@ -35,5 +35,10 @@ namespace Heimdall.ModelController
         {
             return dataAccess.Selecionar(codUsuairo);
         }
+
+        internal void Update(Computador computador)
+        {
+            dataAccess.Inserir(computador);
+        }
     }
 }
