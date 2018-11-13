@@ -5,9 +5,9 @@ import oshi.software.os.OperatingSystem;
 
 public class SistemaOperacional {
     
-    private String fabricanteSO;
-    private String versaoSO;
-    private String familiaSO;
+    private final String fabricanteSO;
+    private final String versaoSO;
+    private final String familiaSO;
     private int codSO;
 
     private static OperatingSystem so = new SystemInfo().getOperatingSystem();

@@ -12,11 +12,11 @@ public class Processador implements Historico{
 	private static OperatingSystem operacao = new SystemInfo().getOperatingSystem();
     
 	private int CodProcessador;
-    public String nomeFabricante;
-    private String modelo;
-    private double frequenciaBase;
-    private int nucleos;
-    private String serial;
+    public final String nomeFabricante;
+    private final String modelo;
+    private final double frequenciaBase;
+    private final int nucleos;
+    private final String serial;
     private long processosExecucao;
     private int porcentagemUtilizacao;
     private int threadsExecucao;
