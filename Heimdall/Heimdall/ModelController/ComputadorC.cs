@@ -38,7 +38,7 @@ namespace Heimdall.ModelController
 
         internal void Update(Computador computador)
         {
-            dataAccess.Inserir(computador);
+            dataAccess.Update(computador);
         }
     }
 }
