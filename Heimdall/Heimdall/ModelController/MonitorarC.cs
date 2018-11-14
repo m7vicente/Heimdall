@@ -70,6 +70,7 @@ namespace Heimdall.ModelController
         {
             ProcessadorC processadorC = new ProcessadorC();
             processadorC.Update(processador);
+            processadorC.InserirEstado(processador);
 
             HistoricoEstadoRAMC historicoEstado = new HistoricoEstadoRAMC();
             historicoEstado.Update(RAM);

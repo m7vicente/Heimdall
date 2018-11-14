@@ -52,14 +52,14 @@ namespace Heimdall.DataObjects
 
                 connection.Open();
 
-                string sql = ($" INSERT INTO[dbo].[HistoricoEstadoProcessador]([ProcessadorExecucao],[PorcentagemUltlizacao],[ThreadExecucao],[TempoExecucao],[Temperatura],[FKCodProcessador],[FKCodComputador],[FKCodUsuario]) VALUES"+
-                               $"({obj.processosExecucao}"+
-                               $",{obj.porcentagemUtilizacao}"+
-                               $",{obj.threadsExecucao}"+
-                               $",'{obj.tempoExecucao}'"+
-                               $",'{obj.temperaturaCpu.ToString().Replace(",",".")}'"+
-                               $", {obj.codProcessador}"+
-                               $", {obj.codComputador}"+
+                string sql = ($" INSERT INTO[dbo].[HistoricoEstadoProcessador]([ProcessadorExecucao],[PorcentagemUltlizacao],[ThreadExecucao],[TempoExecucao],[Temperatura],[FKCodProcessador],[FKCodComputador],[FKCodUsuario]) VALUES" +
+                               $"({obj.processosExecucao}" +
+                               $",{obj.porcentagemUtilizacao}" +
+                               $",{obj.threadsExecucao}" +
+                               $",'{obj.tempoExecucao}'" +
+                               $",'{obj.temperaturaCpu.ToString().Replace(",", ".")}'" +
+                               $", {obj.codProcessador}" +
+                               $", {obj.codComputador}" +
                                $", {obj.codUsuario})");
 
 

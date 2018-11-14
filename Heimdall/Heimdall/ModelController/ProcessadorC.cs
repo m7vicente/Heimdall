@@ -23,9 +23,10 @@ namespace Heimdall.ModelController
 
         internal void InserirEstado(Processador processador)
         {
+            processador = dataAccess.buscar(processador);
             HdataAccess.Inserir(processador);
         }
 
-    }       
-            
+    }
+
 }

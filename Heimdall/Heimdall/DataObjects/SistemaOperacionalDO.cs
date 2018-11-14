@@ -61,10 +61,10 @@ namespace Heimdall.DataObjects
                 string sql = ("UPDATE [dbo].[SistemaOperacional] SET " +
                     "[NomeFrabricante]" + $" = '{obj.fabricanteSO}'" +
                     ",[NomeVersao]" + $" = '{obj.versaoSO}'" +
-                    ",[Familia]" + $",'{obj.familiaSO}'" +
-                    "WHERE " +
-                    "[FKCodComputador]" + $" = {obj.codComputador}" +
-                    "AND [FKCodUsuario] " + $" = {obj.codUsuario}");
+                    ",[Familia] = " + $"'{obj.familiaSO}'" +
+                    " WHERE " +
+                    " [FKCodComputador]" + $" = {obj.codComputador}" +
+                    " AND [FKCodUsuario] " + $" = {obj.codUsuario}");
 
 
                 SqlCommand command = new SqlCommand(sql, connection);
