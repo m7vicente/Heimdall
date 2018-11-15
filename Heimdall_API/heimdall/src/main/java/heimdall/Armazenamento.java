@@ -12,6 +12,8 @@ public class Armazenamento implements Historico{
     private final double capacidadeTotal;
     private double capacidadeUtilizada;
     private String letraLocal;
+    private int codUsuario; 
+    private int codComputador;
     
     private static OSFileStore hd;
     private static DecimalFormat df = new DecimalFormat("#0.0");

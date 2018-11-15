@@ -83,6 +83,8 @@ public class CallService extends ServiceURL {
 			}
 
 			String output = new BufferedReader(new InputStreamReader((conn.getInputStream()))).readLine();
+			
+			System.out.println(output);
 
 			usuario.setComputador(gson.fromJson(output, usuario.getComputador().getClass()));
 

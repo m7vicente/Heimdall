@@ -21,6 +21,8 @@ public class Processador implements Historico {
 	private int threadsExecucao;
 	private String tempoExecucao;
 	private double temperaturaCpu;
+    private int codUsuario; 
+    private int codComputador;
 
 	public Processador() {
 		this.nomeFabricante = this.ObterNomeFabricante();
