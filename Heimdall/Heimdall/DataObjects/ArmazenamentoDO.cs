@@ -196,12 +196,12 @@ namespace Heimdall.DataObjects
 
                 connection.Open();
 
-                string sql = ("UPDATE[dbo].[Armazenamento] SET " +
-                    $"[TipoArmazenamento] = '{obj.tipoArmazenamento}'" +
-                    $",[CapacidadeTotal] = '{obj.capacidadeTotal}'" +
-                    $"WHERE " +
-                    $"[FKCodComputador] = {obj.codComputador}>" +
-                    $",[FKCodUsuario] = {obj.codUsuario}");
+                string sql = ("UPDATE [dbo].[Armazenamento] SET " +
+                    $" [TipoArmazenamento] = '{obj.tipoArmazenamento}'" +
+                    $", [CapacidadeTotal] = '{obj.capacidadeTotal.ToString().Replace(",", ".")}'" +
+                    $" WHERE " +
+                    $"[FKCodComputador] = {obj.codComputador}" +
+                    $"AND [FKCodUsuario] = {obj.codUsuario}");
 
                 SqlCommand command = new SqlCommand(sql, connection);
 
@@ -209,7 +209,7 @@ namespace Heimdall.DataObjects
 
 
                 connection.Close();
-                
+
             }
         }
 

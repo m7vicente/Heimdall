@@ -158,15 +158,15 @@ namespace Heimdall.DataObjects
                 connection.Open();
 
                 string sql = ($" UPDATE [dbo].[Computador]" +
-                    $"SET " +
-                    $"([NomePersonalizado] = '{obj.nomePersonalizado}'" +
+                    $" SET " +
+                    $"[NomePersonalizado] = '{obj.nomePersonalizado}'" +
                     $",[NomeComputador] = '{obj.nomeComputador}'" +
-                    $",[NomeFrabricante] = '{obj.fabricanteComputador}" +
+                    $",[NomeFrabricante] = '{obj.fabricanteComputador}'" +
                     $",[IPV4] = '{obj.ipv4Computador}'" +
-                    $",[VersaoFirmeware] = '{obj.versaoFirmware}'" +
+                    $",[VersaoFirmeware] = '{obj.versaoFirmware}' " +
                     $"WHERE " +
-                    $"[FKCodUsuario]) = {obj.codUsuario} " +
-                    $"AND CodComputador = {obj.codComputador}");
+                    $"[FKCodUsuario] = {obj.codUsuario} " +
+                    $" AND CodComputador = {obj.codComputador}");
 
                 SqlCommand command = new SqlCommand(sql, connection);
                 
