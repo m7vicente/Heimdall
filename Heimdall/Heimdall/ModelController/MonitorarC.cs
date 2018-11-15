@@ -18,13 +18,6 @@ namespace Heimdall.ModelController
         public void VerificarComputador(Usuario usuario)
         {
             usuario.computador.codUsuario = usuario.codUsuario;
-            usuario.computador.RAM.codUsuario = usuario.codUsuario;
-            usuario.computador.processadores.codUsuario = usuario.codUsuario;
-
-            foreach (Armazenamento armazenamento in usuario.computador.armazenamentos)
-            {
-                armazenamento.codUsuario = usuario.codUsuario;
-            }
 
             if (computadorC.VerificarCadastro(usuario.computador))
             {
@@ -35,11 +28,13 @@ namespace Heimdall.ModelController
 
                 usuario.computador.processadores.codUsuario = usuario.codUsuario;
                 usuario.computador.processadores.codComputador = usuario.computador.codComputador;
-                //usuario.computador.processadores.codProcessador = ProcessadorC.buscarChave(usuario.computador.codComputador);
+
+                usuario.computador.OS.codUsuario = usuario.codUsuario;
+                usuario.computador.OS.codComputador = usuario.computador.codComputador;
 
                 foreach (Armazenamento armazenamento in usuario.computador.armazenamentos)
                 {
-                    //armazenamento.codUsuario = usuario.codUsuario;
+                    armazenamento.codUsuario = usuario.codUsuario;
                     armazenamento.codComputador = usuario.computador.codComputador;
                 }
 

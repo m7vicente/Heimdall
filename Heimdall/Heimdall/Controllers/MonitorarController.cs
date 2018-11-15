@@ -22,7 +22,7 @@ namespace Heimdall.Controllers
         // GET api/<controller>/5
         public string Get(int id)
         {
-            return "value";
+            return "value+1";
         }
 
         // POST api/<controller>
