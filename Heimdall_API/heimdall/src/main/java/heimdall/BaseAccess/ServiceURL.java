@@ -7,7 +7,7 @@ public abstract class ServiceURL {
 	
 	protected final String sevicoMonitorar = "http://localhost:52121/api/Monitorar/";
 	
-	protected final String servicoAtualizar = "";
+	protected final String servicoAtualizar = "http://localhost:52121/api/Monitorar/?atualizar=5";
 	
 	//PROD
 	//private String sevicoLogin = "http://heimdallview.azurewebsite.net/api/Usuario/";
