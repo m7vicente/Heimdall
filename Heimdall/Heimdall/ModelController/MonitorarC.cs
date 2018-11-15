@@ -10,7 +10,7 @@ namespace Heimdall.ModelController
     {
         private ComputadorC computadorC = new ComputadorC();
 
-        public MonitorarC(Usuario user)
+        public MonitorarC()
         {
 
         }
@@ -44,6 +44,11 @@ namespace Heimdall.ModelController
             {
                 CadastrarComputador(usuario.computador);
             }
+        }
+
+        internal void AtualizarComputador(Usuario user)
+        {
+            AtualizarEstados(user.computador.processadores, user.computador.RAM, user.computador.armazenamentos);   
         }
 
         private void AtualizarEstados(Processador processador, HistoricoEstadoRam RAM, List<Armazenamento> armazenamentos)
@@ -120,6 +125,7 @@ namespace Heimdall.ModelController
             SistemaOperacionalC sistemaOperacionalC = new SistemaOperacionalC();
             sistemaOperacionalC.Cadastrar(computador.OS);
         }
+             
 
     }
 }

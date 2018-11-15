@@ -32,20 +32,28 @@ namespace Heimdall.Controllers
             
             user = JsonConvert.DeserializeObject<Usuario>(jsonResult.ToString());
 
-            MonitorarC monitorarC = new MonitorarC(user);
+            MonitorarC monitorarC = new MonitorarC();
 
             monitorarC.VerificarComputador(user);
 
-            return user.computador;
-           
-           // monitorarC.Monitorar(Usuario);
+            return user.computador;       
 
         }
 
         // PUT api/<controller>/5
-        public void Put(JObject jsonResult)
+        public void Put(JObject jsonResult,int atualizar)
         {
+            if(atualizar == 5)
+            {
+                Usuario user = new Usuario();
 
+                user = JsonConvert.DeserializeObject<Usuario>(jsonResult.ToString());
+
+                MonitorarC monitorarC = new MonitorarC();
+
+                monitorarC.AtualizarComputador(user);
+                                
+            }
         }
 
         // DELETE api/<controller>/5
