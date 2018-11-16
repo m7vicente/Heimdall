@@ -32,12 +32,6 @@
                         <a href="#">Computadores</a>
                     </li>
                     <li>
-                        <a href="#">Componentes</a>
-                    </li>
-                    <li>
-                        <a href="#">Histórico</a>
-                    </li>
-                    <li>
                         <a href="#">Emitir Relatórios</a>
                     </li>
                     <li>

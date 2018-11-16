@@ -10,7 +10,7 @@
 namespace Heimdall {
     
     
-    public partial class InfoRam {
+    public partial class Monitoracao {
         
         /// <summary>
         /// Controle form1.

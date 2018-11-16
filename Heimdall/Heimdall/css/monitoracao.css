@@ -1,0 +1,177 @@
+﻿/*Começo do CSS do sacrificio*/
+
+#infoComputador {
+    background-color: #f2f2f2;
+    border: solid 1px orange;
+    height: 450px;
+    width: auto;
+    display: inline;
+    margin: 50px;
+}
+
+#infoComputadorT {
+    width: 100%;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    margin: 0px;
+}
+
+#infoPC {
+    font-family: Helvetica, sans-serif;
+    font-size: 23px;
+    font-weight: 500;
+}
+
+#computadorInfo {
+    float: left;
+    margin: 0px;
+    height: calc(100% - 50px);
+    width: 200px;
+    font-family: Helvetica, sans-serif;
+}
+
+    #computadorInfo ul {
+        padding: 10px;
+        margin: 0px;
+        font-family: Helvetica;
+        font-size: 17px;
+    }
+
+#sistemaOperacionalInfo {
+    float: left;
+    height: calc(100% - 50px);
+    width: 198px;
+    font-family: Helvetica, sans-serif;
+}
+
+    #sistemaOperacionalInfo ul {
+        padding: 10px;
+        margin: 0px;
+        font-family: Helvetica;
+        font-size: 17px;
+    }
+
+#graficoCpu {
+    width: auto;
+    height: auto;
+    background-color: #f2f2f2;
+    border: solid 1px orange;
+    margin: 10px;
+}
+
+#informacoesAttCpu {
+    width: 100%;
+    height: 50px;
+    background-color: #f2f2f2;
+    margin-top: 418px;
+}
+
+    #informacoesAttCpu ul {
+        list-style: none;
+        padding: 0px;
+        margin: 10px;
+        font-family: Helvetica, sans-serif;
+        font-size: 17px;
+    }
+
+    #informacoesAttCpu li {
+        margin: 5px;
+        float: left;
+    }
+
+#infoCpu {
+    height: 450px;
+    width: 200px;
+    background-color: #f2f2f2;
+    border: solid 1px orange;
+}
+
+#infoCpuT {
+    width: 100%;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    margin: 0px;
+}
+
+#infoCpu ul {
+    padding: 10px;
+    margin: 0px;
+    font-family: Helvetica;
+    font-size: 17px;
+}
+
+#graficoRam {
+    width: 450px;
+    height: auto;
+    background-color: #f2f2f2;
+    border: solid 1px orange;
+    margin: 10px;
+}
+
+#infoRam {
+    height: 450px;
+    width: 200px;
+    background-color: #f2f2f2;
+    border: solid 1px orange;
+}
+
+#infoRamT {
+    width: 100%;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    margin: 0px;
+}
+
+#infoRam ul {
+    padding: 10px;
+    margin: 0px;
+    font-family: Helvetica;
+    font-size: 17px;
+}
+
+#informacoesAttRam {
+    width: 100%;
+    height: 50px;
+    background-color: transparent;
+    margin-top: 418px;
+}
+
+    #informacoesAttRam ul {
+        list-style: none;
+        padding: 0px;
+        margin: 10px;
+        font-family: Helvetica, sans-serif;
+        font-size: 17px;
+    }
+
+    #informacoesAttRam li {
+        margin: 5px;
+        float: left;
+    }
+
+#armazenamentos {
+    width: 420px;
+    height: 450px;
+    background-color: #f2f2f2;
+    border: solid 1px orange;
+    margin: 40px;
+}
+
+#infoArmazenamentosT {
+    width: 100%;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    margin: 0px;
+}
