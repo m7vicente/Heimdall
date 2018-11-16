@@ -10,7 +10,7 @@ namespace Heimdall.ModelController
     {
         private ComputadorC computadorC = new ComputadorC();
 
-        public MonitorarC(Usuario user)
+        public MonitorarC()
         {
 
         }
@@ -18,13 +18,6 @@ namespace Heimdall.ModelController
         public void VerificarComputador(Usuario usuario)
         {
             usuario.computador.codUsuario = usuario.codUsuario;
-            usuario.computador.RAM.codUsuario = usuario.codUsuario;
-            usuario.computador.processadores.codUsuario = usuario.codUsuario;
-
-            foreach (Armazenamento armazenamento in usuario.computador.armazenamentos)
-            {
-                armazenamento.codUsuario = usuario.codUsuario;
-            }
 
             if (computadorC.VerificarCadastro(usuario.computador))
             {
@@ -35,11 +28,13 @@ namespace Heimdall.ModelController
 
                 usuario.computador.processadores.codUsuario = usuario.codUsuario;
                 usuario.computador.processadores.codComputador = usuario.computador.codComputador;
-                //usuario.computador.processadores.codProcessador = ProcessadorC.buscarChave(usuario.computador.codComputador);
+
+                usuario.computador.OS.codUsuario = usuario.codUsuario;
+                usuario.computador.OS.codComputador = usuario.computador.codComputador;
 
                 foreach (Armazenamento armazenamento in usuario.computador.armazenamentos)
                 {
-                    //armazenamento.codUsuario = usuario.codUsuario;
+                    armazenamento.codUsuario = usuario.codUsuario;
                     armazenamento.codComputador = usuario.computador.codComputador;
                 }
 
@@ -49,6 +44,11 @@ namespace Heimdall.ModelController
             {
                 CadastrarComputador(usuario.computador);
             }
+        }
+
+        public void AtualizarComputador(Usuario user)
+        {
+            AtualizarEstados(user.computador.processadores, user.computador.RAM, user.computador.armazenamentos);   
         }
 
         private void AtualizarEstados(Processador processador, HistoricoEstadoRam RAM, List<Armazenamento> armazenamentos)
@@ -125,6 +125,7 @@ namespace Heimdall.ModelController
             SistemaOperacionalC sistemaOperacionalC = new SistemaOperacionalC();
             sistemaOperacionalC.Cadastrar(computador.OS);
         }
+             
 
     }
 }

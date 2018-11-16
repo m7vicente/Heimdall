@@ -63,7 +63,7 @@ public class CallService extends ServiceURL {
 
 		String json = gson.toJson(usuario);
 
-		System.out.println(json);
+		//System.out.println(json);
 
 		try {
 
@@ -82,10 +82,13 @@ public class CallService extends ServiceURL {
 				throw new RuntimeException("Failed : HTTP error code : " + conn.getResponseCode());
 			}
 
-			String output = new BufferedReader(new InputStreamReader((conn.getInputStream()))).readLine();
-
+			String output = new BufferedReader(new InputStreamReader((conn.getInputStream()))).readLine();	
+			
 			usuario.setComputador(gson.fromJson(output, usuario.getComputador().getClass()));
-
+			//usuario.getComputador().getProcessadores().setCodProcessador(gson.fromJson(output, usuario.getComputador().getProcessadores().getClass()));
+						
+			//System.out.println(usuario.getComputador().getProcessadores().getCodProcessador());
+			
 			conn.disconnect();
 
 		} catch (MalformedURLException e) {
@@ -101,23 +104,30 @@ public class CallService extends ServiceURL {
 
 		String json = gson.toJson(usuario);
 
-		System.out.println(json);
+		System.out.println("Atualizar JSON("+json);
 
 		try {
 
 			URL url = new URL(this.servicoAtualizar);
 			HttpURLConnection conn = (HttpURLConnection) url.openConnection();
 			conn.setDoOutput(true);
-			conn.setRequestMethod("POST");
+			conn.setRequestMethod("PUT");
 			conn.setRequestProperty("Content-Type", "application/json");
 
 			OutputStream os = conn.getOutputStream();
 			os.write(json.getBytes());
 			os.flush();
-			System.out.println(conn.getOutputStream().toString());
 
 			if (conn.getResponseCode() != 200) {
 				throw new RuntimeException("Failed : HTTP error code : " + conn.getResponseCode());
+			}
+			
+			String output = new BufferedReader(new InputStreamReader((conn.getInputStream()))).readLine();	
+			
+			if(output.equals("true")) {
+				System.out.println("Atualizado com Sucesso ");
+			}else {
+				System.out.println("Erro na atulizalção");
 			}
 
 			conn.disconnect();

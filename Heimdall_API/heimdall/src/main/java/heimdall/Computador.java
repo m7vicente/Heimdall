@@ -17,10 +17,10 @@ public class Computador {
 	private final String ipv4Computador;
 	private final String versaoFirmware;
         
-    private final Processador processadores;
+    private Processador processadores;
     private List<Armazenamento> armazenamentos;
-	private final SistemaOperacional OS;
-	private final HistoricoEstadoRam RAM;
+	private SistemaOperacional OS;
+	private HistoricoEstadoRam RAM;
 
         
 	public Computador(SistemaOperacional OS,Processador processadores,List<Armazenamento> armazenamentos,HistoricoEstadoRam RAM) {
@@ -80,5 +80,55 @@ public class Computador {
 	
 	private String ObterVersaoFinware() {
 		return computador.getFirmware().getVersion();
+	}
+
+
+
+	public Processador getProcessadores() {
+		return processadores;
+	}
+	
+	public void setProcessadores(Processador processador) {
+		this.processadores = processador;
+	}
+
+
+
+	public SistemaOperacional getOS() {
+		return OS;
+	}
+
+
+
+	public HistoricoEstadoRam getRAM() {
+		return RAM;
+	}
+
+
+
+	public List<Armazenamento> getArmazenamentos() {
+		return armazenamentos;
+	}
+
+
+
+	public void setArmazenamentos(List<Armazenamento> armazenamentos) {
+		this.armazenamentos = armazenamentos;
+	}
+
+
+
+	public void setOS(SistemaOperacional oS) {
+		OS = oS;
+	}
+
+
+
+	public void setRAM(HistoricoEstadoRam rAM) {
+		RAM = rAM;
 	}     
+	
+	
+	
+	
 }

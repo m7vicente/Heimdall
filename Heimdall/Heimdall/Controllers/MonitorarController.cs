@@ -2,11 +2,7 @@
 using Heimdall.Models;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Linq;
-using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Net;
-using System.Net.Http;
 using System.Web.Http;
 
 namespace Heimdall.Controllers
@@ -22,7 +18,7 @@ namespace Heimdall.Controllers
         // GET api/<controller>/5
         public string Get(int id)
         {
-            return "value";
+            return "value+1";
         }
 
         // POST api/<controller>
@@ -32,20 +28,34 @@ namespace Heimdall.Controllers
             
             user = JsonConvert.DeserializeObject<Usuario>(jsonResult.ToString());
 
-            MonitorarC monitorarC = new MonitorarC(user);
+            MonitorarC monitorarC = new MonitorarC();
 
             monitorarC.VerificarComputador(user);
 
-            return user.computador;
-           
-           // monitorarC.Monitorar(Usuario);
+            return user.computador;       
 
         }
 
         // PUT api/<controller>/5
-        public void Put(JObject jsonResult)
-        {
+        public bool Put(JObject jsonResult,int atualizar)
+            {
+            if(atualizar == 5)
+            {
+                Usuario user = new Usuario();
 
+                user = JsonConvert.DeserializeObject<Usuario>(jsonResult.ToString());
+
+                MonitorarC monitorarC = new MonitorarC();
+
+                monitorarC.AtualizarComputador(user);
+
+                return true;
+
+            }
+            else
+            {
+                return false;
+            }
         }
 
         // DELETE api/<controller>/5

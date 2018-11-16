@@ -87,6 +87,14 @@ public class main {
 
 		while (true) {
 			Thread.sleep(10000);
+
+			user.getComputador().getProcessadores().Atualizar();
+			user.getComputador().getRAM().Atualizar();
+
+			for (Armazenamento armazenamento : user.getComputador().getArmazenamentos()) {
+				armazenamento.Atualizar();
+			}
+
 			service.Atualizar(user);
 		}
 
