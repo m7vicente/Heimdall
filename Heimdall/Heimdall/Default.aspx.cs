@@ -12,7 +12,7 @@ namespace Heimdall
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            Response.Redirect("Login.aspx");
+            Response.Redirect("Inicio.aspx");
             //string codComputador = Request.QueryString["codComputador"].ToString();
             //Usuario usuario = (Usuario)Session["usuario"];
             //lblLaranja.Text = codComputador;

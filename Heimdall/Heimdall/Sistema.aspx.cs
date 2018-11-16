@@ -1,10 +1,6 @@
 ﻿using Heimdall.Models;
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web;
 using System.Web.UI;
-using System.Web.UI.WebControls;
 
 namespace Heimdall
 {
@@ -12,10 +8,17 @@ namespace Heimdall
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-
             Usuario usuario = (Usuario)Session["usuario"];
 
-            ScriptManager.RegisterClientScriptBlock(this, GetType(), "BuscarProcessador", $"BuscarProcessador({usuario.codUsuario});", true);
+            if (usuario == null)
+            {
+                Response.Redirect("Login.aspx");
+            }
+            else
+            {
+
+                ScriptManager.RegisterClientScriptBlock(this, GetType(), "BuscarProcessador", $"BuscarProcessador({usuario.codUsuario});", true);
+            }
         }
     }
 }
