@@ -22,6 +22,8 @@
         </div>
         <div id="wrapper">
 
+
+
             <!-- Sidebar -->
             <div id="sidebar-wrapper">
                 <div id="imagemDiv">
@@ -32,12 +34,6 @@
                     <li class="sidebar-brand"></li>
                     <li>
                         <a href="#">Computadores</a>
-                    </li>
-                    <li>
-                        <a href="#">Componentes</a>
-                    </li>
-                    <li>
-                        <a href="#">Histórico</a>
                     </li>
                     <li>
                         <a href="#">Emitir Relatórios</a>

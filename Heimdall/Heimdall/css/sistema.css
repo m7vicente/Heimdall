@@ -167,7 +167,7 @@
 
 
 #contComputadores {
-    height: calc(700px - 189px);
+    height: 100%;
     background-color: transparent;
     position: relative;
     display: flex;
@@ -225,6 +225,10 @@
         width: 100%;
         margin: 0;
     }
+    
+    #infoComputador {
+        height: 450px;
+    }
 
     #wrapper.toggled #sidebar-wrapper {
         width: 100%;
@@ -256,6 +260,10 @@
         position: absolute;
         text-indent: 84px;
         font-size: 1.4em;
+    }
+
+    #infoComputador {
+        height: 450px;
     }
 
     a {
