@@ -1,5 +1,4 @@
-﻿using Heimdall.DataObjects;
-using Heimdall.ModelController;
+﻿using Heimdall.ModelController;
 using Heimdall.Models;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Linq;

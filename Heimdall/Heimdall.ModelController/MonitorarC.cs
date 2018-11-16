@@ -46,7 +46,7 @@ namespace Heimdall.ModelController
             }
         }
 
-        internal void AtualizarComputador(Usuario user)
+        public void AtualizarComputador(Usuario user)
         {
             AtualizarEstados(user.computador.processadores, user.computador.RAM, user.computador.armazenamentos);   
         }

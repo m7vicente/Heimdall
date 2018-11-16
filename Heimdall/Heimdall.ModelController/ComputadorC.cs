@@ -31,7 +31,7 @@ namespace Heimdall.ModelController
             computador = dataAccess.buscar(computador);
         }
 
-        internal List<Computador> MontarVisualizacao(int codUsuairo)
+        public List<Computador> MontarVisualizacao(int codUsuairo)
         {
             return dataAccess.Selecionar(codUsuairo);
         }
