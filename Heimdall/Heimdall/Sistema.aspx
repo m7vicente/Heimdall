@@ -20,6 +20,8 @@
         </div>
         <div id="wrapper">
 
+
+
             <!-- Sidebar -->
             <div id="sidebar-wrapper">
                 <div id="imagemDiv">
