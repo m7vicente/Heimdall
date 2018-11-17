@@ -13,6 +13,38 @@ namespace Heimdall.DataObjects
             throw new NotImplementedException();
         }
 
+        public HistoricoEstadoRam buscar(int codComputador)
+        {
+            using (SqlConnection connection = new SqlConnection(WebConfigurationManager.ConnectionStrings["ConnectionString"].ConnectionString))
+            {
+
+                connection.Open();
+
+                string sql = ($" SELECT TOP 1 * FROM HistoricoEstadoRam WHERE FKCodComputador = {codComputador} ORDER BY DataEstado DESC");
+
+                SqlCommand command = new SqlCommand(sql, connection);
+
+                HistoricoEstadoRam obj = new HistoricoEstadoRam();
+
+                using (SqlDataReader reader = command.ExecuteReader())
+                {
+                    while (reader.Read())
+                    {
+                        obj.memoriaUtilizada = double.Parse(reader["Ultilizada"].ToString());
+                        obj.memoriaDisponivel = double.Parse(reader["Disponivel"].ToString());
+                        obj.swapTotal = double.Parse(reader["SwapTotal"].ToString());
+                        obj.swapUtilizada = double.Parse(reader["SwapDisponivel"].ToString());
+                        obj.memoriaTotal = double.Parse(reader["QuantidadeTotal"].ToString());
+                        obj.porcentagemUtilizacao = int.Parse(reader["PorcentagemUltilizada"].ToString());
+                        obj.codComputador = int.Parse(reader["FKCodComputador"].ToString());
+                        obj.codUsuario = int.Parse(reader["FKCodUsuario"].ToString());
+                    }
+                    reader.Close();
+                }
+                return obj;
+            }
+        }
+
         public void Deletar(HistoricoEstadoRam obj)
         {
             throw new NotImplementedException();
@@ -28,7 +60,7 @@ namespace Heimdall.DataObjects
                 string sql = ($" INSERT INTO[dbo].[HistoricoEstadoRam] ([Ultilizada], [Disponivel], [SwapTotal], [SwapDisponivel], [QuantidadeTotal], [PorcentagemUltilizada],[FKCodComputador],[FKCodUsuario]) VALUES " +
                             $"('{obj.memoriaUtilizada.ToString().Replace(",", ".")}'" +
                             $",'{obj.memoriaDisponivel.ToString().Replace(",", ".")}'" +
-                            $",'{obj.swapTotal.ToString().Replace(",",".")}'" +
+                            $",'{obj.swapTotal.ToString().Replace(",", ".")}'" +
                             $",'{obj.swapUtilizada.ToString().Replace(",", ".")}'" +//informação esta errada, favor corrigir
                             $",'{obj.memoriaTotal.ToString().Replace(",", ".")}'" +
                             $",{obj.porcentagemUtilizacao}" +
@@ -50,14 +82,14 @@ namespace Heimdall.DataObjects
             }
         }
 
-            public List<HistoricoEstadoRam> Selecionar()
-            {
-                throw new NotImplementedException();
-            }
+        public List<HistoricoEstadoRam> Selecionar()
+        {
+            throw new NotImplementedException();
+        }
 
-            public void Update(HistoricoEstadoRam obj)
-            {
-                throw new NotImplementedException();
-            }
+        public void Update(HistoricoEstadoRam obj)
+        {
+            throw new NotImplementedException();
         }
     }
+}

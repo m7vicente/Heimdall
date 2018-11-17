@@ -16,5 +16,10 @@ namespace Heimdall.ModelController
         {
             dataAccess.Inserir(RAM);
         }
+
+        internal HistoricoEstadoRam BuscarRAM(int codComputador)
+        {
+            return dataAccess.buscar(codComputador);
+        }
     }
 }

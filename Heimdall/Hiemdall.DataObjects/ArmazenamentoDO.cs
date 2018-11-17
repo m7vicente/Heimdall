@@ -13,7 +13,7 @@ namespace Heimdall.DataObjects
         {
             return obj;
         }
-        public List<Armazenamento> buscar(int codUsuario, int codComputador)
+        public List<Armazenamento> buscar(int codComputador)
         {
             using (SqlConnection connection = new SqlConnection(WebConfigurationManager.ConnectionStrings["ConnectionString"].ConnectionString))
             {
@@ -21,8 +21,7 @@ namespace Heimdall.DataObjects
                 connection.Open();
 
                 string sql = ($"SELECT * FROM Armazenamento WHERE " +
-                    $"FKCodComputador = {codComputador}" +
-                    $"AND FKCodUsuario = {codUsuario}");
+                    $"FKCodComputador = {codComputador}");
 
                 SqlCommand command = new SqlCommand(sql, connection);
 
@@ -32,14 +31,11 @@ namespace Heimdall.DataObjects
                     while (reader.Read())
                     {
                         Armazenamento armazenamento = new Armazenamento();
-                        armazenamento.codUsuario = codUsuario;
+                        armazenamento.codUsuario = int.Parse(reader["FKCodUsuario"].ToString());
                         armazenamento.codComputador = codComputador;
                         armazenamento.codUUID = reader["CodUUId"].ToString();
-                        armazenamento.capacidadeUtilizada = double.Parse(reader["capacidadeUltilizada"].ToString());
                         armazenamento.capacidadeTotal = double.Parse(reader["CapacidadeTotal"].ToString());
                         armazenamento.tipoArmazenamento = reader["TipoArmazenamento"].ToString();
-                        armazenamento.letraLocal = reader["LetraLocal"].ToString();
-                        armazenamento.dataEstado = DateTime.Parse(reader["dataEstado"].ToString());
                         armazenamentos.Add(armazenamento);
                     }
                     reader.Close();

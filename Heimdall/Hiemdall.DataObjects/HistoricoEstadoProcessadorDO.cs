@@ -15,10 +15,9 @@ namespace Heimdall.DataObjects
 
                 connection.Open();
 
-                string sql = ($"SELECT[CodProcessador],[NomeFabricante],[Modelo],[FrequenciaBase],[Nucleos],[Serial],[FKCodComputador],[FKCodUsuario] FROM[dbo].[Processador] " +
-                            $"WHERE Serial = '{obj.serial}' " +
-                            $"OR (FKCodComputador = {obj.codComputador}," +
-                            $"AND FKCodUsuario = {obj.codUsuario})");
+                string sql = ($"SELECT TOP (1) * FROM [dbo].[HistoricoEstadoProcessador] " +
+                              $"WHERE FKCodComputador = {obj.codComputador} " +
+                              $"ORDER BY DataEstado DESC");
 
                 SqlCommand command = new SqlCommand(sql, connection);
 
@@ -26,11 +25,11 @@ namespace Heimdall.DataObjects
                 {
                     while (reader.Read())
                     {
-                        obj.codProcessador = int.Parse(reader["CodProcessador"].ToString());
-                        obj.nomeFabricante = reader["FrequenciaBase"].ToString();
-                        obj.modelo = reader["modelo"].ToString();
-                        obj.nucleos = int.Parse(reader["Nucleos"].ToString());
-                        obj.serial = reader["serial"].ToString();
+                        obj.processosExecucao = long.Parse(reader["ProcessadorExecucao"].ToString());
+                        obj.porcentagemUtilizacao = int.Parse(reader["PorcentagemUltlizacao"].ToString());
+                        obj.threadsExecucao = int.Parse(reader["ThreadExecucao"].ToString());
+                        obj.tempoExecucao = reader["tempoExecucao"].ToString();
+                        obj.temperaturaCpu = double.Parse(reader["Temperatura"].ToString());
                         obj.codComputador = int.Parse(reader["FKCodComputador"].ToString());
                         obj.codProcessador = int.Parse(reader["FKCodUsuario"].ToString());
                     }

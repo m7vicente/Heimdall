@@ -10,7 +10,28 @@ namespace Heimdall.DataObjects
     {
         public Armazenamento buscar(Armazenamento obj)
         {
-            throw new NotImplementedException();
+            using (SqlConnection connection = new SqlConnection(WebConfigurationManager.ConnectionStrings["ConnectionString"].ConnectionString))
+            {
+
+                connection.Open();
+
+                string sql = ($"SELECT TOP 1 * FROM HistoricoEstadoArmazenamento where FKCodUUId = '{obj.codUUID}' ORDER BY DataEstado DESC");
+
+                SqlCommand command = new SqlCommand(sql, connection);
+
+                using (SqlDataReader reader = command.ExecuteReader())
+                {
+                    while (reader.Read())
+                    {
+                        obj.capacidadeUtilizada = double.Parse(reader["capacidadeUltilizada"].ToString());
+                        obj.letraLocal = reader["LetraLocal"].ToString();
+                        obj.dataEstado = DateTime.Parse(reader["dataEstado"].ToString());
+                    }
+                    reader.Close();
+                }
+                connection.Close();
+                return obj;
+            }
         }
 
         public void Deletar(Armazenamento obj)

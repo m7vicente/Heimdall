@@ -16,5 +16,10 @@ namespace Heimdall.ModelController
         {
             DataAccess.Update(OS);
         }
+
+        internal SistemaOperacional BuscarSistemaOperacional(int codComputador)
+        {
+            return DataAccess.buscar(codComputador);
+        }
     }
 }

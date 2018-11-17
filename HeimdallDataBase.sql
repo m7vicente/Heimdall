@@ -14,7 +14,8 @@ GO
 		CodComputador INT PRIMARY KEY NOT NULL IDENTITY(1000,1),
 		NomePersonalizado VARCHAR(50) NOT NULL,
 		NomeComputador VARCHAR(50) NOT NULL,
-		NomeFrabricante VARCHAR(50) NOT NULL,
+		NomeFabricante VARCHAR(50) NOT NULL,
+		ModeloComputador VARCHAR(50),
 		IPV4 CHAR (15),
 		VersaoFirmeware VARCHAR(30) NOT NULL,
 		FKCodUsuario INT NOT NULL  FOREIGN KEY REFERENCES Usuario(CodUsuario)
