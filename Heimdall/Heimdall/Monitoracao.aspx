@@ -23,7 +23,7 @@
 </head>
 <body>
     <form id="form1" runat="server">
-           <div id="menuSuperior">
+          <div id="menuSuperior">
 
     <a href="#menu-toggle" class="btn btn-secondary" id="menu-toggle">&#9776</a>
         
@@ -57,20 +57,19 @@
                 
             </ul>
         </div>
+    
         <!-- /#sidebar-wrapper -->
 
         <!-- Page Content -->
         <div id="page-content-wrapper">
-            <div class="container-fluid">
-                <h1>Monitoração</h1>
-            </div>
-        </div>
-        
-        <!--conteudo dentro da pagina -->
         <div id="contComputadores">
+            <div id="conteudoComputador">
+                <div id="titulo">
+                    <label id="tituloMoni">Monitoração</label>
+                </div>    
             <div id="infoComputador">
                 <div id="infoComputadorT">
-                    <label id="infoPC">Informações do Computador</label>
+                    <label id="infoPC">Computador</label>
                 </div>
                 <div id="computadorInfo">
                     <ul style="list-style: none;">
@@ -93,11 +92,7 @@
                         <li>Firmware
                             <p><label id="firmware">Valor</label></p>
                         </li>
-                    </ul>
-                </div>
-                
-                <div id="sistemaOperacionalInfo">
-                    <ul style="list-style: none;">
+                        
                         <li>Fabricante S.O
                             <p><label id="fabricanteSO">Valor</label></p>
                         </li>
@@ -110,14 +105,14 @@
                             <p><label id="versaoSO">Valor</label></p>
                         </li>
                     </ul>
+                </div> 
+        </div>
+        </div>
+            <div id="conteudoCpu">
+                <div id="titulo">
+                    <label id="tituloMoni">Cpu</label>
                 </div>
-            </div>
-            
-            <div id="infoCpu">
-                    <div id="infoCpuT">
-                        <label id="infoPC">CPU</label>
-                    </div>
-                    
+                <div id="infoCpu">
                     <ul style="list-style: none;">
                         <li>Fabricante
                             <p><label id="nomeFabricanteCpu">Valor</label></p>
@@ -131,7 +126,7 @@
                             <p><label id="frequenciaBase">Valor</label></p>
                         </li>
                         
-                        <li>Nuclêos
+                        <li>Núcleos
                             <p><label id="nucleosCpu">Valor</label></p>
                         </li>
                         
@@ -139,11 +134,16 @@
                             <p><label id="serialCpu">Valor</label></p>
                         </li>
                     </ul>
-                    
                 </div>
-            <div id="graficoCpu">
-                <div id="informacoesAttCpu">
-                    <ul>
+                
+            </div>
+            
+            <div id="conteudoUsoCpu">
+                <div id="titulo">
+                    <label id="tituloMoni">Uso da Cpu</label>
+                </div>
+                <div id="infoCpuAtt">
+                    <ul style="list-style: none;">
                         <li>Processos
                             <p><label id="processosExecucao">Valor</label></p>
                         </li>
@@ -169,14 +169,22 @@
                         </li>
                     </ul>
                 </div>
+                
+                <!--canvas que será inserido grafico da cpu (charts.js)-->
+                <canvas id="graficoCpu"></canvas>
             </div>
             
-            <div id="infoRam">
-                <div id="infoRamT">
-                        <label id="infoPC">RAM</label>
+            <div id="conteudoRam">
+                <div id="titulo">
+                    <label id="tituloMoni">Ram</label>
                 </div>
-                
+            <div id="infoRam">
                 <ul style="list-style: none;">
+                        
+                        <li>Porcentagem Utilizada
+                            <p><label id="porcentagemRam">Valor</label></p>
+                        </li>
+                    
                         <li>Memória Total   
                             <p><label id="memTotal">Valor</label></p>
                         </li>
@@ -197,29 +205,30 @@
                             <p><label id="swapDisponivel">Valor</label></p>
                         </li>
                     </ul>
+            </div>    
             </div>
-            
-            <div id="graficoRam">
-                
-                
-                <div id="informacoesAttRam">
-                    <ul style="list-style: none">
-                        <li>Porcentagem Utilizada
-                            <p><label id="porcentagemRam">Valor</label></p>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-            
-            <div id="armazenamentos">
-                <div id="infoArmazenamentosT">
-                        <label id="infoPC">Armazenamentos</label>
-                </div>
-            </div>
-        </div>
 
-        <!--essa ultima div fecha está ligado com o menu e o conteudo-->
+            <div id="conteudoUsoRam">
+                <div id="titulo">
+                    <label id="tituloMoni">Uso da Ram</label>
+                </div>
+                <canvas id="graficoRam"></canvas>    
+            </div>
+            
+            <div id="conteudoArmazenamento">
+                <div id="titulo">
+                    <label id="tituloMoni">Armazenamentos</label>
+                </div>
+                <div id="listaGraficoArm">
+                    
+                
+                </div> 
+            </div>
         </div>
+        </div>
+        
+        <!--conteudo dentro da pagina -->
+       
           
          <!--fecha todo conteudo dentro da pagina -->
         
@@ -231,10 +240,10 @@
     <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
     <!-- Menu Toggle Script -->
     <script>
-    $("#menu-toggle").click(function(e) {
-        e.preventDefault();
-        $("#wrapper").toggleClass("toggled");
-    });
+        $("#menu-toggle").click(function (e) {
+            e.preventDefault();
+            $("#wrapper").toggleClass("toggled");
+        });
     </script>
     </form>
 </body>
