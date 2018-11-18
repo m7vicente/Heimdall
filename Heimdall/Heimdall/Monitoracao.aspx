@@ -15,18 +15,14 @@
 <link href="css/monitoracao.css" rel="stylesheet" />
 
  <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
- 
-
-
+ <script type="text/javascript" src="js/graficos.js"></script>
 
     <title>Heimdall | Monitoração</title>
 </head>
 <body>
     <form id="form1" runat="server">
-          <div id="menuSuperior">
-
+    <div id="menuSuperior">
     <a href="#menu-toggle" class="btn btn-secondary" id="menu-toggle">&#9776</a>
-        
     </div>
     
     <div id="wrapper">
@@ -170,8 +166,8 @@
                     </ul>
                 </div>
                 
-                <!--canvas que será inserido grafico da cpu (charts.js)-->
-                <canvas id="graficoCpu"></canvas>
+               
+                <div id="graficoCpu"></div>
             </div>
             
             <div id="conteudoRam">
@@ -212,7 +208,7 @@
                 <div id="titulo">
                     <label id="tituloMoni">Uso da Ram</label>
                 </div>
-                <canvas id="graficoRam"></canvas>    
+                <div id="graficoRam"></div>    
             </div>
             
             <div id="conteudoArmazenamento">
@@ -220,18 +216,17 @@
                     <label id="tituloMoni">Armazenamentos</label>
                 </div>
                 <div id="listaGraficoArm">
-                    
-                
+                    <ul style="list-style: none">
+                    <li>
+                        <div id="graficoArm"></div>    
+                    </li>
+                    </ul>
                 </div> 
             </div>
         </div>
         </div>
-        
-        <!--conteudo dentro da pagina -->
-       
-          
-         <!--fecha todo conteudo dentro da pagina -->
-        
+        </div>
+        <!--fecha todo conteudo dentro da pagina -->
         
     <!-- /#page-content-wrapper -->
     <!-- /#wrapper -->

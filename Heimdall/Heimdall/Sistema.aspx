@@ -22,8 +22,6 @@
         </div>
         <div id="wrapper">
 
-
-
             <!-- Sidebar -->
             <div id="sidebar-wrapper">
                 <div id="imagemDiv">
@@ -44,7 +42,6 @@
                     <li>
                         <a href="#">Sair</a>
                     </li>
-
                 </ul>
             </div>
 
@@ -59,7 +56,7 @@
 
             <div id="contComputadores">
             </div>
-
+            </div>
             <script src="vendor/jquery/jquery.min.js"></script>
             <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
 

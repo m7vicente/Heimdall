@@ -58,7 +58,7 @@
 #computadorInfo {
     float: left;
     margin: 0px;
-    height: calc(100% - 50px);
+    height: auto;
     width: auto;
     font-family: sans-serif;
     border: solid 1px rgba(255, 153, 51, 0.3);
@@ -82,7 +82,7 @@
 #conteudoCpu {
     width: auto;
     border: solid 1px rgba(192,192,192,0.3);
-    height: auto;
+    height: 480px;
     background-color: white;
     flex-wrap: wrap;
     display: flex;
@@ -90,12 +90,12 @@
 
 #conteudoUsoCpu {
     margin-top: 1px;
-    width: 83.6%;
+    width: 84%;
     border: solid 1px rgba(192,192,192,0.3);
-    height: 445px;
+    height: auto;
     background-color: white;
     flex-wrap: wrap;
-    
+    margin: auto;
     display: flex;
 }
 
@@ -114,7 +114,7 @@
     }
 
 #infoCpuAtt {
-    height: 100px;
+    height: auto;
     width: 100%;
     border: solid 1px rgba(255, 153, 51, 0.3);
     margin: 5px;
@@ -139,7 +139,7 @@
 
 #graficoCpu {
     width: 100%;
-    height: calc(100% - 175px);
+    height: auto;
     border: solid 1px rgba(255, 153, 51, 0.3);
     margin: 5px;
 }
@@ -197,16 +197,22 @@
 
 #conteudoArmazenamento {
     width: 100%;
-    height: 200px;
+    height: auto;
     background-color: white;
     border: solid 1px rgba(255, 153, 51, 0.3);
 }
 
 #listaGraficoArm {
-    width: calc (100% - 500px);
-    height: calc(100% - 50px);
+    width: 100%;
+    height: auto;
     border: solid 1px rgba(255, 153, 51, 0.3);
     margin: 5px;
 }
+
+#graficoArm {
+    width: 400px;
+    height: auto;
+}
+
 
 /*fim do css maroto*/
