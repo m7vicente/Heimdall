@@ -62,7 +62,7 @@ function BuscarComputador(codComputador) {
 
     //var URL = "http://localhost:52121/api/Monitorar/?id=5&codComputador=" + codComputador + "";
     
-    var URL = "http://heimdallview.azurewebsite.net/api/Monitorar/?id=5&codComputador=" + codComputador + "";
+    var URL = https://heimdallview.azurewebsites.net/api/Monitorar/?id=5&codComputador=" + codComputador + "";
 
     var settings = {
         "async": true,
@@ -107,7 +107,7 @@ function populate() {
 
 setInterval(function BuscarComputador() {
 
-    var URL = "http://heimdallview.azurewebsite.net/api/Monitorar/?id=5&codComputador=" + computador + "";
+    var URL = "https://heimdallview.azurewebsites.net/api/Monitorar/?id=5&codComputador=" + computador + "";
 
     var settings = {
         "async": true,
