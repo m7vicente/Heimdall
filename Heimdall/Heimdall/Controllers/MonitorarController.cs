@@ -4,9 +4,11 @@ using Newtonsoft.Json;
 using Newtonsoft.Json.Linq;
 using System.Collections.Generic;
 using System.Web.Http;
+using System.Web.Http.Cors;
 
 namespace Heimdall.Controllers
 {
+    [EnableCors(origins: "https://heimdallview.azurewebsites.net/", headers: "*", methods: "*")]
     public class MonitorarController : ApiController
     {
         // GET api/<controller>

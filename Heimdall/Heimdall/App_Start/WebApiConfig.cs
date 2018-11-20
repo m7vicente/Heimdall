@@ -14,6 +14,9 @@ namespace Heimdall
             // Web API routes
             config.MapHttpAttributeRoutes();
 
+            //Cors
+            config.EnableCors();
+
             config.Routes.MapHttpRoute(
                 name: "DefaultApi",
                 routeTemplate: "api/{controller}/{id}",
