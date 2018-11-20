@@ -6,7 +6,7 @@ using System.Web.Http.Cors;
 
 namespace Heimdall.Controllers
 {
-    [EnableCors(origins: "https://heimdallview.azurewebsites.net/", headers: "*", methods: "*")]
+    [EnableCors(origins: "*", headers: "*", methods: "*")]
     public class ComputadorController : ApiController
     {
         // GET api/<controller>
