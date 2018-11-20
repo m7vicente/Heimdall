@@ -102,6 +102,7 @@
     <Content Include="img\heimdall.png" />
     <Content Include="img\instagram.png" />
     <Content Include="img\twitter.png" />
+    <Content Include="img\user.png" />
     <Content Include="Inicio.aspx" />
     <Content Include="js\computadores.js" />
     <Content Include="js\graficoArmazenamento.js" />

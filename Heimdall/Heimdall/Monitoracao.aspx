@@ -25,7 +25,16 @@
     <form id="form1" runat="server">
     <div id="menuSuperior">
     <a href="#menu-toggle" class="btn btn-secondary" id="menu-toggle">&#9776</a>
+
+        <div id="menuUsuario">
+            <div id ="infoUser">
+            <label id="lblEmail" runat="server"></label>
+            </div>
+            <div id="foto">
+                <img src="img/user.png"/>
+        </div>
     </div>
+ </div>
     
     <div id="wrapper">
 
