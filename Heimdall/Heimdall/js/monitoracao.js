@@ -107,7 +107,7 @@ function populate() {
 
 setInterval(function BuscarComputador() {
 
-    var URL = "http://localhost:52121/api/Monitorar/?id=5&codComputador=" + computador + "";
+    var URL = "http://heimdallview.azurewebsite.net/api/Monitorar/?id=5&codComputador=" + computador + "";
 
     var settings = {
         "async": true,
