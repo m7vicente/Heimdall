@@ -1,4 +1,5 @@
-﻿var lblNomePersonalizado;
+﻿var Computador;
+var lblNomePersonalizado;
 var lblNomeComputador;
 var lblFabricantePc;
 var lblIpv4;
@@ -57,6 +58,8 @@ function MostarComponentes(computador) {
 
 function BuscarComputador(codComputador) {
 
+    computador = codComputador;
+
     var URL = "http://localhost:52121/api/Monitorar/?id=5&codComputador=" + codComputador + "";
 
     var settings = {
@@ -99,3 +102,20 @@ function populate() {
     lblSwapTotal = $('#swapTotal');
     lblSwapDisponivel = $('#swapDisponivel');
 }
+
+setInterval(function BuscarComputador() {
+
+    var URL = "http://localhost:52121/api/Monitorar/?id=5&codComputador=" + computador + "";
+
+    var settings = {
+        "async": true,
+        "crossDomain": true,
+        "url": URL,
+        "method": "GET"
+    };
+
+    $.ajax(settings).done(function (response) {
+        populate();
+        MostarComponentes(response);
+    });
+}, 10000);

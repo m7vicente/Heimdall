@@ -104,8 +104,6 @@ public class CallService extends ServiceURL {
 
 		String json = gson.toJson(usuario);
 
-		System.out.println("Atualizar JSON("+json);
-
 		try {
 
 			URL url = new URL(this.servicoAtualizar);

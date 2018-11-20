@@ -11,6 +11,10 @@ public abstract class ServiceURL {
 	
 	//PROD
 	//private String sevicoLogin = "http://heimdallview.azurewebsite.net/api/Usuario/";
+	
+	//protected final String sevicoMonitorar = "http://heimdallview.azurewebsite.net/api/Monitorar/";
+	
+	//protected final String servicoAtualizar = "http://heimdallview.azurewebsite.net/api/Monitorar/?atualizar=5";
 
 	
 }
