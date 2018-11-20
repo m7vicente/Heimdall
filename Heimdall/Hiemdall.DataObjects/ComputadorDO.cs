@@ -15,7 +15,7 @@ namespace Heimdall.DataObjects
 
                 connection.Open();
 
-                string sql = ($"SELECT TOP(1) [CodComputador],[NomePersonalizado],[NomeComputador],[NomeFrabricante],[IPV4],[VersaoFirmeware],[FKCodUsuario],[ModeloComputador] FROM[dbo].[Computador]" +
+                string sql = ($"SELECT TOP(1) [CodComputador],[NomePersonalizado],[NomeComputador],[NomeFabricante],[IPV4],[VersaoFirmeware],[FKCodUsuario],[ModeloComputador] FROM[dbo].[Computador]" +
                                 $"WHERE FKCodUsuario = {obj.codUsuario} " +
                                 $"AND NomeComputador = '{obj.nomeComputador}'");
 
@@ -26,7 +26,7 @@ namespace Heimdall.DataObjects
                     while (reader.Read())
                     {
                         obj.codComputador = int.Parse(reader["CodComputador"].ToString());
-                        obj.fabricanteComputador = reader["NomeFrabricante"].ToString();
+                        obj.fabricanteComputador = reader["NomeFabricante"].ToString();
                         obj.nomeComputador = reader["NomeComputador"].ToString();
                         obj.nomePersonalizado = reader["NomePersonalizado"].ToString();
                         obj.ipv4Computador = reader["IPV4"].ToString();
@@ -46,7 +46,7 @@ namespace Heimdall.DataObjects
 
                 connection.Open();
 
-                string sql = ($"SELECT TOP(1) [CodComputador],[NomePersonalizado],[NomeComputador],[NomeFrabricante],[IPV4],[VersaoFirmeware],[FKCodUsuario],[ModeloComputador] FROM[dbo].[Computador]" +
+                string sql = ($"SELECT TOP(1) [CodComputador],[NomePersonalizado],[NomeComputador],[NomeFabricante],[IPV4],[VersaoFirmeware],[FKCodUsuario],[ModeloComputador] FROM [dbo].[Computador]" +
                                 $"WHERE CodComputador = {codComputador}");
 
                 SqlCommand command = new SqlCommand(sql, connection);
@@ -59,7 +59,7 @@ namespace Heimdall.DataObjects
                     {
                         obj.codUsuario = int.Parse(reader["FKCodUsuario"].ToString());
                         obj.codComputador = int.Parse(reader["CodComputador"].ToString());
-                        obj.fabricanteComputador = reader["NomeFrabricante"].ToString();
+                        obj.fabricanteComputador = reader["NomeFabricante"].ToString();
                         obj.nomeComputador = reader["NomeComputador"].ToString();
                         obj.nomePersonalizado = reader["NomePersonalizado"].ToString();
                         obj.ipv4Computador = reader["IPV4"].ToString();
@@ -99,7 +99,7 @@ namespace Heimdall.DataObjects
 
                 connection.Open();
 
-                string sql = ($" INSERT INTO[dbo].[Computador]([NomePersonalizado],[NomeComputador],[NomeFrabricante],[IPV4],[VersaoFirmeware],[ModeloComputador],[FKCodUsuario])VALUES " +
+                string sql = ($" INSERT INTO[dbo].[Computador]([NomePersonalizado],[NomeComputador],[NomeFabricante],[IPV4],[VersaoFirmeware],[ModeloComputador],[FKCodUsuario])VALUES " +
                                $"('{obj.nomePersonalizado}'" +
                                $",'{obj.nomeComputador}'" +
                                $",'{obj.fabricanteComputador}'" +
@@ -130,7 +130,7 @@ namespace Heimdall.DataObjects
         {
             using (SqlConnection connection = new SqlConnection(WebConfigurationManager.ConnectionStrings["ConnectionString"].ConnectionString))
             {
-                string sql = ($"SELECT [CodComputador],[NomePersonalizado],[NomeComputador],[NomeFrabricante],[IPV4],[VersaoFirmeware],[FKCodUsuario],[ModeloComputador] FROM[dbo].[Computador]" +
+                string sql = ($"SELECT [CodComputador],[NomePersonalizado],[NomeComputador],[NomeFabricante],[IPV4],[VersaoFirmeware],[FKCodUsuario],[ModeloComputador] FROM[dbo].[Computador]" +
                 $"WHERE FKCodUsuario = '{codUsuario}'");
 
                 connection.Open();
@@ -143,7 +143,7 @@ namespace Heimdall.DataObjects
                     {
                         Computador computador = new Computador();
                         computador.codComputador = int.Parse(reader["CodComputador"].ToString());
-                        computador.fabricanteComputador = reader["NomeFrabricante"].ToString();
+                        computador.fabricanteComputador = reader["NomeFabricante"].ToString();
                         computador.nomeComputador = reader["NomeComputador"].ToString();
                         computador.nomePersonalizado = reader["NomePersonalizado"].ToString();
                         computador.ipv4Computador = reader["IPV4"].ToString();
@@ -162,7 +162,7 @@ namespace Heimdall.DataObjects
         {
             using (SqlConnection connection = new SqlConnection(WebConfigurationManager.ConnectionStrings["ConnectionString"].ConnectionString))
             {
-                string sql = ($"SELECT [CodComputador],[NomePersonalizado],[NomeComputador],[NomeFrabricante],[IPV4],[VersaoFirmeware],[FKCodUsuario],[ModeloComputador] FROM[dbo].[Computador]");
+                string sql = ($"SELECT [CodComputador],[NomePersonalizado],[NomeComputador],[NomeFabricante],[IPV4],[VersaoFirmeware],[FKCodUsuario],[ModeloComputador] FROM[dbo].[Computador]");
 
                 SqlCommand command = new SqlCommand(sql, connection);
                 List<Computador> computadores = new List<Computador>();
@@ -172,7 +172,7 @@ namespace Heimdall.DataObjects
                     {
                         Computador computador = new Computador();
                         computador.codComputador = int.Parse(reader["CodComputador"].ToString());
-                        computador.fabricanteComputador = reader["NomeFrabricante"].ToString();
+                        computador.fabricanteComputador = reader["NomeFabricante"].ToString();
                         computador.nomeComputador = reader["NomeComputador"].ToString();
                         computador.nomePersonalizado = reader["NomePersonalizado"].ToString();
                         computador.ipv4Computador = reader["IPV4"].ToString();
@@ -197,7 +197,7 @@ namespace Heimdall.DataObjects
                     $" SET " +
                     $"[NomePersonalizado] = '{obj.nomePersonalizado}'" +
                     $",[NomeComputador] = '{obj.nomeComputador}'" +
-                    $",[NomeFrabricante] = '{obj.fabricanteComputador}'" +
+                    $",[NomeFabricante] = '{obj.fabricanteComputador}'" +
                     $",[IPV4] = '{obj.ipv4Computador}'" +
                     $",[VersaoFirmeware] = '{obj.versaoFirmware}' " +
                     $",[ModeloComputador] = '{obj.modeloComputador}' " +

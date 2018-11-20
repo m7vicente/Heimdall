@@ -112,7 +112,7 @@ public class CallService extends ServiceURL {
 			HttpURLConnection conn = (HttpURLConnection) url.openConnection();
 			conn.setDoOutput(true);
 			conn.setRequestMethod("PUT");
-			conn.setRequestProperty("Content-Type", "application/json");
+			conn.setRequestProperty("Content-Type", "application/json;charset=UTF-8");
 
 			OutputStream os = conn.getOutputStream();
 			os.write(json.getBytes());

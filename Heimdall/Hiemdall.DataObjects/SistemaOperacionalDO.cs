@@ -54,7 +54,7 @@ namespace Heimdall.DataObjects
             {
                 connection.Open();
 
-                string sql = ("INSERT INTO [dbo].[SistemaOperacional] ([NomeFabricante],[NomeVersao],[Familia],[FKCodComputador],[FKCodUsuario]) VALUES " +
+                string sql = ("INSERT INTO [dbo].[SistemaOperacional] (NomeFabricante,NomeVersao,Familia,FKCodComputador,FKCodUsuario) VALUES " +
                            $"('{obj.fabricanteSO}'" +
                            $",'{obj.versaoSO}'" +
                            $",'{obj.familiaSO}'" +

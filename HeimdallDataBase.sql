@@ -23,7 +23,7 @@ GO
 GO
 	CREATE TABLE SistemaOperacional(
 		CodSo INT PRIMARY KEY NOT NULL IDENTITY(10,1),
-		NomeFrabricante VARCHAR(30),
+		NomeFabricante VARCHAR(30),
 		NomeVersao VARCHAR(30),
 		Familia VARCHAR(20),
 		FKCodComputador INT NOT NULL FOREIGN KEY REFERENCES Computador(CodComputador) UNIQUE,
