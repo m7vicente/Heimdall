@@ -50,22 +50,23 @@
             <!-- Page Content -->
             <div id="page-content-wrapper">
                 <div class="container-fluid">
-                    <h1>Seja bem vindo usuário</h1>
+                    <h1>Bem vindo 
+                        <asp:Label runat="server" Text="Usuario" ID="lblUsuario"></asp:Label></h1>
                 </div>
             </div>
 
             <div id="contComputadores">
             </div>
-            </div>
-            <script src="vendor/jquery/jquery.min.js"></script>
-            <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+        </div>
+        <script src="vendor/jquery/jquery.min.js"></script>
+        <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
 
-            <script>
-                $("#menu-toggle").click(function (e) {
-                    e.preventDefault();
-                    $("#wrapper").toggleClass("toggled");
-                });
-            </script>
+        <script>
+            $("#menu-toggle").click(function (e) {
+                e.preventDefault();
+                $("#wrapper").toggleClass("toggled");
+            });
+        </script>
     </form>
 </body>
 </html>

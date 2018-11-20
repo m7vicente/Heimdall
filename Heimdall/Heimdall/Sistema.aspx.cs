@@ -16,7 +16,7 @@ namespace Heimdall
             }
             else
             {
-
+                lblUsuario.Text = usuario.nomeCompleto;
                 ScriptManager.RegisterClientScriptBlock(this, GetType(), "BuscarProcessador", $"BuscarProcessador({usuario.codUsuario});", true);
             }
         }

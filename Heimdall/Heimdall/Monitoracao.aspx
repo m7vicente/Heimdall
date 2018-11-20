@@ -9,13 +9,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
     <meta name="description" content="" />
     <meta name="author" content="" />
-
+    <script src="vendor/jquery/jquery.min.js"></script>
+    <script type="text/javascript" src="js/monitoracao.js"></script>
     <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet" />
     <link href="css/sistema.css" rel="stylesheet" />
     <link href="css/monitoracao.css" rel="stylesheet" />
 
-
     <title>Heimdall | Monitoração</title>
+
 </head>
 <body>
     <form id="form1" runat="server">
@@ -68,42 +69,50 @@
                                 <ul style="list-style: none;">
                                     <li>Nome Personalizado
                             <p>
-                                <label id="nomePersonalizado">Valor</label></p>
+                                <label id="nomePersonalizado">Valor</label>
+                            </p>
                                     </li>
 
                                     <li>Nome do Computador
                             <p>
-                                <label id="nomeComputador">Valor</label></p>
+                                <label id="nomeComputador">Valor</label>
+                            </p>
                                     </li>
 
                                     <li>Fabricante
                             <p>
-                                <label id="fabricantePc">Valor</label></p>
+                                <label id="fabricantePc">Valor</label>
+                            </p>
                                     </li>
 
                                     <li>IPV4
                             <p>
-                                <label id="ipv4">Valor</label></p>
+                                <label id="ipv4">Valor</label>
+                            </p>
                                     </li>
 
                                     <li>Firmware
                             <p>
-                                <label id="firmware">Valor</label></p>
+                                <label id="firmware">Valor</label>
+                            </p>
                                     </li>
 
                                     <li>Fabricante S.O
                             <p>
-                                <label id="fabricanteSO">Valor</label></p>
+                                <label id="fabricanteSO">Valor</label>
+                            </p>
                                     </li>
 
                                     <li>Familia S.O
                             <p>
-                                <label id="familiaSO">Valor</label></p>
+                                <label id="familiaSO">Valor</label>
+                            </p>
                                     </li>
 
                                     <li>Versão S.O
                             <p>
-                                <label id="versaoSO">Valor</label></p>
+                                <label id="versaoSO">Valor</label>
+                            </p>
                                     </li>
                                 </ul>
                             </div>
@@ -117,27 +126,32 @@
                             <ul style="list-style: none;">
                                 <li>Fabricante
                             <p>
-                                <label id="nomeFabricanteCpu">Valor</label></p>
+                                <label id="nomeFabricanteCpu">Valor</label>
+                            </p>
                                 </li>
 
                                 <li>Modelo
                             <p>
-                                <label id="modeloCpu">Valor</label></p>
+                                <label id="modeloCpu">Valor</label>
+                            </p>
                                 </li>
 
                                 <li>Frequência Base
                             <p>
-                                <label id="frequenciaBase">Valor</label></p>
+                                <label id="frequenciaBase">Valor</label>
+                            </p>
                                 </li>
 
                                 <li>Núcleos
                             <p>
-                                <label id="nucleosCpu">Valor</label></p>
+                                <label id="nucleosCpu">Valor</label>
+                            </p>
                                 </li>
 
                                 <li>Serial
                             <p>
-                                <label id="serialCpu">Valor</label></p>
+                                <label id="serialCpu">Valor</label>
+                            </p>
                                 </li>
                             </ul>
                         </div>
@@ -152,32 +166,38 @@
                             <ul style="list-style: none;">
                                 <li>Processos
                             <p>
-                                <label id="processosExecucao">Valor</label></p>
+                                <label id="processosExecucao">Valor</label>
+                            </p>
                                 </li>
 
                                 <li>Frequência
                             <p>
-                                <label id="frequenciaAtual">Valor</label></p>
+                                <label id="frequenciaAtual">Valor</label>
+                            </p>
                                 </li>
 
                                 <li>Utilizado
                             <p>
-                                <label id="porcenUtiizacao">Valor</label></p>
+                                <label id="porcenUtiizacao">Valor</label>
+                            </p>
                                 </li>
 
                                 <li>Threads
                             <p>
-                                <label id="threadsExec">Valor</label></p>
+                                <label id="threadsExec">Valor</label>
+                            </p>
                                 </li>
 
                                 <li>Tempo uso
                             <p>
-                                <label id="tempoExec">Valor</label></p>
+                                <label id="tempoExec">Valor</label>
+                            </p>
                                 </li>
 
                                 <li>Temperatura
                             <p>
-                                <label id="temperaturaCpu">Valor</label></p>
+                                <label id="temperaturaCpu">Valor</label>
+                            </p>
                                 </li>
                             </ul>
                         </div>
@@ -195,32 +215,38 @@
 
                                 <li>Porcentagem Utilizada
                             <p>
-                                <label id="porcentagemRam">Valor</label></p>
+                                <label id="porcentagemRam">Valor</label>
+                            </p>
                                 </li>
 
                                 <li>Memória Total   
                             <p>
-                                <label id="memTotal">Valor</label></p>
+                                <label id="memTotal">Valor</label>
+                            </p>
                                 </li>
 
                                 <li>Memória Utilizada
                             <p>
-                                <label id="memUtilizada">Valor</label></p>
+                                <label id="memUtilizada">Valor</label>
+                            </p>
                                 </li>
 
                                 <li>Memória Disponivel
                             <p>
-                                <label id="memDisponivel">Valor</label></p>
+                                <label id="memDisponivel">Valor</label>
+                            </p>
                                 </li>
 
                                 <li>Memória Swap Total
                             <p>
-                                <label id="swapTotal">Valor</label></p>
+                                <label id="swapTotal">Valor</label>
+                            </p>
                                 </li>
 
                                 <li>Memória Swap Disponivel
                             <p>
-                                <label id="swapDisponivel">Valor</label></p>
+                                <label id="swapDisponivel">Valor</label>
+                            </p>
                                 </li>
                             </ul>
                         </div>
@@ -255,9 +281,7 @@
         <!-- Bootstrap core JavaScript -->
         <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
         <script type="text/javascript" src="js/graficos.js"></script>
-        <script src="vendor/jquery/jquery.min.js"></script>
         <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-        <script src="js/monitoracao.js" type="text/javascript"></script>
         <!-- Menu Toggle Script -->
         <script>
             $("#menu-toggle").click(function (e) {
