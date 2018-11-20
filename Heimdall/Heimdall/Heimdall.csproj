@@ -108,6 +108,7 @@
     <Content Include="js\graficoRam.js" />
     <Content Include="js\graficos.js" />
     <Content Include="js\gulpfile.js" />
+    <Content Include="js\monitoracao.js" />
     <Content Include="Login.aspx" />
     <Content Include="Monitoracao.aspx" />
     <Content Include="Sistema.aspx" />
