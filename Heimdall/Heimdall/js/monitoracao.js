@@ -60,7 +60,9 @@ function BuscarComputador(codComputador) {
 
     computador = codComputador;
 
-    var URL = "http://localhost:52121/api/Monitorar/?id=5&codComputador=" + codComputador + "";
+    //var URL = "http://localhost:52121/api/Monitorar/?id=5&codComputador=" + codComputador + "";
+    
+    var URL = "http://heimdallview.azurewebsite.net/api/Monitorar/?id=5&codComputador=" + codComputador + "";
 
     var settings = {
         "async": true,

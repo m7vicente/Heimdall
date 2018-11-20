@@ -1,6 +1,8 @@
 ﻿function BuscarProcessador(codUsuario) {
 
-    var URL = "http://localhost:52121/api/Computador/?id=5&codUsuario="+codUsuario+"";
+    //var URL = "http://localhost:52121/api/Computador/?id=5&codUsuario=" + codUsuario + "";
+
+    var URL = http://heimdallview.azurewebsite.net/api/Computador/?id=5&codUsuario=" + codUsuario + "";
 
     var settings = {
         "async": true,
