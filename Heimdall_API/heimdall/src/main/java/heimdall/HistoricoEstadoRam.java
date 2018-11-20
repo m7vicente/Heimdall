@@ -16,6 +16,8 @@ public class HistoricoEstadoRam implements Historico {
 	private double swapUtilizada;
 	private double swapTotal;
 	private int porcentagemUtilizacao;
+    private int codUsuario; 
+    private int codComputador;
 
 	public HistoricoEstadoRam() {
 		this.memoriaTotal = this.ObterMemoriaTotal();

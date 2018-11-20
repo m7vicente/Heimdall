@@ -41,5 +41,5 @@ function success(obj) {
 }
 
 function monitorarProcessador(codComputador) {
-    window.location.href = "Default.aspx?codComputador="+codComputador;
+    window.location.href = "Monitoracao.aspx?codComputador="+codComputador;
 }

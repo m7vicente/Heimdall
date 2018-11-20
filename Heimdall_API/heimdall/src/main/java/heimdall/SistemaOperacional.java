@@ -9,6 +9,8 @@ public class SistemaOperacional {
 	private final String versaoSO;
 	private final String familiaSO;
 	private int codSO;
+    private int codUsuario;
+    private int codComputador;
 
 	private static OperatingSystem so = new SystemInfo().getOperatingSystem();
 

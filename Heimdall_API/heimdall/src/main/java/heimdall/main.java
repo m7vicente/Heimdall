@@ -86,7 +86,15 @@ public class main {
 		user = service.CadastrarComputador(user);
 
 		while (true) {
-			Thread.sleep(10000);
+			Thread.sleep(5000);
+
+			user.getComputador().getProcessadores().Atualizar();
+			user.getComputador().getRAM().Atualizar();
+
+			for (Armazenamento armazenamento : user.getComputador().getArmazenamentos()) {
+				armazenamento.Atualizar();
+			}
+
 			service.Atualizar(user);
 		}
 

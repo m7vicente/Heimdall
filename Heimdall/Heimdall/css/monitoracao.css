@@ -1,0 +1,218 @@
+﻿/*Começo do CSS do sacrificio*/
+
+#infoComputador {
+    height: auto;
+    width: auto;
+    display: inline;
+    margin: 20px;
+    float: left;
+}
+
+#conteudoComputador {
+    width: 100%;
+    border: solid 1px rgba(192,192,192,0.3);
+    height: auto;
+    background-color: white;
+    justify-content: center;
+    flex-wrap: wrap;
+    display: flex;
+}
+
+#titulo {
+    width: 100%;
+    height: 40px;
+    background-color: #ff9933;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+    #titulo label {
+        font-family: sans-serif,helvetica;
+        font-size: 23px;
+        margin-top: 10px;
+        color: white;
+        font-weight: bold;
+    }
+
+
+
+#infoComputadorT {
+    width: 100%;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+#infoPC {
+    font-family: sans-serif;
+    font-size: 18px;
+    margin-top: 10px;
+    color: black;
+    font-weight: 500;
+}
+
+#computadorInfo {
+    float: left;
+    margin: 0px;
+    height: auto;
+    width: auto;
+    font-family: sans-serif;
+    border: solid 1px rgba(255, 153, 51, 0.3);
+}
+
+    #computadorInfo ul {
+        padding: 10px;
+        margin: 0px;
+        font-family: sans-serif;
+        font-size: 20px;
+    }
+
+    #computadorInfo li {
+        margin: auto;
+        font-family: sans-serif;
+        font-size: 17px;
+        float: left;
+        width: 150px;
+    }
+
+#conteudoCpu {
+    width: auto;
+    border: solid 1px rgba(192,192,192,0.3);
+    height: 480px;
+    background-color: white;
+    flex-wrap: wrap;
+    display: flex;
+}
+
+#conteudoUsoCpu {
+    margin-top: 1px;
+    width: 84%;
+    border: solid 1px rgba(192,192,192,0.3);
+    height: auto;
+    background-color: white;
+    flex-wrap: wrap;
+    margin: auto;
+    display: flex;
+}
+
+#infoCpu {
+    height: auto;
+    width: 100%;
+    border: solid 1px rgba(255, 153, 51, 0.3);
+    margin: 5px;
+}
+
+    #infoCpu ul {
+        padding: 10px;
+        margin: 0px;
+        font-family: sans-serif;
+        font-size: 17px;
+    }
+
+#infoCpuAtt {
+    height: auto;
+    width: 100%;
+    border: solid 1px rgba(255, 153, 51, 0.3);
+    margin: 5px;
+    display: flex;
+    justify-content: center;
+}
+
+    #infoCpuAtt ul {
+        padding: 10px;
+        margin: 0px;
+        font-family: sans-serif;
+        font-size: 17px;
+    }
+
+    #infoCpuAtt li {
+        padding: 10px;
+        margin: 0px;
+        font-family: sans-serif;
+        font-size: 17px;
+        float: left;
+    }
+
+#graficoCpu {
+    width: 100%;
+    height: auto;
+    border: solid 1px rgba(255, 153, 51, 0.3);
+    margin: 5px;
+}
+
+#conteudoRam {
+    width: auto;
+    border: solid 1px rgba(192,192,192,0.3);
+    height: auto;
+    background-color: white;
+    flex-wrap: wrap;
+    display: flex;
+    margin-right: -5px;
+}
+
+#conteudoUsoRam {
+    width: 78%;
+    border: solid 1px rgba(192,192,192,0.3);
+    height: 520px;
+    background-color: white;
+    flex-wrap: wrap;
+    margin: auto;
+    display: flex;
+}
+
+#graficoRam {
+    width: 100%;
+    height: calc(100% - 50px);
+    border: solid 1px rgba(255, 153, 51, 0.3);
+    margin: 5px;
+}
+
+#infoRam {
+    height: auto;
+    width: 100%;
+    border: solid 1px rgba(255, 153, 51, 0.3);
+    margin: 5px;
+}
+
+#infoRamT {
+    width: 100%;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    margin: 0px;
+}
+
+#infoRam ul {
+    padding: 10px;
+    margin: 0px;
+    font-family: sans-serif;
+    font-size: 17px;
+}
+
+#conteudoArmazenamento {
+    width: 100%;
+    height: auto;
+    background-color: white;
+    border: solid 1px rgba(255, 153, 51, 0.3);
+}
+
+#listaGraficoArm {
+    width: 100%;
+    height: auto;
+    border: solid 1px rgba(255, 153, 51, 0.3);
+    margin: 5px;
+}
+
+#graficoArm {
+    width: 400px;
+    height: auto;
+}
+
+
+/*fim do css maroto*/
