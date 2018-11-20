@@ -9,7 +9,8 @@
         "async": true,
         "crossDomain": true,
         "url": URL,
-        "method": "GET"
+        "method": "GET",
+        "origin": "https://heimdallview.azurewebsites.net"
     };
 
     $.ajax(settings).done(function (response) {
