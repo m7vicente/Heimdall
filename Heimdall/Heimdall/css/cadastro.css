@@ -92,7 +92,9 @@
         justify-content: center;
         align-items: center;
         text-align: center;
-        background-image: url(/img/bg-sobre.jpg);
+        background-image: url(/img/bg-sobre2.jpg);
+        background-size: 100%;
+        background-repeat: no-repeat;
     }
 
     #form {
@@ -192,7 +194,7 @@
     font-family: sans-serif;
     outline: 0;
     background-color: transparent;
-    border-bottom: 1px solid #000;
+    border-bottom: 1px solid #104E8B;
     border-top: none;
     border-right: none;
     border-left: none;
@@ -209,7 +211,7 @@
     font-family: sans-serif;
     outline: 0;
     background-color: transparent;
-    border-bottom: 1px solid #000;
+    border-bottom: 1px solid #104E8B;
     border-top: none;
     border-right: none;
     border-left: none;
@@ -226,7 +228,7 @@
     font-family: sans-serif;
     outline: 0;
     background-color: transparent;
-    border-bottom: 1px solid #000;
+    border-bottom: 1px solid #104E8B;
     border-top: none;
     border-right: none;
     border-left: none;
@@ -243,7 +245,7 @@
     font-family: sans-serif;
     outline: 0;
     background-color: transparent;
-    border-bottom: 1px solid #000;
+    border-bottom: 1px solid #104E8B;
     border-top: none;
     border-right: none;
     border-left: none;

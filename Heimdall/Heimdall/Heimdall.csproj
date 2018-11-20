@@ -94,6 +94,7 @@
     <Content Include="Default.aspx" />
     <Content Include="Global.asax" />
     <Content Include="img\bg-sobre.jpg" />
+    <Content Include="img\bg-sobre2.jpg" />
     <Content Include="img\bg.jpg" />
     <Content Include="img\bifrost.png" />
     <Content Include="img\computador.png" />
