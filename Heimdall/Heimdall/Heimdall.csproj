@@ -94,6 +94,7 @@
     <Content Include="Default.aspx" />
     <Content Include="Global.asax" />
     <Content Include="img\bg-sobre.jpg" />
+    <Content Include="img\bg-sobre2.jpg" />
     <Content Include="img\bg.jpg" />
     <Content Include="img\bifrost.png" />
     <Content Include="img\computador.png" />
@@ -106,6 +107,7 @@
     <Content Include="js\graficoArmazenamento.js" />
     <Content Include="js\graficoCPU.js" />
     <Content Include="js\graficoRam.js" />
+    <Content Include="js\graficos.js" />
     <Content Include="js\gulpfile.js" />
     <Content Include="Login.aspx" />
     <Content Include="Monitoracao.aspx" />
