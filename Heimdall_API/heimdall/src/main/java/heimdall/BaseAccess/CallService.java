@@ -104,15 +104,13 @@ public class CallService extends ServiceURL {
 
 		String json = gson.toJson(usuario);
 
-		System.out.println("Atualizar JSON("+json);
-
 		try {
 
 			URL url = new URL(this.servicoAtualizar);
 			HttpURLConnection conn = (HttpURLConnection) url.openConnection();
 			conn.setDoOutput(true);
 			conn.setRequestMethod("PUT");
-			conn.setRequestProperty("Content-Type", "application/json");
+			conn.setRequestProperty("Content-Type", "application/json;charset=UTF-8");
 
 			OutputStream os = conn.getOutputStream();
 			os.write(json.getBytes());

@@ -13,6 +13,36 @@ namespace Heimdall.DataObjects
             throw new NotImplementedException();
         }
 
+        public SistemaOperacional buscar(int codComputador)
+        {
+            using (SqlConnection connection = new SqlConnection(WebConfigurationManager.ConnectionStrings["ConnectionString"].ConnectionString))
+            {
+
+                connection.Open();
+
+                string sql = ($"SELECT * FROM SistemaOperacional WHERE FKCodComputador = {codComputador}");
+
+                SqlCommand command = new SqlCommand(sql, connection);
+
+                SistemaOperacional obj = new SistemaOperacional();
+
+                using (SqlDataReader reader = command.ExecuteReader())
+                {
+                    while (reader.Read())
+                    {
+                        obj.codUsuario = int.Parse(reader["FKCodUsuario"].ToString());
+                        obj.codComputador = int.Parse(reader["FKCodComputador"].ToString());
+                        obj.codSO = int.Parse(reader["CodSO"].ToString());
+                        obj.familiaSO = reader["familia"].ToString();
+                        obj.versaoSO = reader["NomeVersao"].ToString();
+                        obj.fabricanteSO = reader["NomeFabricante"].ToString();
+                    }
+                    reader.Close();
+                }
+                return obj;
+            }
+        }
+
         public void Deletar(SistemaOperacional obj)
         {
             throw new NotImplementedException();
@@ -24,7 +54,7 @@ namespace Heimdall.DataObjects
             {
                 connection.Open();
 
-                string sql = ("INSERT INTO [dbo].[SistemaOperacional] ([NomeFrabricante],[NomeVersao],[Familia],[FKCodComputador],[FKCodUsuario]) VALUES " +
+                string sql = ("INSERT INTO [dbo].[SistemaOperacional] (NomeFabricante,NomeVersao,Familia,FKCodComputador,FKCodUsuario) VALUES " +
                            $"('{obj.fabricanteSO}'" +
                            $",'{obj.versaoSO}'" +
                            $",'{obj.familiaSO}'" +
@@ -59,7 +89,7 @@ namespace Heimdall.DataObjects
                 connection.Open();
 
                 string sql = ("UPDATE [dbo].[SistemaOperacional] SET " +
-                    "[NomeFrabricante]" + $" = '{obj.fabricanteSO}'" +
+                    "[NomeFabricante]" + $" = '{obj.fabricanteSO}'" +
                     ",[NomeVersao]" + $" = '{obj.versaoSO}'" +
                     ",[Familia] = " + $"'{obj.familiaSO}'" +
                     " WHERE " +

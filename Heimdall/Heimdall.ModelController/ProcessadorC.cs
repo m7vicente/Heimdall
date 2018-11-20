@@ -27,6 +27,12 @@ namespace Heimdall.ModelController
             HdataAccess.Inserir(processador);
         }
 
+        internal Processador BuscarProcessador(int codComputador)
+        {
+            return HdataAccess.buscar(dataAccess.buscar(codComputador));
+                         
+        }
+
     }
 
 }

@@ -16,9 +16,15 @@ namespace Heimdall.Controllers
         }
 
         // GET api/<controller>/5
-        public string Get(int id)
+        public Computador Get(int id, int codComputador)
         {
-            return "value+1";
+            if (id == 5)
+            {
+                return new MonitorarC().GetComputador(codComputador);
+            }
+            else{
+                return null;
+            }
         }
 
         // POST api/<controller>

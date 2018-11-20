@@ -40,5 +40,10 @@ namespace Heimdall.ModelController
         {
             dataAccess.Update(computador);
         }
+
+        public Computador BuscarComputador(int codComputador)
+        {
+            return dataAccess.buscar(codComputador);
+        }
     }
 }

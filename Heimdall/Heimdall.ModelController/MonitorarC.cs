@@ -9,6 +9,10 @@ namespace Heimdall.ModelController
     public class MonitorarC
     {
         private ComputadorC computadorC = new ComputadorC();
+        private ProcessadorC processadorC = new ProcessadorC();
+        private HistoricoEstadoRAMC historicoEstado = new HistoricoEstadoRAMC();
+        private SistemaOperacionalC sistemaOperacionalC = new SistemaOperacionalC();
+        private ArmazenamentoC armazenamentoC = new ArmazenamentoC();
 
         public MonitorarC()
         {
@@ -48,18 +52,16 @@ namespace Heimdall.ModelController
 
         public void AtualizarComputador(Usuario user)
         {
-            AtualizarEstados(user.computador.processadores, user.computador.RAM, user.computador.armazenamentos);   
+            AtualizarEstados(user.computador.processadores, user.computador.RAM, user.computador.armazenamentos);
         }
 
         private void AtualizarEstados(Processador processador, HistoricoEstadoRam RAM, List<Armazenamento> armazenamentos)
         {
-            ProcessadorC processadorC = new ProcessadorC();
+
             processadorC.InserirEstado(processador);
 
-            HistoricoEstadoRAMC historicoEstado = new HistoricoEstadoRAMC();
             historicoEstado.Update(RAM);
 
-            ArmazenamentoC armazenamentoC = new ArmazenamentoC();
             foreach (Armazenamento armazenamento in armazenamentos)
             {
                 armazenamentoC.InserirEstado(armazenamento);
@@ -68,23 +70,18 @@ namespace Heimdall.ModelController
 
         private void AtualizarEstados(Processador processador, HistoricoEstadoRam RAM, List<Armazenamento> armazenamentos, SistemaOperacional SO, Computador computador)
         {
-            ProcessadorC processadorC = new ProcessadorC();
             processadorC.Update(processador);
             processadorC.InserirEstado(processador);
 
-            HistoricoEstadoRAMC historicoEstado = new HistoricoEstadoRAMC();
             historicoEstado.Update(RAM);
-
-            ArmazenamentoC armazenamentoC = new ArmazenamentoC();
+                        
             foreach (Armazenamento armazenamento in armazenamentos)
             {
                 armazenamentoC.Update(armazenamento);
             }
 
-            SistemaOperacionalC sistemaOperacionalC = new SistemaOperacionalC();
             sistemaOperacionalC.Update(SO);
 
-            ComputadorC computadorC = new ComputadorC();
             computadorC.Update(computador);
 
         }
@@ -110,22 +107,30 @@ namespace Heimdall.ModelController
                 armazenamento.codComputador = computador.codComputador;
             }
 
-            ProcessadorC processadorC = new ProcessadorC();
             processadorC.Cadastrar(computador.processadores);
 
-            HistoricoEstadoRAMC historicoEstadoRAMC = new HistoricoEstadoRAMC();
-            historicoEstadoRAMC.Cadastrar(computador.RAM);
 
-            ArmazenamentoC armazenamentoC = new ArmazenamentoC();
+            historicoEstado.Cadastrar(computador.RAM);
+
             foreach (Armazenamento armazenamento in computador.armazenamentos)
             {
                 armazenamentoC.Cadastrar(armazenamento);
             }
 
-            SistemaOperacionalC sistemaOperacionalC = new SistemaOperacionalC();
             sistemaOperacionalC.Cadastrar(computador.OS);
         }
-             
+
+        public Computador GetComputador(int codComputador)
+        {   
+            Computador computador = computadorC.BuscarComputador(codComputador);
+            computador.armazenamentos = armazenamentoC.BuscarTodosArmazenamentos(codComputador);
+            computador.processadores = processadorC.BuscarProcessador(codComputador);
+            computador.OS = sistemaOperacionalC.BuscarSistemaOperacional(codComputador);
+            computador.RAM = historicoEstado.BuscarRAM(codComputador);
+                                 
+            return computador;
+        }
+
 
     }
 }

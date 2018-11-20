@@ -41,6 +41,39 @@ namespace Heimdall.DataObjects
             }
         }
 
+        public Processador buscar(int codComputador)
+        {
+            using (SqlConnection connection = new SqlConnection(WebConfigurationManager.ConnectionStrings["ConnectionString"].ConnectionString))
+            {
+
+                connection.Open();
+
+                string sql = ($"SELECT TOP (1) [CodProcessador],[NomeFabricante],[Modelo],[FrequenciaBase],[Nucleos],[Serial],[FKCodComputador],[FKCodUsuario] FROM [dbo].[Processador] " +
+                              $"WHERE [FKCodComputador] = {codComputador}");
+
+                SqlCommand command = new SqlCommand(sql, connection);
+
+                Processador obj = new Processador();
+
+                using (SqlDataReader reader = command.ExecuteReader())
+                {                    
+                    while (reader.Read())
+                    {
+                        obj.codProcessador = int.Parse(reader["CodProcessador"].ToString());
+                        obj.nomeFabricante = reader["NomeFabricante"].ToString();
+                        obj.modelo = reader["Modelo"].ToString();
+                        obj.frequenciaBase = float.Parse(reader["FrequenciaBase"].ToString());
+                        obj.nucleos = int.Parse(reader["Nucleos"].ToString());
+                        obj.serial = reader["Serial"].ToString();
+                        obj.codComputador = int.Parse(reader["FKCodComputador"].ToString());
+                        obj.codUsuario = int.Parse(reader["FKCodUsuario"].ToString());
+                    }
+                    reader.Close();
+                }
+                return obj;
+            }
+        }
+
         public void Deletar(Processador obj)
         {
             using (SqlConnection connection = new SqlConnection(WebConfigurationManager.ConnectionStrings["ConnectionString"].ConnectionString))
