@@ -37,7 +37,7 @@ GO
 		Modelo VARCHAR(50) NOT NULL,
 		FrequenciaBase FLOAT NOT NULL,
 		Nucleos INT NOT NULL,
-		Serial VARCHAR(15),
+		Serial VARCHAR(50),
 		FKCodComputador INT NOT NULL FOREIGN KEY REFERENCES Computador(CodComputador) UNIQUE,
 		FKCodUsuario INT NOT NULL  FOREIGN KEY REFERENCES Usuario(CodUsuario)
 	);
