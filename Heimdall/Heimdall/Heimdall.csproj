@@ -110,9 +110,6 @@
     <Content Include="img\twitter.png" />
     <Content Include="Inicio.aspx" />
     <Content Include="js\computadores.js" />
-    <Content Include="js\graficoArmazenamento.js" />
-    <Content Include="js\graficoCPU.js" />
-    <Content Include="js\graficoRam.js" />
     <Content Include="js\graficos.js" />
     <Content Include="js\gulpfile.js" />
     <Content Include="js\monitoracao.js" />
