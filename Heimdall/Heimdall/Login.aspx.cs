@@ -16,7 +16,7 @@ namespace Heimdall
         {
             Usuario usuario = new Usuario();
            
-            usuario.email = txtEmail.Text;
+            usuario.email = txtEmail.Text.ToLower();
             usuario.senha = txtSenha.Text;
 
             UsuarioC controller = new UsuarioC();

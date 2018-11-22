@@ -25,5 +25,8 @@
 			<a href="#">Recuperação de senha</a></p>    
     </form>
     </div>
+
+    <script type="text/javascript" src="js/cadastro.js"></script>
+
 </body>
 </html>
