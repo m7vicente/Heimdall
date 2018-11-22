@@ -55,6 +55,7 @@ function MostarComponentes(computador) {
     lblSwapDisponivel.text(computador.RAM.swapUtilizada); 
 
     desenharGraficoCpu(parseInt(computador.processadores.porcentagemUtilizacao));
+    desenharGraficoRam(parseInt(computador.RAM.porcentagemUtilizacao));
 
 }
 

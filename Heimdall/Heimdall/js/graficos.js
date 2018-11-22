@@ -14,63 +14,53 @@ var cpuTotal = 0, cpuData = null, cpuGrafico = null;
 function desenharGraficoCpu(valor) {
 
     if (cpuData === null) {
-        console.log("asddsdsds");
         cpuData = new google.visualization.DataTable();
         cpuData.addColumn('number', 'Valor');
         cpuData.addColumn('number', 'Utilizacao');
     }
 
-    if (cpuTotal > 5) {
-        cpuData.removeRow(0);
-    }
-
     console.log(valor);
     cpuData.addRows([[cpuTotal, valor]]);
-
-
-
-
+         
     cpuGrafico = new google.visualization.AreaChart(document.getElementById('graficoCpu'));
     cpuGrafico.draw(cpuData, {
         title: 'Desempenho CPU',
         hAxis: { title: '', titleTextStyle: { color: '#ff9933' } },
         vAxis: { minValue: 0 },
         backgroundColor: 'transparent',
-        /*chartArea: {left:20,top:0,width:'50%',height:'75%'},*/
         colors: ['#ff9933'],
-        height: '300'
+        height: '700'
     
         });
 
     cpuTotal++;
 }
 
+var ramTotal = 0, ramData = null, ramGrafico = null;
+function desenharGraficoRam(valor) {
 
+    if (ramData === null) {
+        ramData = new google.visualization.DataTable();
+        ramData.addColumn('number', 'Valor');
+        ramData.addColumn('number', 'Utilizacao');
+    }
 
+    console.log(valor);
+    ramData.addRows([[ramTotal, valor]]);
 
-function desenharGraficoRam() {
-    var data = google.visualization.arrayToDataTable([
-        ['', 'Porcentagem'],
-        ['', 1000],
-        ['', 117],
-        ['', 660],
-        ['', 1030]
-    ]);
-
-    var options = {
+    cpuGrafico = new google.visualization.AreaChart(document.getElementById('graficoRam'));
+    cpuGrafico.draw(ramData, {
         isStacked: 'relative',
         title: 'Desempenho Ram',
         hAxis: { title: '', titleTextStyle: { color: '#ff9933' } },
         vAxis: { minValue: 0 },
         backgroundColor: 'transparent',
-        /*chartArea: {left:20,top:0,width:'50%',height:'75%'},*/
-        colors: ['#ff9933'],
-    };
+        colors: ['#ff9933']
 
-    var chart = new google.visualization.AreaChart(document.getElementById('graficoRam'));
-    chart.draw(data, options);
+    });
+
+    ramTotal++;
 }
-
 
 
 
