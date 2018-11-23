@@ -62,28 +62,29 @@ function desenharGraficoRam(valor) {
     ramTotal++;
 }
 
+var armTotal = 0, armData = null, armGrafico = null;
+function desenharGraficoArmazenamentos(capacidadeTotal,capacidadeUltilizada) {
 
+    $('#tabelaARM').append('graficoArm<li><div id = "graficoArm" ></div ></li >'+
+    +'<script>'+
+    +'var armData = google.visualization.arrayToDataTable(['
+    +"        ['HD total', 'HD usado'],"
+    +"    ['Capacidade Total', "+capacidadeTotal+"],"
+    +"    ['Capacidade Usada', "+capacidadeUltilizada+"]"
 
-function desenharGraficoArmazenamentos() {
-    var data = google.visualization.arrayToDataTable([
-        ['HD total', 'HD usado'],
-        ['Capacidade Total', 11],
-        ['Capacidade Usada', 2]
+        ]);
+    
 
-    ]);
-
-    var options = {
+    armGrafico = new google.visualization.PieChart(document.getElementById('graficoArm'));
+    armGrafico.draw(armData, {
         title: 'Armazenamento 1',
         pieHole: 0.1,
         backgroundColor: 'transparent',
-        colors: ['#ff9933', 'black'],
+        colors: ['#ff9933', 'black']
+    });
 
-    };
-
-    var chart = new google.visualization.PieChart(document.getElementById('graficoArm'));
-    chart.draw(data, options);
+    +'</script>';
 }
-
 /*fecha grafico de armazenamentos*/
 
 $(window).resize(function () {
