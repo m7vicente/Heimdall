@@ -48,9 +48,9 @@ function desenharGraficoRam(valor) {
     console.log(valor);
     ramData.addRows([[ramTotal, valor]]);
 
-    cpuGrafico = new google.visualization.AreaChart(document.getElementById('graficoRam'));
-    cpuGrafico.draw(ramData, {
-        isStacked: 'relative',
+    ramGrafico = new google.visualization.AreaChart(document.getElementById('graficoRam'));
+    ramGrafico.draw(ramData, {
+        
         title: 'Desempenho Ram',
         hAxis: { title: '', titleTextStyle: { color: '#ff9933' } },
         vAxis: { minValue: 0 },
@@ -68,7 +68,7 @@ function desenharGraficoArmazenamentos() {
     var data = google.visualization.arrayToDataTable([
         ['HD total', 'HD usado'],
         ['Capacidade Total', 11],
-        ['Capacidade Usada', 2],
+        ['Capacidade Usada', 2]
 
     ]);
 
