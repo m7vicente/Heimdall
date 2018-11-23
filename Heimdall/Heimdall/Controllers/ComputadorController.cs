@@ -2,9 +2,11 @@
 using Heimdall.Models;
 using System.Collections.Generic;
 using System.Web.Http;
+using System.Web.Http.Cors;
 
 namespace Heimdall.Controllers
 {
+    [EnableCors(origins: "*", headers: "*", methods: "*")]
     public class ComputadorController : ApiController
     {
         // GET api/<controller>

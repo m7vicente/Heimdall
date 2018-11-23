@@ -1,12 +1,16 @@
 ﻿function BuscarProcessador(codUsuario) {
 
-    var URL = "http://localhost:52121/api/Computador/?id=5&codUsuario="+codUsuario+"";
+    //var URL = "http://localhost:52121/api/Computador/?id=5&codUsuario=" + codUsuario + "";
+
+    var URL = "https://heimdallview.azurewebsites.net/api/Computador/?id=5&codUsuario=" + codUsuario + "";
+               
 
     var settings = {
         "async": true,
         "crossDomain": true,
         "url": URL,
-        "method": "GET"
+        "method": "GET",
+        "origin": "https://heimdallview.azurewebsites.net"
     };
 
     $.ajax(settings).done(function (response) {
