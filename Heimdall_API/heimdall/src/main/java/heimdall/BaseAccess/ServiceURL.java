@@ -10,11 +10,11 @@ public abstract class ServiceURL {
 	//protected final String servicoAtualizar = "http://localhost:52121/api/Monitorar/?atualizar=5";
 	
 	//PROD
-	protected final String sevicoLogin = "http://heimdallview.azurewebsite.net/api/Usuario/";
+	protected final String sevicoLogin = "https://heimdallview.azurewebsites.net/api/Usuario/";
 	
-	protected final String sevicoMonitorar = "http://heimdallview.azurewebsite.net/api/Monitorar/";
+	protected final String sevicoMonitorar = "https://heimdallview.azurewebsites.net/api/Monitorar/";
 	
-	protected final String servicoAtualizar = "http://heimdallview.azurewebsite.net/api/Monitorar/?atualizar=5";
+	protected final String servicoAtualizar = "https://heimdallview.azurewebsites.net/api/Monitorar/?atualizar=5";
 
 	
 }
