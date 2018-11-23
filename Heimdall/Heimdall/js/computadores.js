@@ -24,7 +24,7 @@ function success(obj) {
        
     for (var i = 0; i < obj.length; i++) {
 
-        $('#contComputadores').append('<div id = "computador" >' +
+        $('#contComputadores').append('<div id = "computador" onclick="monitorarProcessador(' + obj[i].codComputador +')" >' +
             '<div id="imgPc">' +
             '<img src="img/computador.png">' +
             '</div>' +
@@ -36,7 +36,7 @@ function success(obj) {
             '<p>' +
             '<label ID="lbModeloComputador"> Modelo computador: ' + obj[i].fabricanteComputador + '<label></p>' +
             '<p>' +
-            '<label ID="lblProcessador" onclick="monitorarProcessador('+obj[i].codComputador+')"> Processador : ' + i + '<label></p>' +
+            '<label ID="lblProcessador" > Processador : ' + i + '<label></p>' +
             '<p>' +
             '<label ID="lbIpv4"> IPV4: ' + obj[i].ipv4Computador + ' <label></p>' +
             '</div>' +

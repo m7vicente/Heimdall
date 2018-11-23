@@ -47,7 +47,7 @@
             <!-- Sidebar -->
             <div id="sidebar-wrapper">
                 <div id="imagemDiv">
-                    <img src="img/heimdall.png" id="imgLogo">
+                    <img src="img/heimdall.png" id="imgLogo"/>
 
                     <p id="nomeLogo"> HEIMDALL </p>
 
@@ -70,34 +70,6 @@
 
                 </ul>
             </div>
-
-            <div id="wrapper">
-
-                <!-- Sidebar -->
-                <div id="sidebar-wrapper">
-                    <div id="imagemDiv">
-                        <img src="img/heimdall.png" id="imgLogo">
-
-                        <p id="nomeLogo">HEIMDALL </p>
-
-                    </div>
-                    <ul class="sidebar-nav">
-                        <li class="sidebar-brand"></li>
-                        <li>
-                            <a href="#">Computadores</a>
-                        </li>
-                        <li>
-                            <a href="#">Emitir Relatórios</a>
-                        </li>
-                        <li>
-                            <a href="#">Configurações</a>
-                        </li>
-                        <li>
-                            <a href="#">Sair</a>
-                        </li>
-
-                    </ul>
-                </div>
 
                 <!-- /#sidebar-wrapper -->
 
@@ -321,6 +293,7 @@
                     </div>
                 </div>
             </div>
+           
             <!--fecha todo conteudo dentro da pagina -->
 
             <!-- /#page-content-wrapper -->

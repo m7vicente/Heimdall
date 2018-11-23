@@ -12,17 +12,17 @@ namespace Heimdall
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            Usuario usuario = (Usuario)Session["usuario"];            
+            //Usuario usuario = (Usuario)Session["usuario"];            
 
-            if (usuario == null)
-            {
-                Response.Redirect("Login.aspx");
-            }
-            else
-            {
-                int codComputador = int.Parse(Request.QueryString["codComputador"].ToString());
-                ScriptManager.RegisterClientScriptBlock(this, GetType(), "BuscarComputador", $"BuscarComputador({codComputador});", true);
-            }
+            //if (usuario == null)
+            //{
+            //    Response.Redirect("Login.aspx");
+            //}
+            //else
+            //{
+            //    int codComputador = int.Parse(Request.QueryString["codComputador"].ToString());
+            //    ScriptManager.RegisterClientScriptBlock(this, GetType(), "BuscarComputador", $"BuscarComputador({codComputador});", true);
+            //}
         }
     }
 }
