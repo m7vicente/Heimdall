@@ -10,7 +10,7 @@
 namespace Heimdall {
     
     
-    public partial class Sistema {
+    public partial class Relatorio {
         
         /// <summary>
         /// Controle form1.
@@ -29,14 +29,5 @@ namespace Heimdall {
         /// Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
         /// </remarks>
         protected global::System.Web.UI.HtmlControls.HtmlGenericControl lblEmail;
-        
-        /// <summary>
-        /// Controle lblUsuario.
-        /// </summary>
-        /// <remarks>
-        /// Campo gerado automaticamente.
-        /// Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblUsuario;
     }
 }

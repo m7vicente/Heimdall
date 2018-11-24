@@ -54,6 +54,9 @@ function MostarComponentes(computador) {
     lblSwapTotal.text(computador.RAM.swapTotal);
     lblSwapDisponivel.text(computador.RAM.swapUtilizada); 
 
+    desenharGraficoCpu(parseInt(computador.processadores.porcentagemUtilizacao));
+    desenharGraficoRam(parseInt(computador.RAM.porcentagemUtilizacao));
+
 }
 
 function BuscarComputador(codComputador) {
@@ -120,4 +123,4 @@ setInterval(function BuscarComputador() {
         populate();
         MostarComponentes(response);
     });
-}, 10000);
+}, 1000);

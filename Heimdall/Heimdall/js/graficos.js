@@ -1,66 +1,68 @@
-﻿/*Grafico da CPU*/
+﻿//grafico CPU
+
 google.charts.load('current', { 'packages': ['corechart'] });
 google.charts.setOnLoadCallback(desenharGraficoCpu);
 
-function desenharGraficoCpu() {
-    var data = google.visualization.arrayToDataTable([
-        ['', 'Porcentagem'],
-        ['', 1000],
-        ['', 117],
-        ['', 660],
-        ['', 1030]
-    ]);
+//Grafico da RAM
+google.charts.setOnLoadCallback(desenharGraficoRam);
 
-    var options = {
-        isStacked: 'relative',
+//Grafico de armazenamentos
+google.charts.setOnLoadCallback(desenharGraficoArmazenamentos);
+
+
+var cpuTotal = 0, cpuData = null, cpuGrafico = null;
+function desenharGraficoCpu(valor) {
+
+    if (cpuData === null) {
+        cpuData = new google.visualization.DataTable();
+        cpuData.addColumn('number', 'Valor');
+        cpuData.addColumn('number', 'Utilizacao');
+    }
+
+    console.log(valor);
+    cpuData.addRows([[cpuTotal, valor]]);
+         
+    cpuGrafico = new google.visualization.AreaChart(document.getElementById('graficoCpu'));
+    cpuGrafico.draw(cpuData, {
         title: 'Desempenho CPU',
         hAxis: { title: '', titleTextStyle: { color: '#ff9933' } },
         vAxis: { minValue: 0 },
         backgroundColor: 'transparent',
-        /*chartArea: {left:20,top:0,width:'50%',height:'75%'},*/
         colors: ['#ff9933'],
-        height: '300',
-    };
+        height: '700'
+    
+        });
 
-    var chart = new google.visualization.AreaChart(document.getElementById('graficoCpu'));
-    chart.draw(data, options);
+    cpuTotal++;
 }
 
-/*fecha grafico da CPU*/
+var ramTotal = 0, ramData = null, ramGrafico = null;
+function desenharGraficoRam(valor) {
 
+    if (ramData === null) {
+        ramData = new google.visualization.DataTable();
+        ramData.addColumn('number', 'Valor');
+        ramData.addColumn('number', 'Utilizacao');
+    }
 
-/*Grafico da RAM*/
-google.charts.load('current', { 'packages': ['corechart'] });
-google.charts.setOnLoadCallback(desenharGraficoRam);
+    console.log(valor);
+    ramData.addRows([[ramTotal, valor]]);
 
-function desenharGraficoRam() {
-    var data = google.visualization.arrayToDataTable([
-        ['', 'Porcentagem'],
-        ['', 1000],
-        ['', 117],
-        ['', 660],
-        ['', 1030]
-    ]);
-
-    var options = {
+    cpuGrafico = new google.visualization.AreaChart(document.getElementById('graficoRam'));
+    cpuGrafico.draw(ramData, {
         isStacked: 'relative',
         title: 'Desempenho Ram',
         hAxis: { title: '', titleTextStyle: { color: '#ff9933' } },
         vAxis: { minValue: 0 },
         backgroundColor: 'transparent',
-        /*chartArea: {left:20,top:0,width:'50%',height:'75%'},*/
-        colors: ['#ff9933'],
-    };
+        colors: ['#ff9933']
 
-    var chart = new google.visualization.AreaChart(document.getElementById('graficoRam'));
-    chart.draw(data, options);
+    });
+
+    ramTotal++;
 }
-/*fecha grafico da RAM*/
 
 
-/*Grafico de armazenamentos*/
-google.charts.load("current", { packages: ["corechart"] });
-google.charts.setOnLoadCallback(desenharGraficoArmazenamentos);
 
 function desenharGraficoArmazenamentos() {
     var data = google.visualization.arrayToDataTable([
