@@ -84,15 +84,16 @@ public class main {
 		user.setComputador(pc);
 
 		user = service.CadastrarComputador(user);
-
+		
 		while (true) {
 			Thread.sleep(5000);
 
 			user.getComputador().getProcessadores().Atualizar();
 			user.getComputador().getRAM().Atualizar();
-
-			for (Armazenamento armazenamento : user.getComputador().getArmazenamentos()) {
-				armazenamento.Atualizar();
+			
+			for(int i = 0; i < user.getComputador().getArmazenamentos().size(); i++ ) {
+				user.getComputador().getArmazenamentos().get(i).setHD(hds[i]);
+				user.getComputador().getArmazenamentos().get(i).Atualizar();
 			}
 
 			service.Atualizar(user);

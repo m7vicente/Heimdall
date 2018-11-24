@@ -12,7 +12,7 @@ public class SistemaOperacional {
     private int codUsuario;
     private int codComputador;
 
-	private static OperatingSystem so = new SystemInfo().getOperatingSystem();
+	private transient OperatingSystem so = new SystemInfo().getOperatingSystem();
 
 	public SistemaOperacional() {
 		this.fabricanteSO = this.ObterFabricanteSO();
