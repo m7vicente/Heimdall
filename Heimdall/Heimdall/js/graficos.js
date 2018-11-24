@@ -73,13 +73,22 @@ function desenharGraficosArmazenamento(armazenamentos) {
 
             console.log(i);
 
+            var disponivel = armazenamentos[i].capacidadeUtilizada;
+            var utilizada = armazenamentos[i].capacidadeTotal - armazenamentos[i].capacidadeUtilizada;
+
+            if (utilizada < 0) {
+                utilizada = armazenamentos[i].capacidadeUtilizada - armazenamentos[i].capacidadeTotal;
+            }
+
+            if(armazenamentos[i].capacidadeTotal - armazenamentos[i].capacidadeUtilizada)
+
             $('#tabelaARM').append('<li><div id = "graficoArm' + i + '" ></div ></li >'
                 + '<script>'
                 + "var armTotal" + i + " = 0, armData" + i + " = null, armGrafico" + i + " = null;"
                 + 'var armData' + i + ' = google.visualization.arrayToDataTable(['
                 + "        ['HD total', 'HD usado'],"
-                + "    ['Capacidade Disponivel', " + armazenamentos[i].capacidadeTotal + "],"
-                + "    ['Capacidade Utilizado', " + armazenamentos[i].capacidadeUtilizada + "]]);"
+                + "    ['Capacidade Disponivel', " + disponivel + "],"
+                + "    ['Capacidade Utilizado', " + utilizada + "]]);"
 
                 + "armGrafico" + i + " = new google.visualization.PieChart(document.getElementById('graficoArm" + i + "'));"
                 + "armGrafico" + i + ".draw(armData" + i + ", {"
