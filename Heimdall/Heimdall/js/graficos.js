@@ -7,7 +7,7 @@ google.charts.setOnLoadCallback(desenharGraficoCpu);
 google.charts.setOnLoadCallback(desenharGraficoRam);
 
 //Grafico de armazenamentos
-google.charts.setOnLoadCallback(desenharGraficoArmazenamentos);
+google.charts.setOnLoadCallback(desenharGraficosArmazenamento);
 
 
 var cpuTotal = 0, cpuData = null, cpuGrafico = null;
