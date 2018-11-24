@@ -283,7 +283,7 @@
                                 <label id="tituloMoni">Armazenamentos</label>
                             </div>
                             <div id="listaGraficoArm">
-                                <ul style="list-style: none">
+                                <ul id="tabelaARM" style="list-style: none">
                                     <li>
                                         <div id="graficoArm"></div>
                                     </li>

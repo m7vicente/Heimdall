@@ -19,7 +19,7 @@ import heimdall.Usuario;
 
 public class CallService extends ServiceURL {
 
-	private Gson gson = new GsonBuilder().excludeFieldsWithModifiers(Modifier.STATIC).create();
+	private Gson gson = new GsonBuilder().excludeFieldsWithModifiers(Modifier.TRANSIENT ).create();
 
 	public Usuario ObterUsuario(Usuario login) {
 
@@ -85,9 +85,6 @@ public class CallService extends ServiceURL {
 			String output = new BufferedReader(new InputStreamReader((conn.getInputStream()))).readLine();	
 			
 			usuario.setComputador(gson.fromJson(output, usuario.getComputador().getClass()));
-			//usuario.getComputador().getProcessadores().setCodProcessador(gson.fromJson(output, usuario.getComputador().getProcessadores().getClass()));
-						
-			//System.out.println(usuario.getComputador().getProcessadores().getCodProcessador());
 			
 			conn.disconnect();
 

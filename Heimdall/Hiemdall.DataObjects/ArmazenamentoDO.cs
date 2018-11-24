@@ -196,8 +196,7 @@ namespace Heimdall.DataObjects
                     $" [TipoArmazenamento] = '{obj.tipoArmazenamento}'" +
                     $", [CapacidadeTotal] = '{obj.capacidadeTotal.ToString().Replace(",", ".")}'" +
                     $" WHERE " +
-                    $"[FKCodComputador] = {obj.codComputador}" +
-                    $"AND [FKCodUsuario] = {obj.codUsuario}");
+                    $"[CodUUId] = '{obj.codUUID}'");
 
                 SqlCommand command = new SqlCommand(sql, connection);
 
