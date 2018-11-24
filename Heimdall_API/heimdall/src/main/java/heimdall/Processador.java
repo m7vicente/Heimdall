@@ -7,8 +7,8 @@ import oshi.util.FormatUtil;
 
 public class Processador implements Historico {
 
-	private static HardwareAbstractionLayer processador = new SystemInfo().getHardware();
-	private static OperatingSystem operacao = new SystemInfo().getOperatingSystem();
+	private transient HardwareAbstractionLayer processador = new SystemInfo().getHardware();
+	private transient OperatingSystem operacao = new SystemInfo().getOperatingSystem();
 
 	private int CodProcessador;
 	public final String nomeFabricante;
