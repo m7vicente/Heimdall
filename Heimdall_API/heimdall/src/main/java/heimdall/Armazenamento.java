@@ -15,11 +15,11 @@ public class Armazenamento implements Historico{
     private int codUsuario; 
     private int codComputador;
     
-    private static OSFileStore hd;
-    private static DecimalFormat df = new DecimalFormat("#0.0");
+    private transient  OSFileStore hd;
+    private transient  DecimalFormat df = new DecimalFormat("#0.0");
     
     public Armazenamento(OSFileStore hd) {
-    	this.setHd(hd);
+    	this.hd = hd;
     	this.codUUID = this.ObtertCodUUID();
     	this.capacidadeTotal = this.ObterCapacidadeTotal();
     	this.tipoArmazenamento = this.ObterTipoArmazenamento();
@@ -47,14 +47,15 @@ public class Armazenamento implements Historico{
     	return hd.getMount();
     }
     
+    public void setHD(OSFileStore hd) {
+    	this.hd = hd;
+    }
+    
     public void Atualizar() {
     	this.capacidadeUtilizada = this.ObterCapacidadeUtilizada();
     	this.letraLocal = this.ObterLetraLocal();
     }
 
-	public static void setHd(OSFileStore hd) {
-		Armazenamento.hd = hd;
-	}
     
     
 

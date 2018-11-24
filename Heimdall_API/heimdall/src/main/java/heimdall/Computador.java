@@ -7,8 +7,8 @@ import oshi.software.os.OperatingSystem;
 
 public class Computador {
 	
-	private static OperatingSystem operacao = new SystemInfo().getOperatingSystem();
-	private static ComputerSystem computador = new SystemInfo().getHardware().getComputerSystem();
+	private transient OperatingSystem operacao = new SystemInfo().getOperatingSystem();
+	private transient  ComputerSystem computador = new SystemInfo().getHardware().getComputerSystem();
     
 	private int codComputador;
     private final String nomeComputador;
@@ -36,16 +36,6 @@ public class Computador {
 		this.RAM = RAM;
 	}
 	
-	
-	
-	public static ComputerSystem getComputador() {
-		return computador;
-	}
-
-
-	public static void setComputador(ComputerSystem computador) {
-		Computador.computador = computador;
-	}
 	
 	
 

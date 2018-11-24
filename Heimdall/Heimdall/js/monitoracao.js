@@ -56,6 +56,8 @@ function MostarComponentes(computador) {
 
     desenharGraficoCpu(parseInt(computador.processadores.porcentagemUtilizacao));
     desenharGraficoRam(parseInt(computador.RAM.porcentagemUtilizacao));
+    desenharGraficosArmazenamento(computador.armazenamentos);
+    //desenharGraficoArmazenamentos(computador.armazenamentos[2].capacidadeTotal, computador.armazenamentos[2].capacidadeUtilizada);
 
 }
 
