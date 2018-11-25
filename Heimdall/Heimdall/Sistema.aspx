@@ -9,6 +9,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
     <meta name="description" content="" />
     <meta name="author" content="" />
+    <link href="css/load.css" type="text/css" rel="stylesheet" />
     <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet" />
     <link href="css/sistema.css" rel="stylesheet" />
     <script type="text/javascript" src="js/computadores.js"></script>
@@ -17,6 +18,7 @@
 </head>
 <body>
     <form id="form1" runat="server">
+        <div id="load" class="page"><img src="img/TSC2.gif"/></div>
         <div id="menuSuperior">
             <a href="#menu-toggle" class="btn btn-secondary" id="menu-toggle">&#9776</a>
             
@@ -63,10 +65,9 @@
                 <div class="container-fluid">
                     <h1>Bem vindo 
                         <asp:Label runat="server" Text="Usuario" ID="lblUsuario"></asp:Label></h1>
-                </div>
-            </div>
-
-            <div id="contComputadores">
+                </div>                
+            </div>             
+            <div id="contComputadores" class="hidden">
             </div>
         </div>
         <script src="vendor/jquery/jquery.min.js"></script>

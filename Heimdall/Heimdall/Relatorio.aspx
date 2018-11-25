@@ -22,7 +22,7 @@
 </head>
 <body>
     <form id="form1" runat="server">
-
+        <div id="load" class="page"><img src="img/TSC2.gif"/></div>
         <div id="menuSuperior">
 
             <a href="#menu-toggle" class="btn btn-secondary" id="menu-toggle">&#9776</a>
@@ -41,7 +41,7 @@
             <!-- Sidebar -->
             <div id="sidebar-wrapper">
                 <div id="imagemDiv">
-                    <img src="img/heimdall.png" id="imgLogo">
+                    <img src="img/heimdall.png" id="imgLogo" />
 
                     <p id="nomeLogo">HEIMDALL </p>
 
@@ -68,7 +68,6 @@
             <!-- Page Content -->
             <div id="page-content-wrapper">
                 <div id="contComputadores">
-                     <div id="load" class="page"><img src="img/TSC2.gif"/></div>
                     <div id="relatorioTable" class="hidden">
                         <div id="titulo">
                             <label id="tituloMoni">Gere seu relatório</label>
@@ -83,7 +82,7 @@
                                 <th>IPV4</th>
                                 <th>Gerar Relatório</th>
                             </tr>
-                        </table>                       
+                        </table>
                     </div>
                 </div>
             </div>
