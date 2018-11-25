@@ -90,6 +90,7 @@
     <Content Include="css\cadastro.css" />
     <Content Include="css\contato.css" />
     <Content Include="css\grid.css" />
+    <Content Include="css\load.css" />
     <Content Include="css\login.css" />
     <Content Include="css\monitoracao.css" />
     <Content Include="css\normalize.css" />
@@ -115,6 +116,7 @@
     <Content Include="img\pedro.png" />
     <Content Include="img\relatorioIcon.png" />
     <Content Include="img\thiago.png" />
+    <Content Include="img\TSC2.gif" />
     <Content Include="img\twitter.png" />
     <Content Include="img\user.png" />
     <Content Include="img\userd.png" />
@@ -124,6 +126,7 @@
     <Content Include="js\graficos.js" />
     <Content Include="js\gulpfile.js" />
     <Content Include="js\monitoracao.js" />
+    <Content Include="js\relatorio.js" />
     <Content Include="Login.aspx" />
     <Content Include="Monitoracao.aspx" />
     <Content Include="Relatorio.aspx" />

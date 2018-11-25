@@ -1,0 +1,15 @@
+﻿#load{
+    margin-top:10%;
+    margin-left:35%;  
+}
+
+.page {
+    display: block;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+
+.hidden {
+    display: none;
+}
