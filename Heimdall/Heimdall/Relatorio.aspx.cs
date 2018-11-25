@@ -13,5 +13,11 @@ namespace Heimdall
         {
 
         }
+
+        protected void sair_Click(object sender, EventArgs e)
+        {
+            Session["usuario"] = null;
+            Response.Redirect("Inicio.aspx");
+        }
     }
 }

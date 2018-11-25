@@ -39,18 +39,19 @@
                     <p id="nomeLogo">HEIMDALL </p>
                 </div>
                 <ul class="sidebar-nav">
-                    <li class="sidebar-brand"></li>
-                    <li>
-                        <a href="#">Computadores</a>
+                    <li class="sidebar-brand">
                     </li>
                     <li>
-                        <a href="#">Emitir Relatórios</a>
+                        <a href="Sistema.aspx">Computadores</a>
+                    </li>
+                    <li>
+                        <a href="Relatorio.aspx">Emitir Relatórios</a>
                     </li>
                     <li>
                         <a href="#">Configurações</a>
                     </li>
                     <li>
-                        <a href="#">Sair</a>
+                        <asp:LinkButton ID="sair" Text="Sair" OnClick="sair_Click" runat="server" />
                     </li>
                 </ul>
             </div>
