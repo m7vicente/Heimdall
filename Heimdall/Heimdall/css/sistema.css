@@ -635,8 +635,7 @@ body {
     padding: -5px;   
 }
 
-
-@media only screen and (min-width: 600px) {
+@media only screen and (max-width: 600px) {
     body {
         width: 100%;
         margin: 0;
@@ -645,6 +644,7 @@ body {
     #infoComputador {
         height: 450px;
     }
+
 
     #wrapper.toggled #sidebar-wrapper {
         width: 100%;
@@ -662,48 +662,32 @@ body {
     }
 
     #computador {
-        height: auto;
-        /*box-sizing: border-box;*/
-    }
-
-
-
-    #infoPC {
-        height: auto;
-        box-sizing: border-box;
-    }
-
-    #relatorioTable {
-        width: auto;
-    }
-
-    informacoesPc p {
-        font-size: 15px;
+        height: 410px;
     }
 }
 
 @media only screen and (max-width: 1024px) {
 
     p {
-        font-size: 1.3em; /**/
-    }
-
-    #nomeLogo {
-        position: absolute;
-        text-indent: 84px;
-        font-size: 1.4em; /**/
+        font-size: 1.3em;
     }
 
     #infoComputador {
         height: 450px;
     }
 
+    #nomeLogo {
+        position: absolute;
+        text-indent: 84px;
+        font-size: 1.4em;
+    }
+
     a {
-        font-size: 1.3em; /**/
+        font-size: 1.3em;
     }
 
     #menuSuperior a {
-        font-size: 24px; /**/
+        font-size: 24px;
         padding-left: 20px;
     }
 
@@ -723,11 +707,6 @@ body {
     #infoUser label {
         margin-top: 23px;
         margin-left: 10px;
-        font-size: 5px; /**/
-    }
-
-    informacoesPc p {
-        font-size: 15px;
     }
 }
 
@@ -736,8 +715,4 @@ body {
         position: absolute;
         text-indent: 80px;
     }
-
-    informacoesPc p {
-        font-size: 15px;
-    }
-}
+}}
