@@ -646,6 +646,22 @@ body {
     }
 
 
+    label {
+        font-family: Arial Light;
+        font-size: 15px;
+    }
+
+    li {
+        font-family: Arial Light;
+        font-size: 15px;
+    }
+
+    p {
+        font-family: Arial Light;
+        font-size: 15px;
+    }
+    
+
     #wrapper.toggled #sidebar-wrapper {
         width: 100%;
     }

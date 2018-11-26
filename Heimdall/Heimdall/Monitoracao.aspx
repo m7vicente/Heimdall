@@ -181,6 +181,9 @@
                             <div id="titulo">
                                 <label id="tituloMoni">Uso da Cpu</label>
                             </div>
+
+                            <div id="graficoCpu"></div>
+
                             <div id="infoCpuAtt">
                                 <ul style="list-style: none;">
                                     <li>Processos
@@ -222,7 +225,7 @@
                             </div>
 
 
-                            <div id="graficoCpu"></div>
+                            
                         </div>
 
                         <div id="conteudoRam">
