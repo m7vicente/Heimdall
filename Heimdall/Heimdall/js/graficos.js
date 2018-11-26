@@ -24,10 +24,10 @@ function desenharGraficoCpu(valor) {
     cpuGrafico = new google.visualization.AreaChart(document.getElementById('graficoCpu'));
     cpuGrafico.draw(cpuData, {
         title: 'Desempenho CPU',
-        hAxis: { title: '', titleTextStyle: { color: '#ff9933' } },
+        hAxis: { title: '', titleTextStyle: { color: '#ffc738' } },
         vAxis: { minValue: 0 },
         backgroundColor: 'transparent',
-        colors: ['#ff9933'],
+        colors: ['#ffc738'],
         height: '700'
 
     });
@@ -50,10 +50,10 @@ function desenharGraficoRam(valor) {
     ramGrafico.draw(ramData, {
 
         title: 'Desempenho Ram',
-        hAxis: { title: '', titleTextStyle: { color: '#ff9933' } },
+        hAxis: { title: '', titleTextStyle: { color: '#ffc738' } },
         vAxis: { minValue: 0 },
         backgroundColor: 'transparent',
-        colors: ['#ff9933']
+        colors: ['#ffc738']
 
     });
 
@@ -95,7 +95,7 @@ function desenharGraficosArmazenamento(armazenamentos) {
                 + "    title: '" + armazenamentos[i].tipoArmazenamento + "',"
                 + "    pieHole: 0.1,"
                 + "    backgroundColor: 'transparent',"
-                + "    colors: ['#ff9933', 'black']"
+                + "    colors: ['#ffc738', 'black']"
                 + "});"
                 + '</script>');
         }
@@ -118,7 +118,7 @@ function desenharGraficoArmazenamentos(capacidadeTotal, capacidadeUltilizada) {
         + "    title: 'Armazenamento 1',"
         + "    pieHole: 0.1,"
         + "    backgroundColor: 'transparent',"
-        + "    colors: ['#ff9933', 'black']"
+        + "    colors: ['#ffc738', 'black']"
         + "});"
         + '</script>');
 }
