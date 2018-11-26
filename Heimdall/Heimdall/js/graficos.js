@@ -24,10 +24,10 @@ function desenharGraficoCpu(valor) {
     cpuGrafico = new google.visualization.AreaChart(document.getElementById('graficoCpu'));
     cpuGrafico.draw(cpuData, {
         title: 'Desempenho CPU',
-        hAxis: { title: '', titleTextStyle: { color: '#ff9933' } },
+        hAxis: { title: '', titleTextStyle: { color: '#ffc738' } },
         vAxis: { minValue: 0 },
         backgroundColor: 'transparent',
-        colors: ['#ff9933'],
+        colors: ['#ffc738'],
         height: '700'
 
     });
@@ -50,10 +50,10 @@ function desenharGraficoRam(valor) {
     ramGrafico.draw(ramData, {
 
         title: 'Desempenho Ram',
-        hAxis: { title: '', titleTextStyle: { color: '#ff9933' } },
+        hAxis: { title: '', titleTextStyle: { color: '#ffc738' } },
         vAxis: { minValue: 0 },
         backgroundColor: 'transparent',
-        colors: ['#ff9933']
+        colors: ['#ffc738']
 
     });
 
@@ -91,13 +91,35 @@ function desenharGraficosArmazenamento(armazenamentos) {
                 + "    title: '" + armazenamentos[i].tipoArmazenamento + "',"
                 + "    pieHole: 0.1,"
                 + "    backgroundColor: 'transparent',"
-                + "    colors: ['#ff9933', 'black']"
+                + "    colors: ['#ffc738', 'black']"
                 + "});"
                 + '</script>');
         }
         armExist = true;
     }
 }
+
+function desenharGraficoArmazenamentos(capacidadeTotal, capacidadeUltilizada) {
+
+    $('#tabelaARM').append('graficoArm<li><div id = "graficoArm" ></div ></li >'
+        + '<script>'
+        + "var armTotal = 0, armData = null, armGrafico = null;"
+        + 'var armData = google.visualization.arrayToDataTable(['
+        + "        ['HD total', 'HD usado'],"
+        + "    ['Capacidade Total', " + capacidadeTotal + "],"
+        + "    ['Capacidade Usada', " + capacidadeUltilizada + "]]);"
+
+        + "armGrafico = new google.visualization.PieChart(document.getElementById('graficoArm'));"
+        + "armGrafico.draw(armData, {"
+        + "    title: 'Armazenamento 1',"
+        + "    pieHole: 0.1,"
+        + "    backgroundColor: 'transparent',"
+        + "    colors: ['#ffc738', 'black']"
+        + "});"
+        + '</script>');
+}
+/*fecha grafico de armazenamentos*/
+
 
 $(window).resize(function () {
     desenharGraficoCpu();

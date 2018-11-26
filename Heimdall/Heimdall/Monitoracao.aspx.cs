@@ -12,7 +12,7 @@ namespace Heimdall
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            Usuario usuario = (Usuario)Session["usuario"];            
+             Usuario usuario = (Usuario)Session["usuario"];
 
             if (usuario == null)
             {
@@ -29,6 +29,7 @@ namespace Heimdall
         {
             Session["usuario"] = null;
             Response.Redirect("Inicio.aspx");
+
         }
     }
 }
