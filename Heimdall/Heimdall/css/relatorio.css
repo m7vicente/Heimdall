@@ -6,7 +6,7 @@
 #titulo {
     width: 100%;
     height: 40px;
-    background-color: #ff9933;
+    background-color: rgb(255,199,56);
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
@@ -14,7 +14,7 @@
 }
 
 #titulo label {
-    font-family: sans-serif,helvetica;
+    font-family: Arial Light;
     font-size: 23px;
     margin-top: 10px;
     color: white;
@@ -46,13 +46,13 @@
     background-color: #ddd;
 }
 
-#tableRelatorio th {
-    padding-top: 12px;
-    padding-bottom: 12px;
-    text-align: left;
-    background-color: #ff9933;
-    color: white;
-}
+    #tableRelatorio th {
+        padding-top: 12px;
+        padding-bottom: 12px;
+        text-align: left;
+        background-color: rgb(255,199,56);
+        color: white;
+    }
 
 #tableRelatorio img {
     width: 40px;
