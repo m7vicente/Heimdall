@@ -56,8 +56,7 @@ public class HistoricoEstadoRam implements Historico {
 	}
 
 	public int ObterPorcentagemUtilizacao() {
-		System.out.println((int) ((getMemoriaUtilizada() * 0.1) / getMemoriaTotal()));
-		return (int) ((getMemoriaUtilizada() * 100) / getMemoriaTotal());
+		return (int) ((getMemoriaUtilizada() * 0.1) / getMemoriaTotal());
 	}
 
 	public double getMemoriaUtilizada() {
