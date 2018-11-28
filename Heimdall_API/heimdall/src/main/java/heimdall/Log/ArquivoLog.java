@@ -16,20 +16,21 @@ import java.util.Vector;
  *
  * @author Alice Coelho
  */
-public class ArquivoLog {
+public final class ArquivoLog {
     
     File arquivo;
     FileReader fileReader;
     BufferedReader bufferedReader;
     FileWriter fileWriter;
     BufferedWriter bufferedWriter;
-
+    
     
     public ArquivoLog(String erros)
     {
         escreverLog(erros);
     }
-    private void escreverLog (String erros)
+
+	private void escreverLog (String erros)
     {
         
         SimpleDateFormat df = new SimpleDateFormat("dd MMM yyyy");

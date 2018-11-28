@@ -5,8 +5,7 @@ import java.util.Date;
 
 public class AdicionarLog {
     
-            private String escrever;
-    
+        
     SimpleDateFormat df = new SimpleDateFormat("dd MMM yyyy HH:mm");
     Date d = new Date ();
     
