@@ -18,6 +18,11 @@
     flex-wrap: wrap;
     display: flex;
 }
+#page-content-wrapper {
+    background-color: #fcf9f9;
+}
+
+
 
 #titulo {
     width: 100%;
@@ -27,6 +32,16 @@
     justify-content: center;
     flex-wrap: wrap;
     align-items: center;
+}
+
+.material-icons {
+    color: white;
+    float: left;
+}
+
+#icon {
+    float: right;
+    margin-left: 50px;
 }
 
     #titulo label {
@@ -90,12 +105,12 @@
 
 #conteudoUsoCpu {
     margin-top: 1px;
-    width: 100%;
+    width: 62%;
     border: solid 1px rgba(192,192,192,0.3);
     height: auto;
     background-color: white;
     flex-wrap: wrap;
-    margin: auto;
+    margin: 20px;
     display: flex;
 }
 
@@ -157,7 +172,7 @@
 #conteudoRam {
     width: auto;
     border: solid 1px rgba(192,192,192,0.3);
-    height: auto;
+    height: 520px;
     background-color: white;
     flex-wrap: wrap;
     display: flex;
@@ -165,7 +180,7 @@
 }
 
 #conteudoUsoRam {
-    width: 78%;
+    width: 75%;
     border: solid 1px rgba(192,192,192,0.3);
     height: 520px;
     background-color: white;
@@ -206,8 +221,9 @@
 }
 
 #conteudoArmazenamento {
-    width: 100%;
+    width: 30%;
     height: auto;
+    margin: 25px;
     background-color: white;
     border: solid 1px rgba(255,199,56, 0.3);
 }

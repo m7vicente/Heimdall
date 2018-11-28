@@ -37,7 +37,7 @@
             <!-- Sidebar -->
             <div id="sidebar-wrapper">
                 <div id="imagemDiv">
-                    <img src="img/heimdall.png" id="imgLogo" />
+                    <img src="img/heimdall_logo.png" id="imgLogo" />
                     <p id="nomeLogo">HEIMDALL </p>
                 </div>
                 <ul class="sidebar-nav">

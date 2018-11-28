@@ -14,7 +14,7 @@
     <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet" />
     <link href="css/sistema.css" rel="stylesheet" />
     <link href="css/monitoracao.css" rel="stylesheet" />
-
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
 
     <!--Jquery abaixo permite deixar os graficos do google charts 100% resonsivos-->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
@@ -75,6 +75,122 @@
                 <!-- Page Content -->
                 <div id="page-content-wrapper">
                     <div id="contComputadores">
+
+                        <div id="conteudoRam">
+                            <div id="titulo">
+                                <label id="tituloMoni">Ram</label>
+                                
+                            </div>
+                            <div id="infoRam">
+                                <ul style="list-style: none;">
+
+                                    <li>Porcentagem Utilizada
+                                        <p>
+                                            <label id="porcentagemRam">Valor</label>
+                                        </p>
+                                    </li>
+
+                                    <li>Memória Total
+                                        <p>
+                                            <label id="memTotal">Valor</label>
+                                        </p>
+                                    </li>
+
+                                    <li>Memória Utilizada
+                                        <p>
+                                            <label id="memUtilizada">Valor</label>
+                                        </p>
+                                    </li>
+
+                                    <li>Memória Disponivel
+                                        <p>
+                                            <label id="memDisponivel">Valor</label>
+                                        </p>
+                                    </li>
+
+                                    <li>Memória Swap Total
+                                        <p>
+                                            <label id="swapTotal">Valor</label>
+                                        </p>
+                                    </li>
+
+                                    <li>Memória Swap Disponivel
+                                        <p>
+                                            <label id="swapDisponivel">Valor</label>
+                                        </p>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <div id="conteudoUsoRam">
+                            <div id="titulo">
+                                <label id="tituloMoni">Uso da Ram</label>
+                            </div>
+                            <div id="graficoRam"></div>
+                        </div>
+
+                        <div id="conteudoArmazenamento">
+                            <div id="titulo">
+                                <label id="tituloMoni">Armazenamentos</label>
+                            </div>
+                            <div id="listaGraficoArm">
+                                <ul id="tabelaARM" style="list-style: none">
+                                    <li>
+                                        <div id="graficoArm"></div>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <div id="conteudoUsoCpu">
+                            <div id="titulo">
+                                <label id="tituloMoni">Uso da Cpu</label>
+                            </div>
+
+                            <div id="graficoCpu"></div>
+
+                            <div id="infoCpuAtt">
+                                <ul style="list-style: none;">
+                                    <li>Processos
+                                        <p>
+                                            <label id="processosExecucao">Valor</label>
+                                        </p>
+                                    </li>
+
+                                    <li>Frequência
+                                        <p>
+                                            <label id="frequenciaAtual">Valor</label>
+                                        </p>
+                                    </li>
+
+                                    <li>Utilizado
+                                        <p>
+                                            <label id="porcenUtiizacao">Valor</label>
+                                        </p>
+                                    </li>
+
+                                    <li>Threads
+                                        <p>
+                                            <label id="threadsExec">Valor</label>
+                                        </p>
+                                    </li>
+
+                                    <li>Tempo uso
+                                        <p>
+                                            <label id="tempoExec">Valor</label>
+                                        </p>
+                                    </li>
+
+                                    <li>Temperatura
+                                        <p>
+                                            <label id="temperaturaCpu">Valor</label>
+                                        </p>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+
                         <div id="conteudoComputador">
                             <div id="titulo">
                                 <label id="tituloMoni">Monitoração</label>
@@ -176,122 +292,12 @@
 
                         </div>
 
-                        <div id="conteudoUsoCpu">
-                            <div id="titulo">
-                                <label id="tituloMoni">Uso da Cpu</label>
-                            </div>
+                        
 
-                            <div id="graficoCpu"></div>
+                        
 
-                            <div id="infoCpuAtt">
-                                <ul style="list-style: none;">
-                                    <li>Processos
-                                        <p>
-                                            <label id="processosExecucao">Valor</label>
-                                        </p>
-                                    </li>
-
-                                    <li>Frequência
-                                        <p>
-                                            <label id="frequenciaAtual">Valor</label>
-                                        </p>
-                                    </li>
-
-                                    <li>Utilizado
-                                        <p>
-                                            <label id="porcenUtiizacao">Valor</label>
-                                        </p>
-                                    </li>
-
-                                    <li>Threads
-                                        <p>
-                                            <label id="threadsExec">Valor</label>
-                                        </p>
-                                    </li>
-
-                                    <li>Tempo uso
-                                        <p>
-                                            <label id="tempoExec">Valor</label>
-                                        </p>
-                                    </li>
-
-                                    <li>Temperatura
-                                        <p>
-                                            <label id="temperaturaCpu">Valor</label>
-                                        </p>
-                                    </li>
-                                </ul>
-                            </div>
-
-
-                            
-                        </div>
-
-                        <div id="conteudoRam">
-                            <div id="titulo">
-                                <label id="tituloMoni">Ram</label>
-                            </div>
-                            <div id="infoRam">
-                                <ul style="list-style: none;">
-
-                                    <li>Porcentagem Utilizada
-                                        <p>
-                                            <label id="porcentagemRam">Valor</label>
-                                        </p>
-                                    </li>
-
-                                    <li>Memória Total
-                                        <p>
-                                            <label id="memTotal">Valor</label>
-                                        </p>
-                                    </li>
-
-                                    <li>Memória Utilizada
-                                        <p>
-                                            <label id="memUtilizada">Valor</label>
-                                        </p>
-                                    </li>
-
-                                    <li>Memória Disponivel
-                                        <p>
-                                            <label id="memDisponivel">Valor</label>
-                                        </p>
-                                    </li>
-
-                                    <li>Memória Swap Total
-                                        <p>
-                                            <label id="swapTotal">Valor</label>
-                                        </p>
-                                    </li>
-
-                                    <li>Memória Swap Disponivel
-                                        <p>
-                                            <label id="swapDisponivel">Valor</label>
-                                        </p>
-                                    </li>
-                                </ul>
-                            </div>
-                        </div>
-
-                        <div id="conteudoUsoRam">
-                            <div id="titulo">
-                                <label id="tituloMoni">Uso da Ram</label>
-                            </div>
-                            <div id="graficoRam"></div>
-                        </div>
-
-                        <div id="conteudoArmazenamento">
-                            <div id="titulo">
-                                <label id="tituloMoni">Armazenamentos</label>
-                            </div>
-                            <div id="listaGraficoArm">
-                                <ul id="tabelaARM" style="list-style: none">
-                                    <li>
-                                        <div id="graficoArm"></div>
-                                    </li>
-                                </ul>
-                            </div>
-                        </div>
+                        
+                        
                     </div>
                 </div>
             </div>

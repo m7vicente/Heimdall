@@ -1,4 +1,4 @@
-﻿//grafico CPU
+﻿\//grafico CPU
 
 google.charts.load('current', { 'packages': ['corechart'] });
 google.charts.setOnLoadCallback(desenharGraficoCpu);
