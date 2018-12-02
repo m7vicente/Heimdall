@@ -1,4 +1,11 @@
-﻿/*Começo do CSS do sacrificio*/
+﻿
+#contComputadores {
+    height: 100%;
+    background-color: transparent;
+    display: grid;
+    grid-template-columns: 50% 50%;
+    grid-gap: 1em;
+}
 
 
 #infoComputador {
@@ -18,6 +25,7 @@
     flex-wrap: wrap;
     display: flex;
 }
+
 #page-content-wrapper {
     background-color: #fcf9f9;
 }
@@ -44,13 +52,13 @@
     margin-left: 50px;
 }
 
-    #titulo label {
-        font-family: Arial light;
-        font-size: 23px;
-        margin-top: 10px;
-        color: white;
-        font-weight: bold;
-    }
+#titulo label {
+    font-family: 'Roboto';
+    font-size: 23px;
+    margin-top: 10px;
+    color: white;
+    font-weight: bold;
+}
 
 
 
@@ -63,35 +71,28 @@
     align-items: center;
 }
 
-#infoPC {
-    font-family: Arial light;
-    font-size: 18px;
-    margin-top: 10px;
-    font-weight: 500;
-}
-
 #computadorInfo {
-    float: left;
-    margin: 0px;
     height: auto;
-    width: auto;
-    font-family: Arial light;
+    width: 100%;
     border: solid 1px rgba(255,199,56, 0.3);
+    display: flex;
+    justify-content: center;
 }
 
     #computadorInfo ul {
         padding: 10px;
         margin: 0px;
-        font-family: Arial light;
-        font-size: 20px;
+        font-family: 'Roboto';
     }
 
     #computadorInfo li {
-        margin: auto;
-        font-family: Arial light;
-        font-size: 17px;
-        float: left;
-        width: 150px;
+        padding: 10px;
+        margin: 0px;
+        font-family: 'Roboto';
+        float:left;
+    }
+    #computadorInfo label {
+        font-size: 18px;
     }
 
 #conteudoCpu {
@@ -103,40 +104,47 @@
     display: flex;
 }
 
+label {
+    font-size: 20px;
+    font-weight: 500;
+}   
+
+li{
+   font-size: 13px;
+}
+
+
+
+
 #conteudoUsoCpu {
-    margin-top: 1px;
-    width: 62%;
     border: solid 1px rgba(192,192,192,0.3);
     height: auto;
     background-color: white;
     flex-wrap: wrap;
-    margin: 20px;
     display: flex;
 }
 
 #infoCpu {
-    display: flex;
     height: auto;
     width: 100%;
     border: solid 1px rgba(255,199,56, 0.3);
     margin: 5px;
+    display: flex;
     justify-content: center;
 }
 
-    #infoCpu ul {
-        padding: 10px;
-        margin: 10px;
-        font-family: Arial light;
-        font-size: 20px;
-    }
+#infoCpu ul {
+    padding: 10px;
+    margin: 0px;
+    font-family: 'Roboto';
+}
 
-    #infoCpu li {
-        padding: 10px;
-        margin: 20px;
-        font-family: Arial Light;
-        font-size: 17px;
-        float: left;
-    }
+#infoCpu li {
+    padding: 10px;
+    margin: 0px;
+    font-family: 'Roboto';
+    float: left;
+}
 
 #infoCpuAtt {
     height: auto;
@@ -150,17 +158,19 @@
     #infoCpuAtt ul {
         padding: 10px;
         margin: 0px;
-        font-family: Arial Light;
-        font-size: 17px;
+        font-family: 'Roboto';
     }
 
-    #infoCpuAtt li {
-        padding: 10px;
-        margin: 0px;
-        font-family: Arial Light;
-        font-size: 17px;
-        float: left;
-    }
+#infoCpuAtt li {
+    padding: 10px;
+    margin: 0px;
+    font-family: 'Roboto';
+    float: left;
+}
+
+#infoCpu label {
+    font-size: 18px;
+}
 
 #graficoCpu {
     width: 100%;
@@ -170,22 +180,19 @@
 }
 
 #conteudoRam {
-    width: auto;
     border: solid 1px rgba(192,192,192,0.3);
-    height: 520px;
+    height: auto;
     background-color: white;
     flex-wrap: wrap;
     display: flex;
-    margin-right: -5px;
 }
 
 #conteudoUsoRam {
-    width: 75%;
+    width: 100%; 
     border: solid 1px rgba(192,192,192,0.3);
-    height: 520px;
+    height: auto;
     background-color: white;
     flex-wrap: wrap;
-    margin: auto;
     display: flex;
 }
 
@@ -201,49 +208,43 @@
     width: 100%;
     border: solid 1px rgba(255,199,56, 0.3);
     margin: 5px;
-}
-
-#infoRamT {
-    width: 100%;
-    height: 50px;
     display: flex;
     justify-content: center;
-    align-items: center;
-    flex-wrap: wrap;
-    margin: 0px;
 }
 
-#infoRam ul {
-    padding: 10px;
-    margin: 0px;
-    font-family: Arial Light;
-    font-size: 17px;
+    #infoRam ul {
+        padding: 10px;
+        margin: 0px;
+        font-family: 'Roboto';
+    }
+
+#infoRam li {
+padding: 10px;
+margin: 0px;
+font-family: 'Roboto';
+float: left;
 }
+
 
 #conteudoArmazenamento {
-    width: 30%;
     height: auto;
-    margin: 25px;
     background-color: white;
     border: solid 1px rgba(255,199,56, 0.3);
+    padding-bottom: 33px;
 }
 
 #listaGraficoArm {
     width: 100%;
     height: auto;
-    margin: 5px;
 }
 
     #listaGraficoArm ul {
         padding: 10px;
-        margin: 0px;
-        font-family: Arial Light;
+        font-family: 'Roboto';
         font-size: 17px;
     }
 
     #listaGraficoArm li {
-        padding: 10px;
-        margin: -20px;
         float: left;
     }
 
@@ -252,11 +253,18 @@
     height: auto;
 }
 
-/*#graficoArm2{
-    width: 400px;
-    height: auto;
-}*/
+@media only screen and (max-width: 600px) {
+    #contComputadores {
+        width: 100%;
+        height: 100%;
+        background-color: transparent;
+        display: grid;
+        grid-template-columns: 100%;
+        grid-gap: 1em;
+    }
 
-
-
-/*fim do css maroto*/
+    #graficoArm {
+        width: 350px;
+        height: auto;
+    }
+}

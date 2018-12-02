@@ -26,7 +26,7 @@ var lblSwapTotal;
 var lblSwapDisponivel;
 
 
-function MostarComponentes(computador) {   
+function MostarComponentes(computador) {
 
     lblNomePersonalizado.text(computador.nomePersonalizado);
     lblNomeComputador.text(computador.nomeComputador);
@@ -52,8 +52,8 @@ function MostarComponentes(computador) {
     lblMemUtilizada.text(computador.RAM.memoriaUtilizada);
     lblMemDisponivel.text(computador.RAM.memoriaDisponivel);
     lblSwapTotal.text(computador.RAM.swapTotal);
-    lblSwapDisponivel.text(computador.RAM.swapUtilizada); 
-
+    lblSwapDisponivel.text(computador.RAM.swapUtilizada);
+    
     desenharGraficoCpu(parseInt(computador.processadores.porcentagemUtilizacao));
     desenharGraficoRam(parseInt(computador.RAM.porcentagemUtilizacao));
     desenharGraficosArmazenamento(computador.armazenamentos);
@@ -65,9 +65,9 @@ function BuscarComputador(codComputador) {
 
     computador = codComputador;
 
-    //var URL = "http://localhost:52121/api/Monitorar/?id=5&codComputador=" + codComputador + "";
-    
-    var URL = "https://heimdallview.azurewebsites.net/api/Monitorar/?id=5&codComputador=" + codComputador + "";
+    var URL = "http://localhost:52121/api/Monitorar/?id=5&codComputador=" + codComputador + "";
+
+    //var URL = "https://heimdallview.azurewebsites.net/api/Monitorar/?id=5&codComputador=" + codComputador + "";
 
     var settings = {
         "async": true,
@@ -113,6 +113,8 @@ function populate() {
 setInterval(function BuscarComputador() {
 
     var URL = "https://heimdallview.azurewebsites.net/api/Monitorar/?id=5&codComputador=" + computador + "";
+
+    //var URL = "http://localhost:52121/api/Monitorar/?id=5&codComputador=" + codComputador + "";
 
     var settings = {
         "async": true,

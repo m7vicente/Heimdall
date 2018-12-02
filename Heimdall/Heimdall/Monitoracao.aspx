@@ -15,7 +15,7 @@
     <link href="css/sistema.css" rel="stylesheet" />
     <link href="css/monitoracao.css" rel="stylesheet" />
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
-
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet"/>
     <!--Jquery abaixo permite deixar os graficos do google charts 100% resonsivos-->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
@@ -75,78 +75,94 @@
                 <!-- Page Content -->
                 <div id="page-content-wrapper">
                     <div id="contComputadores">
-
-                        <div id="conteudoRam">
+                        <div id="conteudoUsoRam">
                             <div id="titulo">
-                                <label id="tituloMoni">Ram</label>
-                                
+                                <label id="tituloMoni">Memória Ram</label>
                             </div>
+
                             <div id="infoRam">
                                 <ul style="list-style: none;">
 
-                                    <li>Porcentagem Utilizada
+                                    <li>Utilização
                                         <p>
                                             <label id="porcentagemRam">Valor</label>
                                         </p>
                                     </li>
 
-                                    <li>Memória Total
+                                    <li>Total
                                         <p>
                                             <label id="memTotal">Valor</label>
                                         </p>
                                     </li>
 
-                                    <li>Memória Utilizada
+                                    <li>Consumido
                                         <p>
                                             <label id="memUtilizada">Valor</label>
                                         </p>
                                     </li>
 
-                                    <li>Memória Disponivel
+                                    <li>Disponivel
                                         <p>
                                             <label id="memDisponivel">Valor</label>
                                         </p>
                                     </li>
 
-                                    <li>Memória Swap Total
+                                    <li>Swap Total
                                         <p>
                                             <label id="swapTotal">Valor</label>
                                         </p>
                                     </li>
 
-                                    <li>Memória Swap Disponivel
+                                    <li>Swap Disponivel
                                         <p>
                                             <label id="swapDisponivel">Valor</label>
                                         </p>
                                     </li>
                                 </ul>
                             </div>
-                        </div>
 
-                        <div id="conteudoUsoRam">
-                            <div id="titulo">
-                                <label id="tituloMoni">Uso da Ram</label>
-                            </div>
                             <div id="graficoRam"></div>
                         </div>
 
-                        <div id="conteudoArmazenamento">
+                         <div id="conteudoUsoCpu">
                             <div id="titulo">
-                                <label id="tituloMoni">Armazenamentos</label>
+                                <label id="tituloMoni">Processador</label>
                             </div>
-                            <div id="listaGraficoArm">
-                                <ul id="tabelaARM" style="list-style: none">
-                                    <li>
-                                        <div id="graficoArm"></div>
+
+                             <div id="infoCpu">
+                                <ul style="list-style: none;">
+                                    <li>Fabricante
+                                        <p>
+                                            <label id="nomeFabricanteCpu">Valor</label>
+                                        </p>
+                                    </li>
+
+                                    <li>Modelo
+                                        <p>
+                                            <label id="modeloCpu">Valor</label>
+                                        </p>
+                                    </li>
+
+                                    <li>Frequência Base
+                                        <p>
+                                            <label id="frequenciaBase">Valor</label>
+                                        </p>
+                                    </li>
+
+                                    <li>Núcleos
+                                        <p>
+                                            <label id="nucleosCpu">Valor</label>
+                                        </p>
+                                    </li>
+
+                                    <li>Serial
+                                        <p>
+                                            <label id="serialCpu">Valor</label>
+                                        </p>
                                     </li>
                                 </ul>
                             </div>
-                        </div>
 
-                        <div id="conteudoUsoCpu">
-                            <div id="titulo">
-                                <label id="tituloMoni">Uso da Cpu</label>
-                            </div>
 
                             <div id="graficoCpu"></div>
 
@@ -191,14 +207,26 @@
                             </div>
                         </div>
 
+                        <div id="conteudoArmazenamento">
+                            <div id="titulo">
+                                <label id="tituloMoni">Armazenamentos</label>
+                            </div>
+                            <div id="listaGraficoArm">
+                                <ul id="tabelaARM" style="list-style: none">
+                                    <li>
+                                        <div id="graficoArm"></div>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+
+                       
+
                         <div id="conteudoComputador">
                             <div id="titulo">
-                                <label id="tituloMoni">Monitoração</label>
+                                <label id="tituloMoni">Computador</label>
                             </div>
                             <div id="infoComputador">
-                                <div id="infoComputadorT">
-                                    <label id="infoPC">Computador</label>
-                                </div>
                                 <div id="computadorInfo">
                                     <ul style="list-style: none;">
                                         <li>Nome Personalizado
@@ -252,52 +280,6 @@
                                 </div>
                             </div>
                         </div>
-                        <div id="conteudoCpu">
-                            <div id="titulo">
-                                <label id="tituloMoni">Cpu</label>
-                            </div>
-                            <div id="infoCpu">
-                                <ul style="list-style: none;">
-                                    <li>Fabricante
-                                        <p>
-                                            <label id="nomeFabricanteCpu">Valor</label>
-                                        </p>
-                                    </li>
-
-                                    <li>Modelo
-                                        <p>
-                                            <label id="modeloCpu">Valor</label>
-                                        </p>
-                                    </li>
-
-                                    <li>Frequência Base
-                                        <p>
-                                            <label id="frequenciaBase">Valor</label>
-                                        </p>
-                                    </li>
-
-                                    <li>Núcleos
-                                        <p>
-                                            <label id="nucleosCpu">Valor</label>
-                                        </p>
-                                    </li>
-
-                                    <li>Serial
-                                        <p>
-                                            <label id="serialCpu">Valor</label>
-                                        </p>
-                                    </li>
-                                </ul>
-                            </div>
-
-                        </div>
-
-                        
-
-                        
-
-                        
-                        
                     </div>
                 </div>
             </div>
