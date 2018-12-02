@@ -30,7 +30,7 @@ function success(obj) {
             + '<td>' + obj[i].OS.familiaSO+ '</td>'
             + "<td>" + obj[i].processadores.modelo + "</td>"
             + "<td>"+ obj[i].ipv4Computador + "</td>"
-            + '<td><img src="img/relatorioIcon.png" /></td>'
+            + '<td><img src="img/relatorioIcon.png" id="btnPDF" /></td>'
             + "</tr >");
     }
 
@@ -39,3 +39,30 @@ function success(obj) {
 
     computadores = obj;
 }
+
+// função que gera o PDF ao clicar no icone de relatórios
+
+$(document).ready(function () {
+    $('#btnPDF').click(function () {
+        savePDF(document.querySelector('#divPDF'));
+    });
+});
+
+function savePDF(codigoHTML) {
+    var doc = new jsPDF('portrait', 'pt', 'a4'),
+        data = new Date();
+    margins = {
+        top: 40,
+        bottom: 60,
+        left: 40,
+        width: 1000
+    };
+    doc.fromHTML(codigoHTML,
+        margins.left, // x coord
+        margins.top, { pagesplit: true },
+        function (dispose) {
+            doc.save("Relatorio - " + data.getDate() + "/" + (data.getMonth() + 1) + "/" + data.getFullYear() + ".pdf");
+        });
+}
+
+

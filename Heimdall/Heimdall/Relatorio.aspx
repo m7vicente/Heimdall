@@ -18,8 +18,13 @@
     <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet"/>
 
     <script src="vendor/jquery/jquery.min.js"></script>
-
     <script src="js/relatorio.js" type="text/javascript"></script>
+
+    <!--Jquery para gerar PDF (JPDF)-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/1.3.5/jspdf.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/0.4.1/html2canvas.min.js"></script>
+
 
     <title>Heimdall || Relatório</title>
 </head>
@@ -86,6 +91,9 @@
                                 <th>Gerar Relatório</th>
                             </tr>
                         </table>
+                        <div id="divPDF" style="display: none;">
+                            relatório em breve...
+                        </div>
                     </div>
                 </div>
             </div>
