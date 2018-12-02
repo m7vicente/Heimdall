@@ -22,11 +22,11 @@ public class main {
 
 	public static void main(String[] args) throws InterruptedException {
 
-		 Usuario user = new Usuario("mgvicente@gmail.com","rola");
-		//Usuario user = new Usuario("", "");
+		 //Usuario user = new Usuario("mgvicente@gmail.com","rola");
+		Usuario user = new Usuario("", "");
 		CallService service = new CallService();
 
-		/*while (true) {
+		while (true) {
 			user.setEmail(JOptionPane.showInputDialog("Insira seu Email: "));
 
 			while (user.getEmail().equals("")) {
@@ -55,7 +55,7 @@ public class main {
 				break;
 			}
 
-		}*/
+		}
 
 		user = service.ObterUsuario(user);
 
