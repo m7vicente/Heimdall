@@ -41,16 +41,21 @@
     flex-wrap: wrap;
     align-items: center;
 }
+#sidebar-wrapper ul {
+    font-size: 14px;
+}
 
 .material-icons {
-    color: white;
+    color: lightgray;
     float: left;
+    margin-top: 5px;
 }
 
 #icon {
     float: right;
     margin-left: 50px;
 }
+
 
 #titulo label {
     font-family: 'Roboto';
@@ -109,7 +114,7 @@ label {
     font-weight: 500;
 }   
 
-li{
+#contComputadores li{
    font-size: 13px;
 }
 

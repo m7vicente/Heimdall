@@ -19,6 +19,8 @@
     <!--Jquery abaixo permite deixar os graficos do google charts 100% resonsivos-->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+
+
     <script type="text/javascript" src="js/graficos.js"></script>
     <script src="vendor/jquery/jquery.min.js"></script>
     <script type="text/javascript" src="js/monitoracao.js"></script>
@@ -56,16 +58,16 @@
                     <li class="sidebar-brand">
                     </li>
                     <li>
-                        <a href="Sistema.aspx">Computadores</a>
+                        <a href="Sistema.aspx"><i class="material-icons md-dark md-inactive">computer</i> Computadores</a>
                     </li>
                     <li>
-                        <a href="Relatorio.aspx">Emitir Relatórios</a>
+                         <a href="Relatorio.aspx"><i class="material-icons md-dark md-inactive">assessment</i>Emitir Relatórios</a>
                     </li>
                     <li>
-                        <a href="#">Configurações</a>
+                         <a href="#"><i class="material-icons md-dark md-inactive">build</i>Configurações</a>
                     </li>
                     <li>
-                        <asp:LinkButton ID="sair" Text="Sair" OnClick="sair_Click" runat="server" />
+                        <i class="material-icons md-dark md-inactive" id="sairIcon">settings_power</i> <asp:LinkButton ID="sair" Text="Sair" OnClick="sair_Click" runat="server" />
                     </li>
                 </ul>
             </div>

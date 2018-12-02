@@ -14,7 +14,7 @@
 }
 
 #titulo label {
-    font-family: Arial Light;
+    font-family: 'Roboto';
     font-size: 23px;
     margin-top: 10px;
     color: white;
@@ -22,7 +22,7 @@
 }
 
 #tableRelatorio {
-    font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+    font-family: 'Roboto';
     border-collapse: collapse;
     width: 100%;
 }
