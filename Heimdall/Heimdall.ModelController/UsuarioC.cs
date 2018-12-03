@@ -36,5 +36,10 @@ namespace Heimdall.ModelController
                 return false;
             }
         }
+
+        public void atualizar(Usuario usuario)
+        {
+            usuario.senha = new Criptografar().GenerateSHA256String(usuario.senha);
+        }
     }
 }
