@@ -12,7 +12,7 @@ namespace Heimdall
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            Usuario usuario = (Usuario)Session["usuario"];            
+            Usuario usuario = (Usuario)Session["usuario"];
 
             if (usuario == null)
             {
@@ -23,6 +23,13 @@ namespace Heimdall
                 int codComputador = int.Parse(Request.QueryString["codComputador"].ToString());
                 ScriptManager.RegisterClientScriptBlock(this, GetType(), "BuscarComputador", $"BuscarComputador({codComputador});", true);
             }
+        }
+
+        protected void sair_Click(object sender, EventArgs e)
+        {
+            Session["usuario"] = null;
+            Response.Redirect("Inicio.aspx");
+
         }
     }
 }

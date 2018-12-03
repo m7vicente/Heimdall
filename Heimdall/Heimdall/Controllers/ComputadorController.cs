@@ -10,9 +10,17 @@ namespace Heimdall.Controllers
     public class ComputadorController : ApiController
     {
         // GET api/<controller>
-        public IEnumerable<string> Get()
+        public IEnumerable<Computador> Get(int codUsuario)
         {
-            return new string[] { "value1", "value2" };
+            List<Computador> computadores = new List<Computador>();
+            ComputadorC c1 = new ComputadorC();
+            
+            foreach(Computador computador in c1.MontarVisualizacao(codUsuario))
+            {
+                computadores.Add(new MonitorarC().GetComputador(computador.codComputador)); 
+            }
+
+            return computadores;
         }
 
         // GET api/<controller>/5

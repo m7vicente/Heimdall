@@ -17,14 +17,19 @@ import oshi.SystemInfo;
 import oshi.hardware.HardwareAbstractionLayer;
 import oshi.software.os.OSFileStore;
 import oshi.software.os.OperatingSystem;
+import heimdall.Log.AdicionarLog;
+import heimdall.Log.ArquivoLog;;
 
 public class main {
+		
+	static final AdicionarLog Log = new AdicionarLog();
 
 	public static void main(String[] args) throws InterruptedException {
 
-		// Usuario login = new Usuario("Pedro@bifrost.com.br","12345");
+		 //Usuario user = new Usuario("mgvicente@gmail.com","rola");
 		Usuario user = new Usuario("", "");
 		CallService service = new CallService();
+
 
 		while (true) {
 			user.setEmail(JOptionPane.showInputDialog("Insira seu Email: "));
@@ -52,12 +57,13 @@ public class main {
 			user = service.ObterUsuario(user);
 
 			if (user.getCodUsuario() > 0 && !user.getNomeCompleto().equals("")) {
+				Log.EscreverLog("Usuario logado: ");
 				break;
 			}
+			
+			Log.EscreverLog("Usuario não validado: ");
 
 		}
-
-		user = service.ObterUsuario(user);
 
 		// Sistema Operacional
 		SistemaOperacional sistemaOperacional = new SistemaOperacional();

@@ -100,9 +100,9 @@ public class CallService extends ServiceURL {
 	public void Atualizar(Usuario usuario) {
 
 		String json = gson.toJson(usuario);
-
+		System.out.println(json);
 		try {
-
+			
 			URL url = new URL(this.servicoAtualizar);
 			HttpURLConnection conn = (HttpURLConnection) url.openConnection();
 			conn.setDoOutput(true);

@@ -42,6 +42,9 @@ function success(obj) {
             '</div>' +
             '</div>');
     }
+
+    $('#load').addClass("hidden");
+    $('#contComputadores').removeClass("hidden");
 }
 
 function monitorarProcessador(codComputador) {
