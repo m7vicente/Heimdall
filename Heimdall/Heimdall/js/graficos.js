@@ -24,11 +24,11 @@ function desenharGraficoCpu(valor) {
     cpuGrafico = new google.visualization.AreaChart(document.getElementById('graficoCpu'));
     cpuGrafico.draw(cpuData, {
         title: 'Desempenho CPU',
-        hAxis: { title: '', titleTextStyle: { color: '#ff9933' } },
+        hAxis: { title: '', titleTextStyle: { color: '#ffc738' } },
         vAxis: { minValue: 0 },
         backgroundColor: 'transparent',
-        colors: ['#ff9933'],
-        height: '700'
+        colors: ['#ffc738'],
+        height: '400'
 
     });
 
@@ -43,27 +43,28 @@ function desenharGraficoRam(valor) {
         ramData.addColumn('number', 'Valor');
         ramData.addColumn('number', 'Utilizacao');
     }
-        
+
     ramData.addRows([[ramTotal, valor]]);
 
     ramGrafico = new google.visualization.AreaChart(document.getElementById('graficoRam'));
     ramGrafico.draw(ramData, {
 
         title: 'Desempenho Ram',
-        hAxis: { title: '', titleTextStyle: { color: '#ff9933' } },
+        hAxis: { title: '', titleTextStyle: { color: '#ffc738' } },
         vAxis: { minValue: 0 },
         backgroundColor: 'transparent',
-        colors: ['#ff9933']
-
+        colors: ['#ffc738'],
+        height: '613',
+        font: 'Roboto'
     });
 
     ramTotal++;
 }
 
 var armExist = false;
-function desenharGraficosArmazenamento(armazenamentos) { 
+function desenharGraficosArmazenamento(armazenamentos) {
 
-    if (!armExist) {        
+    if (!armExist) {
 
         $('#tabelaARM').html('');
 
@@ -77,7 +78,7 @@ function desenharGraficosArmazenamento(armazenamentos) {
             if (utilizada < 0) {
                 utilizada = armazenamentos[i].capacidadeUtilizada - armazenamentos[i].capacidadeTotal;
             }
-            
+
             $('#tabelaARM').append('<li><div id = "graficoArm' + i + '" ></div ></li >'
                 + '<script>'
                 + "var armTotal" + i + " = 0, armData" + i + " = null, armGrafico" + i + " = null;"
@@ -91,7 +92,7 @@ function desenharGraficosArmazenamento(armazenamentos) {
                 + "    title: '" + armazenamentos[i].tipoArmazenamento + "',"
                 + "    pieHole: 0.1,"
                 + "    backgroundColor: 'transparent',"
-                + "    colors: ['#ff9933', 'black']"
+                + "    colors: ['#ffc738', 'black']"
                 + "});"
                 + '</script>');
         }
@@ -99,8 +100,30 @@ function desenharGraficosArmazenamento(armazenamentos) {
     }
 }
 
+function desenharGraficoArmazenamentos(capacidadeTotal, capacidadeUltilizada) {
+
+    $('#tabelaARM').append('graficoArm<li><div id = "graficoArm" ></div ></li >'
+        + '<script>'
+        + "var armTotal = 0, armData = null, armGrafico = null;"
+        + 'var armData = google.visualization.arrayToDataTable(['
+        + "        ['HD total', 'HD usado'],"
+        + "    ['Capacidade Total', " + capacidadeTotal + "],"
+        + "    ['Capacidade Usada', " + capacidadeUltilizada + "]]);"
+
+        + "armGrafico = new google.visualization.PieChart(document.getElementById('graficoArm'));"
+        + "armGrafico.draw(armData, {"
+        + "    title: 'Armazenamento 1',"
+        + "    pieHole: 0.1,"
+        + "    backgroundColor: 'transparent',"
+        + "    colors: ['#ffc738', 'black']"
+        + "});"
+        + '</script>');
+}
+/*fecha grafico de armazenamentos*/
+
+
 $(window).resize(function () {
     desenharGraficoCpu();
     desenharGraficoRam();
-    desenharGraficoArmazenamentos();
+    desenharGraficosArmazenamento();
 });
