@@ -10,6 +10,11 @@
     transition: all 0.5s ease;
 }
 
+h1 {
+    font-family: 'Roboto';
+    font-size: 35px;
+}
+
     #wrapper.toggled {
         padding-left: 250px;
     }
@@ -28,7 +33,12 @@
     -moz-transition: all 0.5s ease;
     -o-transition: all 0.5s ease;
     transition: all 0.5s ease;
+    font-family: 'Roboto'; 
 }
+#sidebar-wrapper  ul{
+    font-size: 14px;
+}
+
 
 #wrapper.toggled #sidebar-wrapper {
     width: 250px;
@@ -62,6 +72,12 @@
     height: 50px;
 }
 
+.material-icons {
+    color: lightgray;
+    float: left;
+    margin-top: 5px;
+}
+
 #infoUser {
     height: 100%;
     width: 150px;
@@ -69,7 +85,7 @@
 }
 
     #infoUser label {
-        font-family: arial;
+        font-family: 'Roboto';
         color: white;
         text-overflow: ellipsis;
         display: inline-block;
@@ -226,17 +242,18 @@
     float: left;
     flex-wrap: wrap;
     padding: 20px 0;
+    font-family: 'Roboto';
 }
 
     #computador label {
         width: 100%;
         margin: 0px;
-        font-family: "arial light";
+        font-family: 'Roboto';
         font-weight: 600;
     }
 
     #computador p {
-        font-family: "arial light";
+        font-family: 'Roboto';
         width: 100%;
         margin: 0px 0px 15px 0px;
     }
@@ -452,7 +469,7 @@ body {
 }
 
     #infoUser label {
-        font-family: arial;
+        font-family: 'Roboto';
         color: white;
         text-overflow: ellipsis;
         display: inline-block;
@@ -647,17 +664,17 @@ body {
 
 
     label {
-        font-family: Arial Light;
+        font-family: 'Roboto';
         font-size: 15px;
     }
 
     li {
-        font-family: Arial Light;
+        font-family: 'Roboto';
         font-size: 15px;
     }
 
     p {
-        font-family: Arial Light;
+        font-family: 'Roboto';
         font-size: 15px;
     }
     
@@ -731,4 +748,4 @@ body {
         position: absolute;
         text-indent: 80px;
     }
-}}
+}

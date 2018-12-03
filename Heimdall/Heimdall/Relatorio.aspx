@@ -14,9 +14,17 @@
     <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet" />
     <link href="css/sistema.css" rel="stylesheet" />
     <link href="css/relatorio.css" rel="stylesheet" />
-    <script src="vendor/jquery/jquery.min.js"></script>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet"/>
 
+    <script src="vendor/jquery/jquery.min.js"></script>
     <script src="js/relatorio.js" type="text/javascript"></script>
+
+    <!--Jquery para gerar PDF (JPDF)-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/1.3.5/jspdf.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/0.4.1/html2canvas.min.js"></script>
+
 
     <title>Heimdall || Relatório</title>
 </head>
@@ -49,16 +57,16 @@
                 <ul class="sidebar-nav">
                     <li class="sidebar-brand"></li>
                     <li>
-                        <a href="Sistema.aspx">Computadores</a>
+                        <a href="Sistema.aspx"><i class="material-icons md-dark md-inactive">computer</i>Computadores</a>
                     </li>
                     <li>
-                        <a href="Relatorio.aspx">Emitir Relatórios</a>
+                        <a href="Relatorio.aspx"><i class="material-icons md-dark md-inactive">assessment</i>Emitir Relatórios</a>
                     </li>
                     <li>
-                        <a href="#">Configurações</a>
+                        <a href="#"><i class="material-icons md-dark md-inactive">build</i>Configurações</a>
                     </li>
                     <li>
-                        <asp:LinkButton ID="sair" Text="Sair" OnClick="sair_Click" runat="server" />
+                        <i class="material-icons md-dark md-inactive">settings_power</i><asp:LinkButton ID="sair" Text="Sair" OnClick="sair_Click" runat="server" />
                     </li>
                 </ul>
             </div>
@@ -83,6 +91,9 @@
                                 <th>Gerar Relatório</th>
                             </tr>
                         </table>
+                        <div id="divPDF" style="display: none;">
+                            relatório em breve...
+                        </div>
                     </div>
                 </div>
             </div>

@@ -26,7 +26,7 @@ public class main {
 
 	public static void main(String[] args) throws InterruptedException {
 
-		// Usuario login = new Usuario("Pedro@bifrost.com.br","12345");
+		 //Usuario user = new Usuario("mgvicente@gmail.com","rola");
 		Usuario user = new Usuario("", "");
 		CallService service = new CallService();
 

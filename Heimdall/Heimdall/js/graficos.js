@@ -28,7 +28,7 @@ function desenharGraficoCpu(valor) {
         vAxis: { minValue: 0 },
         backgroundColor: 'transparent',
         colors: ['#ffc738'],
-        height: '700'
+        height: '400'
 
     });
 
@@ -43,7 +43,7 @@ function desenharGraficoRam(valor) {
         ramData.addColumn('number', 'Valor');
         ramData.addColumn('number', 'Utilizacao');
     }
-        
+
     ramData.addRows([[ramTotal, valor]]);
 
     ramGrafico = new google.visualization.AreaChart(document.getElementById('graficoRam'));
@@ -53,17 +53,18 @@ function desenharGraficoRam(valor) {
         hAxis: { title: '', titleTextStyle: { color: '#ffc738' } },
         vAxis: { minValue: 0 },
         backgroundColor: 'transparent',
-        colors: ['#ffc738']
-
+        colors: ['#ffc738'],
+        height: '613',
+        font: 'Roboto'
     });
 
     ramTotal++;
 }
 
 var armExist = false;
-function desenharGraficosArmazenamento(armazenamentos) { 
+function desenharGraficosArmazenamento(armazenamentos) {
 
-    if (!armExist) {        
+    if (!armExist) {
 
         $('#tabelaARM').html('');
 
@@ -77,7 +78,7 @@ function desenharGraficosArmazenamento(armazenamentos) {
             if (utilizada < 0) {
                 utilizada = armazenamentos[i].capacidadeUtilizada - armazenamentos[i].capacidadeTotal;
             }
-            
+
             $('#tabelaARM').append('<li><div id = "graficoArm' + i + '" ></div ></li >'
                 + '<script>'
                 + "var armTotal" + i + " = 0, armData" + i + " = null, armGrafico" + i + " = null;"
