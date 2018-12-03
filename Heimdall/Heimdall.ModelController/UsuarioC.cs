@@ -40,6 +40,7 @@ namespace Heimdall.ModelController
         public void atualizar(Usuario usuario)
         {
             usuario.senha = new Criptografar().GenerateSHA256String(usuario.senha);
+            new UsuarioC().atualizar(usuario);
         }
     }
 }
