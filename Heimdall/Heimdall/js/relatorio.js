@@ -2,9 +2,9 @@
 
 function BuscarComputadores(codUsuario) {
 
-    var URL = "http://localhost:52121/api/Computador/?codUsuario=" + codUsuario + "";
+    //var URL = "http://localhost:52121/api/Computador/?codUsuario=" + codUsuario + "";
 
-    //var URL = "https://heimdallview.azurewebsites.net/api/Computador/?codUsuario=" + codUsuario + "";
+    var URL = "https://heimdallview.azurewebsites.net/api/Computador/?codUsuario=" + codUsuario + "";
 
 
     var settings = {
