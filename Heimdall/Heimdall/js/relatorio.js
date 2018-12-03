@@ -30,8 +30,10 @@ function success(obj) {
             + '<td>' + obj[i].OS.familiaSO+ '</td>'
             + "<td>" + obj[i].processadores.modelo + "</td>"
             + "<td>"+ obj[i].ipv4Computador + "</td>"
-            + '<td><img src="img/relatorioIcon.png" id="btnPDF" /></td>'
+            + '<td><img src="img/relatorioIcon.png" onclick="savePDF(objComputer'+ obj[i].codComputador+')"/></td>'
             + "</tr >");
+
+        gravarInforRelatorio(obj[i]);
     }
 
     $('#load').addClass("hidden");
@@ -42,13 +44,9 @@ function success(obj) {
 
 // função que gera o PDF ao clicar no icone de relatórios
 
-$(document).ready(function () {
-    $('#btnPDF').click(function () {
-        savePDF(document.querySelector('#divPDF'));
-    });
-});
 
 function savePDF(codigoHTML) {
+    document.querySelector('#divPDF')
     var doc = new jsPDF('portrait', 'pt', 'a4'),
         data = new Date();
     margins = {
@@ -66,3 +64,6 @@ function savePDF(codigoHTML) {
 }
 
 
+function gravarInforRelatorio(computador) {
+    $('#divPDF').append('<div id="objComputer' + computador.codComputador + '">#rola '+ computador.codComputador + '</div>');
+}
