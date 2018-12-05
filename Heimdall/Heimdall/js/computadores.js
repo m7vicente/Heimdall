@@ -36,8 +36,6 @@ function success(obj) {
             '<p>' +
             '<label ID="lbModeloComputador"> Modelo computador: ' + obj[i].fabricanteComputador + '<label></p>' +
             '<p>' +
-            '<label ID="lblProcessador" > Processador : ' + i + '<label></p>' +
-            '<p>' +
             '<label ID="lbIpv4"> IPV4: ' + obj[i].ipv4Computador + ' <label></p>' +
             '</div>' +
             '</div>');
