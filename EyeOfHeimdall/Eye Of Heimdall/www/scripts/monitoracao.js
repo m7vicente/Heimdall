@@ -1,4 +1,6 @@
-﻿var Computador;
+﻿var codComputador = parseInt($.cookie('codComputador'));
+alert(codComputador);
+$.cookie("codComputador", null);
 var lblNomePersonalizado;
 var lblNomeComputador;
 var lblFabricantePc;
@@ -61,9 +63,8 @@ function MostarComponentes(computador) {
 
 }
 
-function BuscarComputador(codComputador) {
-
-    computador = codComputador;
+function BuscarComputador() {
+      
 
     var URL = "http://localhost:52121/api/Monitorar/?id=5&codComputador=" + codComputador + "";
 
@@ -112,7 +113,7 @@ function populate() {
 
 setInterval(function BuscarComputador() {
 
-    var URL = "https://heimdallview.azurewebsites.net/api/Monitorar/?id=5&codComputador=" + computador + "";
+    var URL = "https://heimdallview.azurewebsites.net/api/Monitorar/?id=5&codComputador=" + codComputador + "";
 
     //var URL = "http://localhost:52121/api/Monitorar/?id=5&codComputador=" + codComputador + "";
 

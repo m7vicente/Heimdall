@@ -41,8 +41,6 @@ function success(obj) {
             '<p>' +
             '<label ID="lbModeloComputador"> Modelo computador: ' + obj[i].fabricanteComputador + '<label></p>' +
             '<p>' +
-            '<label ID="lblProcessador" > Processador : ' + i + '<label></p>' +
-            '<p>' +
             '<label ID="lbIpv4"> IPV4: ' + obj[i].ipv4Computador + ' <label></p>' +
             '</div>' +
             '</div>');
@@ -53,5 +51,6 @@ function success(obj) {
 }
 
 function monitorarProcessador(codComputador) {
-    window.location.href = "Monitoracao.aspx?codComputador="+codComputador;
+    $.cookie('codComputador', codComputador);
+    document.location = "Monitoracao.html";
 }
