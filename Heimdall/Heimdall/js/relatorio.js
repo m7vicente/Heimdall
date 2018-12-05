@@ -66,39 +66,36 @@ function savePDF(codigoHTML) {
 
 function gravarInforRelatorio(computador) {
     $('#divPDF').append('<div id="objComputer' + computador.codComputador + '">' +
-        "<h1>Informações do computador</h1>" +
-        '<div id="risco"></div>' +
+        '<img src="img/bifrost_branco_rela.png"/>' +
+        "<h1>INFORMAÇÕES DO COMPUTADOR</h1>" +
+        '<img src="img/risco.png" id="risco"/>' +
         '<div id="infoPcomputador">'+
         '<ul style="list-style: none;">' +
-        '<li>Codigo do computador: <label id="codComp">' + computador.codComputador + '</label></li>' +
-        '<li>Fabricante do computador: <label id="faComp">' + computador.fabricanteComputador + '</label></li>' +
-        '<li>Nome do computador: <label id="nomeComp">' + computador.nomeComputador + '</label></li>' +
-        '<li>IPV4: <label id="ipv4Comp">' + computador.ipv4Computador + '</label></li>' +
-        '<li>Versão Firmware: <label id="verfirm">' + computador.versaoFirmware + '</label></li>' +
-        '<li>Modelo do computador: <label id="verfirm">' + computador.modeloComputador + '</label></li>' +
+        "<li>Fabricante do computador:  "+ computador.fabricanteComputador + "</li>" +
+        "<li>Nome do computador: "+ computador.nomeComputador + "</label></li>" +
+        "<li>IPV4: " + computador.ipv4Computador + "</label></li>" +
+        "<li>Versão Firmware: " + computador.versaoFirmware + "</label></li>" +
+        "<li>Modelo do computador: "+ computador.modeloComputador + "</label></li>" +
         '</ul>'+
         '</div >'+
-        '<div id="risco"></div>' +
-        "<h1>Sistema Operacional</h1>" +
-        '<div id="risco"></div>' +
+        "<h1>SISTEMA OPERACIONAL</h1>" +
+        '<img src="img/risco.png" id="risco"/>' +
+        '<div id="infoPcomputador">' +
+        "<ul>" +
+        '<li> '+ computador.OS.fabricanteSO + ' ' + computador.OS.familiaSO + ' ' + computador.OS.versaoSO + '</li>' +
+        "</ul>" +
+        "</div >" +
+        "<h1>SISTEMA</h1>" +
+        '<img src="img/risco.png" id="risco"/>' +
         '<div id="infoPcomputador">' +
         '<ul style="list-style: none;">' +
-        '<li><label id="sistemaOperacional">' + computador.OS.fabricanteSO + ' ' + computador.OS.familiaSO + ' ' + computador.OS.versaoSO + '</label></li>' +
-        '</ul>' +
-        '</div >' +
-        '<div id="risco"></div>' +
-        "<h1>Sistema</h1>" +
-        '<div id="risco"></div>' +
-        '<div id="infoPcomputador">' +
-        '<ul style="list-style: none;">' +
-        '<li>Processador: <label id="processador">' + computador.processadores.modelo + '</label></li>' +
-        '<li>Memória RAM: <label id="memoriaRam">' + computador.RAM.memoriaTotal + '</label></li>' +
-        '<li>Memória Swap: <label id="memoriaSwap">' + computador.RAM.swapTotal + '</label></li>' +
-        '<li>Quantidade de Núcleos: <label id="nucleo">' + computador.processadores.nucleos + '</label></li>' +
-        '<li>Serial: <label id="nucleo">' + computador.processadores.serial + '</label></li>' +
-        '</ul>' +
-        '</div >' +
+        "<li>Processador: "+ computador.processadores.modelo + "</li>" +
+        "<li>Memória RAM: "+ computador.RAM.memoriaTotal + " GB</li>" +
+        "<li>Memória Swap: " + computador.RAM.swapTotal + " GB</li>" +
+        "<li>Quantidade de Núcleos: "+ computador.processadores.nucleos + "</li>" +
+        "<li>Serial: " + computador.processadores.serial + "</li>" +
+        "</ul>" +
+        "</div >" +
         +"</div>");
-        
-        
+    
 }
