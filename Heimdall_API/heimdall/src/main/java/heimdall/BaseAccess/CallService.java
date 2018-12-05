@@ -16,9 +16,12 @@ import com.google.gson.reflect.TypeToken;
 
 import heimdall.Computador;
 import heimdall.Usuario;
+import heimdall.Log.AdicionarLog;
 
 public class CallService extends ServiceURL {
 
+	static final AdicionarLog Log = new AdicionarLog();
+	
 	private Gson gson = new GsonBuilder().excludeFieldsWithModifiers(Modifier.TRANSIENT ).create();
 
 	public Usuario ObterUsuario(Usuario login) {
@@ -39,7 +42,8 @@ public class CallService extends ServiceURL {
 			os.flush();
 
 			if (conn.getResponseCode() != 200) {
-				throw new RuntimeException("Failed : HTTP error code : " + conn.getResponseCode());
+				//throw new RuntimeException("Failed : HTTP error code : " + conn.getResponseCode());
+				Log.EscreverLog("Failed : HTTP error code : " + conn.getResponseCode());
 			}
 
 			String output = new BufferedReader(new InputStreamReader((conn.getInputStream()))).readLine();
@@ -76,10 +80,11 @@ public class CallService extends ServiceURL {
 			OutputStream os = conn.getOutputStream();
 			os.write(json.getBytes());
 			os.flush();
-			System.out.println(conn.getOutputStream().toString());
+			//System.out.println(conn.getOutputStream().toString());
 
 			if (conn.getResponseCode() != 200) {
-				throw new RuntimeException("Failed : HTTP error code : " + conn.getResponseCode());
+				//throw new RuntimeException("Failed : HTTP error code : " + conn.getResponseCode());
+				Log.EscreverLog("Failed : HTTP error code : " + conn.getResponseCode());
 			}
 
 			String output = new BufferedReader(new InputStreamReader((conn.getInputStream()))).readLine();	
@@ -100,7 +105,7 @@ public class CallService extends ServiceURL {
 	public void Atualizar(Usuario usuario) {
 
 		String json = gson.toJson(usuario);
-		System.out.println(json);
+		//System.out.println(json);
 		try {
 			
 			URL url = new URL(this.servicoAtualizar);
@@ -114,23 +119,25 @@ public class CallService extends ServiceURL {
 			os.flush();
 
 			if (conn.getResponseCode() != 200) {
-				throw new RuntimeException("Failed : HTTP error code : " + conn.getResponseCode());
+				Log.EscreverLog("Failed : HTTP error code : " + conn.getResponseCode());				
 			}
 			
 			String output = new BufferedReader(new InputStreamReader((conn.getInputStream()))).readLine();	
 			
 			if(output.equals("true")) {
-				System.out.println("Atualizado com Sucesso ");
+				//System.out.println("Atualizado com Sucesso ");
 			}else {
-				System.out.println("Erro na atulizalção");
+				//System.out.println("Erro na atulizalção");
+				Log.EscreverLog("erro ao atualizar");
 			}
 
 			conn.disconnect();
 
 		} catch (MalformedURLException e) {
-			e.printStackTrace();
+			Log.EscreverLog("ERRO linha: "+e.toString());//retornar erro
+			
 		} catch (IOException e) {
-			e.printStackTrace();
+			Log.EscreverLog("ERRO linha: "+e.toString());
 		}
 
 	}
