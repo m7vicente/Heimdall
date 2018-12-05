@@ -54,7 +54,7 @@
                     <a href="#"><i class="material-icons md-dark md-inactive">build</i> Configurações</a>
                 </li>
                 <li>
-                    <i class="material-icons md-dark md-inactive">settings_power</i><asp:LinkButton ID="sair" Text="Sair" OnClick="sair_Click" runat="server" />
+                    <a href="#" onclick="sair()"><i class="material-icons md-dark md-inactive" id="sairIcon">settings_power</i>Sair</a>
                 </li>
             </ul>
         </div>
@@ -78,6 +78,10 @@
             e.preventDefault();
             $("#wrapper").toggleClass("toggled");
         });
+
+        function sair() {
+            navigator.app.exitApp();
+        }
     </script>
 
     <script type="text/javascript" src="scripts/bootstrap.bundle.js"></script>

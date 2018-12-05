@@ -65,7 +65,7 @@
                     <a href="#"><i class="material-icons md-dark md-inactive">build</i>Configurações</a>
                 </li>
                 <li>
-                    <i class="material-icons md-dark md-inactive" id="sairIcon">settings_power</i> <button id="sair" OnClick="sair_Click">Sair</button>
+                    <a href="#" onclick="sair()"><i class="material-icons md-dark md-inactive" id="sairIcon">settings_power</i>Sair</a>
                 </li>
             </ul>
         </div>
@@ -320,6 +320,11 @@
             e.preventDefault();
             $("#wrapper").toggleClass("toggled");
         });
+
+        function sair() {
+            navigator.app.exitApp();
+        }
+
     </script>
 </body>
 </html>

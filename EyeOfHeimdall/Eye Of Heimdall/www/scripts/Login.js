@@ -1,5 +1,10 @@
 ﻿$(document).ready(function () {
 
+    usuario = $.parseJSON($.cookie("user"));
+
+    if (usuario.nomeCompleto !== null && usuario.codUsuario > 0) {
+        document.location = "Sistema.html";
+    }
 });
 
 var email = $('#txtEmail');
@@ -20,8 +25,13 @@ $('#btnLogar').click(function () {
     usuario.email = email.val();
     usuario.senha = senha.val();
     usuario = login(usuario);
-    $.cookie('user', JSON.stringify(usuario));
-    document.location = "Sistema.html";
+
+    if (usuario.nomeCompleto !== null && usuario.codUsuario > 0) {
+        $.cookie('user', JSON.stringify(usuario));
+        document.location = "Sistema.html";
+    } else {
+        alert("Usuario Incorreto");
+    }
 });
 
 function login(user) {
