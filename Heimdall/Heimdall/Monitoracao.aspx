@@ -76,6 +76,69 @@
 
                 <!-- Page Content -->
                 <div id="page-content-wrapper">
+                    <!--Novo começo aqui-->
+                    <div id="compInfo">
+                    <div id="conteudoComputador">
+                            <div id="titulo">
+                                <label id="tituloMoni">Computador</label>
+                            </div>
+                            <div id="infoComputador">
+                                <div id="computadorInfo">
+                                    <ul style="list-style: none;">
+                                        
+                                        <li>Nome do Computador
+                                            <p>
+                                                <label id="nomeComputador">Valor</label>
+                                            </p>
+                                        </li>
+
+                                        <li>Modelo
+                                            <p>
+                                                <label id="nomePersonalizado">Valor</label>
+                                            </p>
+                                        </li>
+
+                                        <li>Fabricante
+                                            <p>
+                                                <label id="fabricantePc">Valor</label>
+                                            </p>
+                                        </li>
+
+                                        <li>IPV4
+                                            <p>
+                                                <label id="ipv4">Valor</label>
+                                            </p>
+                                        </li>
+
+                                        <li>Firmware
+                                            <p>
+                                                <label id="firmware">Valor</label>
+                                            </p>
+                                        </li>
+
+                                        <li>Fabricante S.O
+                                            <p>
+                                                <label id="fabricanteSO">Valor</label>
+                                            </p>
+                                        </li>
+
+                                        <li>Familia S.O
+                                            <p>
+                                                <label id="familiaSO">Valor</label>
+                                            </p>
+                                        </li>
+
+                                        <li>Versão S.O
+                                            <p>
+                                                <label id="versaoSO">Valor</label>
+                                            </p>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                   </div>
+                    <!--Fim do novo começo-->
                     <div id="contComputadores">
                         <div id="conteudoUsoRam">
                             <div id="titulo">
@@ -208,7 +271,8 @@
                                 </ul>
                             </div>
                         </div>
-
+                    </div>
+                    <div id="armazenaArmazenamentos">
                         <div id="conteudoArmazenamento">
                             <div id="titulo">
                                 <label id="tituloMoni">Armazenamentos</label>
@@ -219,67 +283,6 @@
                                         <div id="graficoArm"></div>
                                     </li>
                                 </ul>
-                            </div>
-                        </div>
-
-                       
-
-                        <div id="conteudoComputador">
-                            <div id="titulo">
-                                <label id="tituloMoni">Computador</label>
-                            </div>
-                            <div id="infoComputador">
-                                <div id="computadorInfo">
-                                    <ul style="list-style: none;">
-                                        <li>Nome Personalizado
-                                            <p>
-                                                <label id="nomePersonalizado">Valor</label>
-                                            </p>
-                                        </li>
-
-                                        <li>Nome do Computador
-                                            <p>
-                                                <label id="nomeComputador">Valor</label>
-                                            </p>
-                                        </li>
-
-                                        <li>Fabricante
-                                            <p>
-                                                <label id="fabricantePc">Valor</label>
-                                            </p>
-                                        </li>
-
-                                        <li>IPV4
-                                            <p>
-                                                <label id="ipv4">Valor</label>
-                                            </p>
-                                        </li>
-
-                                        <li>Firmware
-                                            <p>
-                                                <label id="firmware">Valor</label>
-                                            </p>
-                                        </li>
-
-                                        <li>Fabricante S.O
-                                            <p>
-                                                <label id="fabricanteSO">Valor</label>
-                                            </p>
-                                        </li>
-
-                                        <li>Familia S.O
-                                            <p>
-                                                <label id="familiaSO">Valor</label>
-                                            </p>
-                                        </li>
-
-                                        <li>Versão S.O
-                                            <p>
-                                                <label id="versaoSO">Valor</label>
-                                            </p>
-                                        </li>
-                                    </ul>
-                                </div>
                             </div>
                         </div>
                     </div>
