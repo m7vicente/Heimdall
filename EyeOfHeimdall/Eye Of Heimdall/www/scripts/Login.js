@@ -31,6 +31,8 @@ $('#btnLogar').click(function () {
         document.location = "Sistema.html";
     } else {
         alert("Usuario Incorreto");
+        email.val("");
+        senha.val("");
     }
 });
 
