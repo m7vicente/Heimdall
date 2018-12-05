@@ -39,9 +39,9 @@
                 <h1 class="compre">bridge to the facility</h1>
                 <blockquote class="quote-externo">
                     <!--permite citações de texto-->
-                    <p>"compre nosso produto por favor,tururuuuuuuuuuuu"</p>
+                    <p>"Um rei sábio nunca almeja guerra, mas deve estar sempre pronto para ela."</p>
                     <br/>
-                    <cite>Master Scrum</cite><!--matem o titulo de uma publicação em italico-->
+                    <cite>Pai de Todos</cite><!--matem o titulo de uma publicação em italico-->
                 </blockquote>
                 <a href="Login.aspx" class="btn">Heimdall Dashboard</a>
             </div>
@@ -154,8 +154,8 @@
 
             <!--botão-->
             <div class="call">
-                <p>conheça mais nossa história</p>
-                <a href="sobre.html" class="btn btn-preto">Sobre</a>
+                
+                <a href="Cadastro.aspx" class="btn btn-preto">Cadastre-se</a>
             </div>
         </section>
         <!--fim da qualidade-->
