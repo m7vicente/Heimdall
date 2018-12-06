@@ -1,0 +1,61 @@
+﻿#relatorioTable {
+    width: 100%;
+    height: auto;
+}
+
+#titulo {
+    width: 100%;
+    height: 40px;
+    background-color: rgb(255,199,56);
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+#titulo label {
+    font-family: 'Roboto';
+    font-size: 23px;
+    margin-top: 10px;
+    color: white;
+    font-weight: bold;
+}
+
+#tableRelatorio {
+    font-family: 'Roboto';
+    border-collapse: collapse;
+    width: 100%;
+}
+
+#tableRelatorio td {
+    padding: 15px;
+    border-bottom: solid 1px #000;
+    border-top: solid 1px #000;
+}
+
+#tableRelatorio th {
+    padding: 15px;    
+    
+}
+
+#tableRelatorio tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+#tableRelatorio tr:hover {
+    background-color: #ddd;
+}
+
+    #tableRelatorio th {
+        padding-top: 12px;
+        padding-bottom: 12px;
+        text-align: left;
+        background-color: rgb(255,199,56);
+        color: white;
+    }
+
+#tableRelatorio img {
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+}

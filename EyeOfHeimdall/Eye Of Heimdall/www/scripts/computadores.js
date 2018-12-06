@@ -1,6 +1,11 @@
-﻿function BuscarProcessador(codUsuario) {
+﻿usuario = $.parseJSON($.cookie("user"));
 
-    //var URL = "http://localhost:52121/api/Computador/?id=5&codUsuario=" + codUsuario + "";
+$('#lblUsuario').text("Bem Vindo "+usuario.nomeCompleto);
+
+BuscarProcessador(usuario.codUsuario);
+
+function BuscarProcessador(codUsuario) {
+
 
     var URL = "https://heimdallview.azurewebsites.net/api/Computador/?id=5&codUsuario=" + codUsuario + "";
                
@@ -26,7 +31,7 @@ function success(obj) {
 
         $('#contComputadores').append('<div id = "computador" onclick="monitorarProcessador(' + obj[i].codComputador +')" >' +
             '<div id="imgPc">' +
-            '<img src="img/computador.png">' +
+            '<img src="images/computador.png">' +
             '</div>' +
             '<div id="informacoesPc">' +
             '<p>' +
@@ -46,5 +51,6 @@ function success(obj) {
 }
 
 function monitorarProcessador(codComputador) {
-    window.location.href = "Monitoracao.aspx?codComputador="+codComputador;
+    $.cookie('codComputador', codComputador);
+    document.location = "Monitoracao.html";
 }
