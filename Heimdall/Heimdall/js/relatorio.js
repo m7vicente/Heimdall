@@ -95,7 +95,7 @@ function gravarInforRelatorio(computador) {
         "<li>Quantidade de Núcleos: "+ computador.processadores.nucleos + "</li>" +
         "<li>Serial: " + computador.processadores.serial + "</li>" +
         "</ul>" +
-        "</div >" +
+        "</div>" 
         +"</div>");
     
 }
