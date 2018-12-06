@@ -33,7 +33,7 @@ public class main {
 
 		while (true) {
 			user.setEmail(JOptionPane.showInputDialog("Insira seu Email: "));
-
+			
 			while (user.getEmail().equals("")) {
 				user.setEmail(JOptionPane.showInputDialog("Insira seu Email: ").toLowerCase());
 			}
@@ -50,14 +50,17 @@ public class main {
 				if (x == JOptionPane.OK_OPTION) {
 					user.setSenha(jpf.getText());
 				} else {
+					Log.EscreverLog("Usuario cancelou login: ");
 					System.exit(0);
+					
 				}
 			}
 
 			user = service.ObterUsuario(user);
 
 			if (user.getCodUsuario() > 0 && !user.getNomeCompleto().equals("")) {
-				Log.EscreverLog("Usuario logado: ");
+				Log.EscreverLog("Usuario "+user.getNomeCompleto()+" está logado");
+				
 				break;
 			}
 			
@@ -91,6 +94,7 @@ public class main {
 
 		user = service.CadastrarComputador(user);
 		
+		
 		while (true) {
 			Thread.sleep(5000);
 
@@ -101,9 +105,12 @@ public class main {
 				user.getComputador().getArmazenamentos().get(i).setHD(hds[i]);
 				user.getComputador().getArmazenamentos().get(i).Atualizar();
 			}
-
+			
 			service.Atualizar(user);
+			Log.EscreverLog("atualizado com sucesso: ");
 		}
+		
+		
 
 	}
 

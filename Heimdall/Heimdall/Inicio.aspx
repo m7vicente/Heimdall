@@ -39,9 +39,9 @@
                 <h1 class="compre">bridge to the facility</h1>
                 <blockquote class="quote-externo">
                     <!--permite citações de texto-->
-                    <p>"compre nosso produto por favor,tururuuuuuuuuuuu"</p>
+                    <p>"Um rei sábio nunca almeja guerra, mas deve estar sempre pronto para ela."</p>
                     <br/>
-                    <cite>Master Scrum</cite><!--matem o titulo de uma publicação em italico-->
+                    <cite>Pai de Todos</cite><!--matem o titulo de uma publicação em italico-->
                 </blockquote>
                 <a href="Login.aspx" class="btn">Heimdall Dashboard</a>
             </div>
@@ -154,8 +154,8 @@
 
             <!--botão-->
             <div class="call">
-                <p>conheça mais nossa história</p>
-                <a href="sobre.html" class="btn btn-preto">Sobre</a>
+                
+                <a href="Cadastro.aspx" class="btn btn-preto">Cadastre-se</a>
             </div>
         </section>
         <!--fim da qualidade-->
@@ -167,15 +167,20 @@
             <div class="container contato_form">
                 <h2 class="subtitulo">suporte</h2>
                 <form id="form_orcamento" class="contato_form grid-8">
-                    <label for="nome">nome</label>
-                    <input type="text" id="nome"/>
-                    <label for="email">email</label>
-                    <input type="text" id="email"/>
-                    <label for="telefone">teefone</label>
-                    <input type="text" id="telefone"/>
-                    <label for="espec">especificação</label>
-                    <textarea id="espec"></textarea>
-                    <button type="submit" class="btn">enviar</button>
+                    <!--label for="nome">nome</!--label-->
+                    <asp:text runat="server" id="txtNome" class="input" placeholder="nome"/></asp:text>
+                    <!--input type="text" id="nome"/-->
+                    <asp:text runat="server" id="txtEmail" class="input" placeholder="email"/></asp:text>
+                    <!--label for="email">email</label>
+                    <input type="text" id="email"/-->
+                    <asp:text runat="server" id="txtTel" class="input" placeholder="fone"/></asp:text>
+                    <!--label for="telefone">teefone</!--label>
+                    <input type="text" id="telefone"/-->
+                    <asp:text runat="server" textmode="multiline" id="txtEspec" class="input" placeholder="especificação" /></asp:text>
+                    <!--label for="espec">especificação</!--label>
+                    <textarea id="espec"></textarea-->
+                    <!--button type="submit" class="btn">enviar</!--button-->
+                    <asp:Button runat="server" ID="btnEnviar" Class="btn" text="enviar" OnClick="btnEnviar_Click"/>
                 </form>
                 <div class="contato_dados grid-8">
                     <h3>dados</h3>
