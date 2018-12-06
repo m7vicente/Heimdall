@@ -1,0 +1,275 @@
+﻿
+#contComputadores {
+    height: 100%;
+    background-color: transparent;
+    display: grid;
+    grid-template-columns: 50% 50%;
+    grid-gap: 1em;
+}
+
+
+#infoComputador {
+    height: auto;
+    width: auto;
+    display: inline;
+    margin: 20px;
+    float: left;
+}
+
+#conteudoComputador {
+    width: 100%;
+    border: solid 1px rgba(192,192,192,0.3);
+    height: auto;
+    background-color: white;
+    justify-content: center;
+    flex-wrap: wrap;
+    display: flex;
+}
+
+#page-content-wrapper {
+    background-color: #fcf9f9;
+}
+
+
+
+#titulo {
+    width: 100%;
+    height: 40px;
+    background-color: rgb(255,199,56);
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    align-items: center;
+}
+#sidebar-wrapper ul {
+    font-size: 14px;
+}
+
+.material-icons {
+    color: lightgray;
+    float: left;
+    margin-top: 5px;
+}
+
+#icon {
+    float: right;
+    margin-left: 50px;
+}
+
+
+#titulo label {
+    font-family: 'Roboto';
+    font-size: 23px;
+    margin-top: 10px;
+    color: white;
+    font-weight: bold;
+}
+
+
+
+#infoComputadorT {
+    width: 100%;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+#computadorInfo {
+    height: auto;
+    width: 100%;
+    border: solid 1px rgba(255,199,56, 0.3);
+    display: flex;
+    justify-content: center;
+}
+
+    #computadorInfo ul {
+        padding: 10px;
+        margin: 0px;
+        font-family: 'Roboto';
+    }
+
+    #computadorInfo li {
+        padding: 10px;
+        margin: 0px;
+        font-family: 'Roboto';
+        float:left;
+    }
+    #computadorInfo label {
+        font-size: 18px;
+    }
+
+#conteudoCpu {
+    width: 100%;
+    border: solid 1px rgba(192,192,192,0.3);
+    height: auto;
+    background-color: white;
+    flex-wrap: wrap;
+    display: flex;
+}
+
+label {
+    font-size: 20px;
+    font-weight: 500;
+}   
+
+#contComputadores li{
+   font-size: 13px;
+}
+
+
+
+
+#conteudoUsoCpu {
+    border: solid 1px rgba(192,192,192,0.3);
+    height: auto;
+    background-color: white;
+    flex-wrap: wrap;
+    display: flex;
+}
+
+#infoCpu {
+    height: auto;
+    width: 100%;
+    border: solid 1px rgba(255,199,56, 0.3);
+    margin: 5px;
+    display: flex;
+    justify-content: center;
+}
+
+#infoCpu ul {
+    padding: 10px;
+    margin: 0px;
+    font-family: 'Roboto';
+}
+
+#infoCpu li {
+    padding: 10px;
+    margin: 0px;
+    font-family: 'Roboto';
+    float: left;
+}
+
+#infoCpuAtt {
+    height: auto;
+    width: 100%;
+    border: solid 1px rgba(255,199,56, 0.3);
+    margin: 5px;
+    display: flex;
+    justify-content: center;
+}
+
+    #infoCpuAtt ul {
+        padding: 10px;
+        margin: 0px;
+        font-family: 'Roboto';
+    }
+
+#infoCpuAtt li {
+    padding: 10px;
+    margin: 0px;
+    font-family: 'Roboto';
+    float: left;
+}
+
+#infoCpu label {
+    font-size: 18px;
+}
+
+#graficoCpu {
+    width: 100%;
+    height: auto;
+    border: solid 1px rgba(255,199,56, 0.3);
+    margin: 5px;
+}
+
+#conteudoRam {
+    border: solid 1px rgba(192,192,192,0.3);
+    height: auto;
+    background-color: white;
+    flex-wrap: wrap;
+    display: flex;
+}
+
+#conteudoUsoRam {
+    width: 100%; 
+    border: solid 1px rgba(192,192,192,0.3);
+    height: auto;
+    background-color: white;
+    flex-wrap: wrap;
+    display: flex;
+}
+
+#graficoRam {
+    width: 100%;
+    height: calc(100% - 50px);
+    border: solid 1px rgba(255,199,56, 0.3);
+    margin: 5px;
+}
+
+#infoRam {
+    height: auto;
+    width: 100%;
+    border: solid 1px rgba(255,199,56, 0.3);
+    margin: 5px;
+    display: flex;
+    justify-content: center;
+}
+
+    #infoRam ul {
+        padding: 10px;
+        margin: 0px;
+        font-family: 'Roboto';
+    }
+
+#infoRam li {
+padding: 10px;
+margin: 0px;
+font-family: 'Roboto';
+float: left;
+}
+
+
+#conteudoArmazenamento {
+    height: auto;
+    background-color: white;
+    border: solid 1px rgba(255,199,56, 0.3);
+    padding-bottom: 33px;
+}
+
+#listaGraficoArm {
+    width: 100%;
+    height: auto;
+}
+
+    #listaGraficoArm ul {
+        padding: 10px;
+        font-family: 'Roboto';
+        font-size: 17px;
+    }
+
+    #listaGraficoArm li {
+        float: left;
+    }
+
+#graficoArm {
+    width: 400px;
+    height: auto;
+}
+
+@media only screen and (max-width: 600px) {
+    #contComputadores {
+        width: 100%;
+        height: 100%;
+        background-color: transparent;
+        display: grid;
+        grid-template-columns: 100%;
+        grid-gap: 1em;
+    }
+
+    #graficoArm {
+        width: 350px;
+        height: auto;
+    }
+}

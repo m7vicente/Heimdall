@@ -17,8 +17,12 @@ import oshi.SystemInfo;
 import oshi.hardware.HardwareAbstractionLayer;
 import oshi.software.os.OSFileStore;
 import oshi.software.os.OperatingSystem;
+import heimdall.Log.AdicionarLog;
+import heimdall.Log.ArquivoLog;;
 
 public class main {
+		
+	static final AdicionarLog Log = new AdicionarLog();
 
 	public static void main(String[] args) throws InterruptedException {
 
@@ -26,9 +30,10 @@ public class main {
 		Usuario user = new Usuario("", "");
 		CallService service = new CallService();
 
+
 		while (true) {
 			user.setEmail(JOptionPane.showInputDialog("Insira seu Email: "));
-
+			
 			while (user.getEmail().equals("")) {
 				user.setEmail(JOptionPane.showInputDialog("Insira seu Email: ").toLowerCase());
 			}
@@ -45,19 +50,23 @@ public class main {
 				if (x == JOptionPane.OK_OPTION) {
 					user.setSenha(jpf.getText());
 				} else {
+					Log.EscreverLog("Usuario cancelou login: ");
 					System.exit(0);
+					
 				}
 			}
 
 			user = service.ObterUsuario(user);
 
 			if (user.getCodUsuario() > 0 && !user.getNomeCompleto().equals("")) {
+				Log.EscreverLog("Usuario "+user.getNomeCompleto()+" está logado");
+				
 				break;
 			}
+			
+			Log.EscreverLog("Usuario não validado: ");
 
 		}
-
-		user = service.ObterUsuario(user);
 
 		// Sistema Operacional
 		SistemaOperacional sistemaOperacional = new SistemaOperacional();
@@ -85,6 +94,7 @@ public class main {
 
 		user = service.CadastrarComputador(user);
 		
+		
 		while (true) {
 			Thread.sleep(5000);
 
@@ -95,9 +105,12 @@ public class main {
 				user.getComputador().getArmazenamentos().get(i).setHD(hds[i]);
 				user.getComputador().getArmazenamentos().get(i).Atualizar();
 			}
-
+			
 			service.Atualizar(user);
+			Log.EscreverLog("atualizado com sucesso: ");
 		}
+		
+		
 
 	}
 
