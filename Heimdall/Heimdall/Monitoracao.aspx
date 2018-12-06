@@ -26,6 +26,7 @@
     <script type="text/javascript" src="js/monitoracao.js"></script>
 
     <title>Heimdall | Monitoração</title>
+    <link rel='shortcut icon' href='img/favicon.ico' type='image/x-icon' />
 
 </head>
 

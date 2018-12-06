@@ -17,7 +17,8 @@
 
     <script type="text/javascript" src="js/computadores.js"></script>
     <script type="text/javascript" src="vendor/jquery/jquery.js"></script>
-    <title>Heimdall | System</title>
+    <title>Heimdall | Computadores</title>
+    <link rel='shortcut icon' href='img/favicon.ico' type='image/x-icon' />
 </head>
 <body>
     <form id="form1" runat="server">

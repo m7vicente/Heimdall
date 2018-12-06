@@ -166,22 +166,22 @@
         <section class="contato" id="contato">
             <div class="container contato_form">
                 <h2 class="subtitulo">suporte</h2>
-                <form id="form_orcamento" class="contato_form grid-8">
-                    <!--label for="nome">nome</!--label-->
-                    <asp:text runat="server" id="txtNome" class="input" placeholder="nome"/></asp:text>
-                    <!--input type="text" id="nome"/-->
-                    <asp:text runat="server" id="txtEmail" class="input" placeholder="email"/></asp:text>
-                    <!--label for="email">email</label>
-                    <input type="text" id="email"/-->
-                    <asp:text runat="server" id="txtTel" class="input" placeholder="fone"/></asp:text>
-                    <!--label for="telefone">teefone</!--label>
-                    <input type="text" id="telefone"/-->
-                    <asp:text runat="server" textmode="multiline" id="txtEspec" class="input" placeholder="especificação" /></asp:text>
-                    <!--label for="espec">especificação</!--label>
-                    <textarea id="espec"></textarea-->
-                    <!--button type="submit" class="btn">enviar</!--button-->
-                    <asp:Button runat="server" ID="btnEnviar" Class="btn" text="enviar" OnClick="btnEnviar_Click"/>
-                </form>
+                    <form id="form_orcamento" class="contato_form grid-8">
+                        <!--label for="nome">nome</!--label-->
+                        <asp:TextBox runat="server" ID="txtNome" class="input" placeholder="nome"/>>
+                        <!--input type="text" id="nome"/-->
+                        <asp:TextBox runat="server" ID="txtEmail" class="input" placeholder="email"/>>
+                        <!--label for="email">email</label>
+                        <input type="text" id="email"/-->
+                        <asp:TextBox runat="server" ID="txtTel" class="input" placeholder="fone"/>>
+                        <!--label for="telefone">teefone</!--label>
+                        <input type="text" id="telefone"/-->
+                        <asp:TextBox runat="server" textmode="multiline" id="txtEspec" class="input" placeholder="especificação" />>
+                        <!--label for="espec">especificação</!--label>
+                        <textarea id="espec"></textarea-->
+                        <!--button type="submit" class="btn">enviar</!--button-->
+                        <asp:Button runat="server" ID="btnEnviar" class="btn" text="enviar" OnClick="btnEnviar_Click"/>
+                    </form>
                 <div class="contato_dados grid-8">
                     <h3>dados</h3>
                     <span>+55 11 98765 4321</span>

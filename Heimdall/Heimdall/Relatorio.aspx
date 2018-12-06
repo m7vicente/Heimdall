@@ -26,7 +26,8 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/0.4.1/html2canvas.min.js"></script>
 
 
-    <title>Heimdall || Relatório</title>
+    <title>Heimdall | Relatório</title>
+    <link rel='shortcut icon' href='img/favicon.ico' type='image/x-icon' />
 </head>
 <body>
     <form id="form1" runat="server">

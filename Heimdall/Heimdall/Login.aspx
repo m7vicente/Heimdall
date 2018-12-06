@@ -9,6 +9,7 @@
 <meta http-equiv="X-UA-Compatible" content="ie=edge"/>   
 <link rel="stylesheet" type="text/css" href="css/login.css"/>
     <title>Heimdall | Login</title>
+    <link rel='shortcut icon' href='img/favicon.ico' type='image/x-icon' />
 </head>
 <body>
       <div class="container">
