@@ -28,7 +28,7 @@ var lblSwapDisponivel;
 
 function MostarComponentes(computador) {
 
-    lblNomePersonalizado.text(computador.nomePersonalizado);
+    lblNomePersonalizado.text(computador.modeloComputador);
     lblNomeComputador.text(computador.nomeComputador);
     lblFabricantePc.text(computador.fabricanteComputador);
     lblIpv4.text(computador.ipv4Computador);

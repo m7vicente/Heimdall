@@ -65,5 +65,37 @@ function savePDF(codigoHTML) {
 
 
 function gravarInforRelatorio(computador) {
-    $('#divPDF').append('<div id="objComputer' + computador.codComputador + '">#rola '+ computador.codComputador + '</div>');
+    $('#divPDF').append('<div id="objComputer' + computador.codComputador + '">' +
+        '<img src="img/bifrost_branco_rela.png"/>' +
+        "<h1>INFORMAÇÕES DO COMPUTADOR</h1>" +
+        '<img src="img/risco.png" id="risco"/>' +
+        '<div id="infoPcomputador">'+
+        '<ul style="list-style: none;">' +
+        "<li>Fabricante do computador:  "+ computador.fabricanteComputador + "</li>" +
+        "<li>Nome do computador: "+ computador.nomeComputador + "</label></li>" +
+        "<li>IPV4: " + computador.ipv4Computador + "</label></li>" +
+        "<li>Versão Firmware: " + computador.versaoFirmware + "</label></li>" +
+        "<li>Modelo do computador: "+ computador.modeloComputador + "</label></li>" +
+        '</ul>'+
+        '</div >'+
+        "<h1>SISTEMA OPERACIONAL</h1>" +
+        '<img src="img/risco.png" id="risco"/>' +
+        '<div id="infoPcomputador">' +
+        "<ul>" +
+        '<li> '+ computador.OS.fabricanteSO + ' ' + computador.OS.familiaSO + ' ' + computador.OS.versaoSO + '</li>' +
+        "</ul>" +
+        "</div >" +
+        "<h1>SISTEMA</h1>" +
+        '<img src="img/risco.png" id="risco"/>' +
+        '<div id="infoPcomputador">' +
+        '<ul style="list-style: none;">' +
+        "<li>Processador: "+ computador.processadores.modelo + "</li>" +
+        "<li>Memória RAM: "+ computador.RAM.memoriaTotal + " GB</li>" +
+        "<li>Memória Swap: " + computador.RAM.swapTotal + " GB</li>" +
+        "<li>Quantidade de Núcleos: "+ computador.processadores.nucleos + "</li>" +
+        "<li>Serial: " + computador.processadores.serial + "</li>" +
+        "</ul>" +
+        "</div >" +
+        +"</div>");
+    
 }

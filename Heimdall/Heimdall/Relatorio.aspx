@@ -91,9 +91,7 @@
                                 <th>Gerar Relatório</th>
                             </tr>
                         </table>
-                        <div id="divPDF" style="display: none;">
-                            relatório em breve...
-                        </div>
+                        <div id="divPDF" style="display: none;"></div>
                     </div>
                 </div>
             </div>
