@@ -108,19 +108,19 @@
                 <h2 class="subtitulo">sistema</h2>
                 <ul class="portifolio_lista">
                     <li class="grid-8">
-                        <img src="img/portfolio/retro.jpg" alt="Bicicleta Retro"></li>
+                        <img src="img/graficoLine.PNG" alt="Grafico"/></li>
 
                     <li class="grid-8">
-                        <img src="img/portfolio/passeio.jpg" alt="Bicicleta Passeio"></li>
+                        <img src="img/paginaSist.PNG" alt="Bicicleta Passeio"/></li>
 
                     <li class="grid-16">
-                        <img src="img/portfolio/esporte.jpg" alt="Bicicleta Esporte"></li>
+                        <img src="img/graficoPizza2.PNG" alt="Bicicleta Esporte"/></li>
 
                     <!--botão-->
-                    <div class="call">
+                    <!--div-- class="call">
                         <p>conheça mais nosso portifolio</p>
                         <a href="portifolio.html" class="btn">Portifolio</a>
-                    </div>
+                    </!--div-->
                 </ul>
             </div>
         </section>
@@ -138,9 +138,9 @@
                 </li>
 
                 <li class="grid-1-3">
-                    <h3>Design</h3>
+                    <h3>Praticidade</h3>
                     <p>
-                        Feitas sob medida para o melhor desempenho, com o melhor desing de arquitetura e desempenho.
+                        Contém todas informações necessárias para manter um bom desempenho de sua maquina
                     </p>
                 </li>
 
@@ -166,7 +166,7 @@
         <section class="contato" id="contato">
             <div class="container contato_form">
                 <h2 class="subtitulo">suporte</h2>
-                <form id="form_orcamento" class="contato_form grid-8">
+                <div id="form_orcamento" class="contato_form grid-16">
                     <!--label for="nome">nome</!--label-->
                     <asp:TextBox runat="server" ID="txtNome" class="input" placeholder="nome" />>
                     <!--input type="text" id="nome"/-->
@@ -181,7 +181,7 @@
                     <textarea id="espec"></textarea-->
                     <!--button type="submit" class="btn">enviar</!--button-->
                     <asp:Button runat="server" ID="btnEnviar" class="btn" Text="enviar" OnClick="btnEnviar_Click" />
-                </form>
+                </div>
                 <div class="contato_dados grid-8">
                     <h3>dados</h3>
                     <span>+55 11 98765 4321</span>
@@ -194,7 +194,7 @@
                             <img src="img/facebook.png" alt="Facebook bifrost" /></a></li>
                         <li><a href="http://instagram.com" target="_blank">
                             <img src="img/instagram.png" alt="Instagran bifrost" /></a></li>
-                        <li><a href="http://teitter.com" target="_blank">
+                        <li><a href="http://twitter.com" target="_blank">
                             <img src="img/twitter.png" alt="Twitter bifrost" /></a></li>
                     </ul>
                 </div>
