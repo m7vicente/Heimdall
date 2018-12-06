@@ -203,7 +203,7 @@ label {
 #graficoCpu {
     width: 100%;
     height: auto;
-    margin: 5px;
+    margin-top: -55px;
 }
 
 #conteudoRam {
@@ -225,7 +225,7 @@ label {
 #graficoRam {
     width: 100%;
     height: calc(100% - 50px);
-    margin: 5px;
+    margin-top: -55px;
 }
 
 #infoRam {

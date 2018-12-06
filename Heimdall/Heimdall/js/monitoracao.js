@@ -43,11 +43,11 @@ function MostarComponentes(computador) {
     lblSerialCpu.text(computador.processadores.serial);
     lblProcessosExecucao.text(computador.processadores.processosExecucao);
     lblFrequenciaAtual.text(computador.processadores.velocidade);
-    lblPorcenUtiizacao.text(computador.processadores.porcentagemUtilizacao);
+    lblPorcenUtiizacao.text(computador.processadores.porcentagemUtilizacao+"%");
     lblThreadsExec.text(computador.processadores.threadsExecucao);
     lblTempoExec.text(computador.processadores.tempoExecucao);
-    lblTemperaturaCpu.text(computador.processadores.temperaturaCpu);
-    lblPorcentagemRam.text(computador.RAM.porcentagemUtilizacao);
+    lblTemperaturaCpu.text(computador.processadores.temperaturaCpu+"°C");
+    lblPorcentagemRam.text(computador.RAM.porcentagemUtilizacao+"%");
     lblMemTotal.text(computador.RAM.memoriaTotal);
     lblMemUtilizada.text(computador.RAM.memoriaUtilizada);
     lblMemDisponivel.text(computador.RAM.memoriaDisponivel);
