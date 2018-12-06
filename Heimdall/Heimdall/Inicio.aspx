@@ -20,7 +20,7 @@
         <header class="header">
             <div>
                 <a href="index.html" class="grid-4">
-                    <img src="img/bifrost.png" alt="Bifrost" class="header-logo"/><!--logo bifrost-->
+                    <img src="img/bifrost.png" alt="Bifrost" class="header-logo" /><!--logo bifrost-->
                 </a>
                 <nav class="grid-12 header_menu">
                     <ul>
@@ -40,7 +40,7 @@
                 <blockquote class="quote-externo">
                     <!--permite citações de texto-->
                     <p>"Um rei sábio nunca almeja guerra, mas deve estar sempre pronto para ela."</p>
-                    <br/>
+                    <br />
                     <cite>Pai de Todos</cite><!--matem o titulo de uma publicação em italico-->
                 </blockquote>
                 <a href="Login.aspx" class="btn">Heimdall Dashboard</a>
@@ -128,7 +128,7 @@
         <!--qualidades-->
         <section class="qualidade container">
             <h2 class="subtitulo">Qualidade</h2>
-            <img src="img/heimdall.png" alt="Bikcraft" class="qualidade_bifrost"/>
+            <img src="img/heimdall.png" alt="Bikcraft" class="qualidade_bifrost" />
             <ul class="qualidade_lista">
                 <li class="grid-1-3">
                     <h3>Facilidade</h3>
@@ -154,7 +154,7 @@
 
             <!--botão-->
             <div class="call">
-                
+
                 <a href="Cadastro.aspx" class="btn btn-preto">Cadastre-se</a>
             </div>
         </section>
@@ -166,21 +166,21 @@
         <section class="contato" id="contato">
             <div class="container contato_form">
                 <h2 class="subtitulo">suporte</h2>
-                <form id="form_orcamento" class="contato_form grid-8">
+                <form id="form_orcamento" runat="server" class="contato_form grid-8">
                     <!--label for="nome">nome</!--label-->
-                    <asp:text runat="server" id="txtNome" class="input" placeholder="nome"/></asp:text>
+                    <asp:TextBox runat="server" ID="txtNome" class="input" placeholder="nome" />>
                     <!--input type="text" id="nome"/-->
-                    <asp:text runat="server" id="txtEmail" class="input" placeholder="email"/></asp:text>
+                    <asp:TextBox runat="server" ID="txtEmail" class="input" placeholder="email" />>
                     <!--label for="email">email</label>
                     <input type="text" id="email"/-->
-                    <asp:text runat="server" id="txtTel" class="input" placeholder="fone"/></asp:text>
+                    <asp:TextBox runat="server" ID="txtTel" class="input" placeholder="fone" />>
                     <!--label for="telefone">teefone</!--label>
                     <input type="text" id="telefone"/-->
-                    <asp:text runat="server" textmode="multiline" id="txtEspec" class="input" placeholder="especificação" /></asp:text>
+                    <asp:TextBox runat="server" TextMode="multiline" ID="txtEspec" class="input" placeholder="especificação" />>
                     <!--label for="espec">especificação</!--label>
                     <textarea id="espec"></textarea-->
                     <!--button type="submit" class="btn">enviar</!--button-->
-                    <asp:Button runat="server" ID="btnEnviar" Class="btn" text="enviar" OnClick="btnEnviar_Click"/>
+                    <asp:Button runat="server" ID="btnEnviar" class="btn" Text="enviar" OnClick="btnEnviar_Click" />
                 </form>
                 <div class="contato_dados grid-8">
                     <h3>dados</h3>
@@ -191,11 +191,11 @@
                     <h3>redes sociais</h3>
                     <ul>
                         <li><a href="http://facebok.com" target="_blank">
-                            <img src="img/facebook.png" alt="Facebook bifrost"/></a></li>
+                            <img src="img/facebook.png" alt="Facebook bifrost" /></a></li>
                         <li><a href="http://instagram.com" target="_blank">
-                            <img src="img/instagram.png" alt="Instagran bifrost"/></a></li>
+                            <img src="img/instagram.png" alt="Instagran bifrost" /></a></li>
                         <li><a href="http://teitter.com" target="_blank">
-                            <img src="img/twitter.png" alt="Twitter bifrost"/></a></li>
+                            <img src="img/twitter.png" alt="Twitter bifrost" /></a></li>
                     </ul>
                 </div>
             </div>
