@@ -166,7 +166,7 @@
         <section class="contato" id="contato">
             <div class="container contato_form">
                 <h2 class="subtitulo">suporte</h2>
-                <form id="form_orcamento" runat="server" class="contato_form grid-8">
+                <form id="form_orcamento" class="contato_form grid-8">
                     <!--label for="nome">nome</!--label-->
                     <asp:TextBox runat="server" ID="txtNome" class="input" placeholder="nome" />>
                     <!--input type="text" id="nome"/-->
