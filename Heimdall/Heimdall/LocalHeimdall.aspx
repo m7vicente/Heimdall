@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Inicio.aspx.cs" Inherits="Heimdall.Inicio" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="LocalHeimdall.aspx.cs" Inherits="Heimdall.LocalHeimdall" %>
 
 <!DOCTYPE html>
 
@@ -23,10 +23,8 @@
                     <img src="img/heimdall_logo.png" alt="Bifrost" class="header-logo" /><!--logo bifrost-->
                 </a>
                 <nav class="grid-12 header_menu">
-                    <ul>
-                        <li><a href="#sobre">Sobre</a></li>
+                    <ul>   
                         <li><a href="#integrantes">Integrantes</a></li>
-                        <li><a href="#contato">Contato</a></li>
                         <li><a href="Login.aspx">Heimdall</a></li>
                     </ul>
                 </nav>
@@ -108,7 +106,7 @@
                 <h2 class="subtitulo">sistema</h2>
                 <ul class="portifolio_lista">
                     <li class="grid-8">
-                        <img src="img/graficoLine.PNG" alt="Grafico" />
+                        <img src="img/graficoLine.PNG" style="height:310px;" alt="Grafico" />
                     </li>
 
                     <li class="grid-8">
@@ -117,6 +115,15 @@
 
                     <li class="grid-16">
                         <img src="img/graficoPizza2.PNG" alt="Bicicleta Esporte" />
+                    </li>
+
+
+                    <!--li class="grid-16">
+                        <img src="img/BPMN ProjetoPreview.png" alt="Bicicleta Esporte" />
+                    </li>
+
+                    <li class="grid-16">
+                        <img src="img/UseCaseWeb.png" style="width:940px;" alt="Bicicleta Esporte" />
                     </li>
 
                     <!--botão-->
@@ -155,62 +162,10 @@
                 </li>
             </ul>
 
-            <!--botão-->
-            <div class="call">
-
-                <a href="Cadastro.aspx" class="btn btn-preto">Cadastre-se</a>
-            </div>
+            <div class="call"></div>
         </section>
         <!--fim da qualidade-->
         <!--FORMULARIO-->
-
-
-        <section class="contato" id="contato">
-            <div class="container contato_form">
-                <h2 class="subtitulo">suporte</h2>
-                <div id="form_orcamento" class="contato_form grid-16">
-                    <!--label for="nome">nome</!--label-->
-                    <asp:TextBox runat="server" ID="txtNome" class="input" placeholder="nome" />>
-                    <!--input type="text" id="nome"/-->
-                    <asp:TextBox runat="server" ID="txtEmail" class="input" placeholder="email" />>
-                    <!--label for="email">email</label>
-                    <input type="text" id="email"/-->
-                    <asp:TextBox runat="server" ID="txtTel" class="input" placeholder="fone" />>
-                    <!--label for="telefone">teefone</!--label>
-                    <input type="text" id="telefone"/-->
-                    <asp:TextBox runat="server" TextMode="multiline" ID="txtEspec" class="input" placeholder="especificação" />>
-                    <!--label for="espec">especificação</!--label>
-                    <textarea id="espec"></textarea-->
-                    <!--button type="submit" class="btn">enviar</!--button-->
-                    <asp:Button runat="server" ID="btnEnviar" class="btn btn-branco" Text="enviar" OnClick="btnEnviar_Click" />
-                </div>
-                <div class="contato_dados grid-8">
-                    <h3>dados</h3>
-                    <span>+55 11 98765 4321</span>
-                    <span class="dados_email">suporte@bifrost.com</span>
-                    <span>rua logo ali - paulista</span>
-                    <samp>sao paulo-SP - Brasil</samp>
-                    <h3>redes sociais</h3>
-                    <ul>
-                        <li>
-                            <a href="http://facebok.com" target="_blank">
-                                <img src="img/facebook.png" alt="Facebook bifrost" />
-                            </a>
-                        </li>
-                        <li>
-                            <a href="http://instagram.com" target="_blank">
-                                <img src="img/instagram.png" alt="Instagran bifrost" />
-                            </a>
-                        </li>
-                        <li>
-                            <a href="http://twitter.com" target="_blank">
-                                <img src="img/twitter.png" alt="Twitter bifrost" />
-                            </a>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </section>
 
         <footer>
             <div class="copy">

@@ -103,7 +103,6 @@
     <Content Include="Default.aspx" />
     <Content Include="Global.asax" />
     <Content Include="img\alice.jpg" />
-    <Content Include="img\alice.png" />
     <Content Include="img\bg-sobre.jpg" />
     <Content Include="img\bg-sobre2.jpg" />
     <Content Include="img\bg.jpg" />
@@ -111,6 +110,7 @@
     <Content Include="img\bifrost_branco.png" />
     <Content Include="img\bifrost_branco_rela.png" />
     <Content Include="img\Bifrost_Bridge.png" />
+    <Content Include="img\BPMN ProjetoPreview.png" />
     <Content Include="img\computador.png" />
     <Content Include="img\eu-sou-o-groot.png" />
     <Content Include="img\facebook.png" />
@@ -118,16 +118,12 @@
     <Content Include="img\graficoLine.PNG" />
     <Content Include="img\graficoPizza2.PNG" />
     <Content Include="img\graficosPizza.PNG" />
-    <Content Include="img\Heimdall%27s_Observatory.png" />
-    <Content Include="img\Heimdall%27s_Observatory2.png" />
     <Content Include="img\heimdall-introducao.jpg" />
     <Content Include="img\heimdall.png" />
     <Content Include="img\heimdall_logo.png" />
     <Content Include="img\heimdall_logo_rela.png" />
     <Content Include="img\instagram.png" />
     <Content Include="img\matheus.png" />
-    <Content Include="img\observatorio.jpeg" />
-    <Content Include="img\observatorio2.png" />
     <Content Include="img\paginaSist.PNG" />
     <Content Include="img\pedro.png" />
     <Content Include="img\relatorioIcon.png" />
@@ -135,6 +131,7 @@
     <Content Include="img\thiago.png" />
     <Content Include="img\TSC2.gif" />
     <Content Include="img\twitter.png" />
+    <Content Include="img\UseCaseWeb.png" />
     <Content Include="img\user.png" />
     <Content Include="img\userd.png" />
     <Content Include="Inicio.aspx" />
@@ -144,9 +141,9 @@
     <Content Include="js\gulpfile.js" />
     <Content Include="js\monitoracao.js" />
     <Content Include="js\relatorio.js" />
+    <Content Include="LocalHeimdall.aspx" />
     <Content Include="Login.aspx" />
     <Content Include="Monitoracao.aspx" />
-    <Content Include="PaginaHeimdall.html" />
     <Content Include="Relatorio.aspx" />
     <Content Include="Sistema.aspx" />
     <Content Include="vendor\bootstrap\css\bootstrap-grid.css" />
@@ -195,6 +192,13 @@
     </Compile>
     <Compile Include="Inicio.aspx.designer.cs">
       <DependentUpon>Inicio.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="LocalHeimdall.aspx.cs">
+      <DependentUpon>LocalHeimdall.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="LocalHeimdall.aspx.designer.cs">
+      <DependentUpon>LocalHeimdall.aspx</DependentUpon>
     </Compile>
     <Compile Include="Login.aspx.cs">
       <DependentUpon>Login.aspx</DependentUpon>

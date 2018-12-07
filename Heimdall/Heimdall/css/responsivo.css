@@ -1,5 +1,16 @@
 ﻿/*tablet*/
 @media only screen and (min-width:768px) and (max-width:959px) {
+
+    .introducao {
+        margin-top: 89px;
+
+    }
+
+    .integrantes_lista li {
+        height: 430px;
+
+    }
+
     /*qualidade*/
     .qualidade:after {
         right: 66px;
@@ -51,7 +62,29 @@
                     border-color: #fec63e;
                 }
 
+    .introducao {
+        margin-top: 0px;
+    }
+
+    .integrantes_lista li {
+        height: 460px;
+    }
+
     .qualidade:after {
         display: none;
+    }
+
+
+    .contato_form input {
+        width: 124%;
+        height:70px;
+        margin-bottom: 5px;
+    }
+
+    .contato_form textarea {
+       
+        width: 124%;
+        height: 120px;
+        
     }
 }
