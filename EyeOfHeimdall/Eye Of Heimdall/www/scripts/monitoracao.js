@@ -1,6 +1,5 @@
 ﻿var codComputador = parseInt($.cookie('codComputador'));
-alert(codComputador);
-$.cookie("codComputador", null);
+
 var lblNomePersonalizado;
 var lblNomeComputador;
 var lblFabricantePc;
@@ -30,7 +29,7 @@ var lblSwapDisponivel;
 
 function MostarComponentes(computador) {
 
-    lblNomePersonalizado.text(computador.nomePersonalizado);
+    lblNomePersonalizado.text(computador.modeloComputador);
     lblNomeComputador.text(computador.nomeComputador);
     lblFabricantePc.text(computador.fabricanteComputador);
     lblIpv4.text(computador.ipv4Computador);
