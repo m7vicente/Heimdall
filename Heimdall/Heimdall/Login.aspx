@@ -8,6 +8,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 <meta http-equiv="X-UA-Compatible" content="ie=edge"/>   
 <link rel="stylesheet" type="text/css" href="css/login.css"/>
+    <link rel="shortcut icon" href="img/heimdall_icone.ico" type="image/x-icon" />
     <title>Heimdall | Login</title>
 </head>
 <body>

@@ -16,6 +16,7 @@
     <link href="css/relatorio.css" rel="stylesheet" />
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
     <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet"/>
+    <link rel="shortcut icon" href="img/heimdall_icone.ico" type="image/x-icon" />
 
     <script src="vendor/jquery/jquery.min.js"></script>
     <script src="js/relatorio.js" type="text/javascript"></script>

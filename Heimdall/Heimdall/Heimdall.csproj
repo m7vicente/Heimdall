@@ -112,6 +112,7 @@
     <Content Include="img\computador.png" />
     <Content Include="img\facebook.png" />
     <Content Include="img\heimdall.png" />
+    <Content Include="img\heimdall_icone.ico" />
     <Content Include="img\heimdall_logo.png" />
     <Content Include="img\heimdall_logo_rela.png" />
     <Content Include="img\instagram.png" />
