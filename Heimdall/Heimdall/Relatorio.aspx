@@ -113,11 +113,6 @@
                 $("#wrapper").toggleClass("toggled");
             });
         </script>
-
-
-
-
-
     </form>
 </body>
 </html>

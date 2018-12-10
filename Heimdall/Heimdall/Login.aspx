@@ -18,7 +18,6 @@
             <asp:TextBox ID="txtSenha" TextMode="Password" runat="server" placeholder="Senha"></asp:TextBox><br/><br/>
             <asp:Button ID="btnLogar" runat="server" Text="LOGAR" onclick="btnLogar_Click" />
 			<p class="mensagem">Não é registrado ? <a href="Cadastro.aspx">Crie sua Conta.</a><br/>
-			<a href="#">Recuperação de senha</a></p>
     	</form>
       </div>
 </body>
