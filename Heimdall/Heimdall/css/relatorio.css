@@ -46,13 +46,13 @@
     background-color: #ddd;
 }
 
-    #tableRelatorio th {
-        padding-top: 12px;
-        padding-bottom: 12px;
-        text-align: left;
-        background-color: rgb(255,199,56);
-        color: white;
-    }
+#tableRelatorio th {
+    padding-top: 12px;
+    padding-bottom: 12px;
+    text-align: left;
+    background-color: rgb(255,199,56);
+    color: white;
+}
 
 #tableRelatorio img {
     width: 40px;
@@ -83,3 +83,6 @@ h1 {
     margin: 10px;
 }
 
+@media only screen and (max-width: 600px) {
+    
+}
