@@ -65,7 +65,10 @@
                          <a href="Relatorio.aspx"><i class="material-icons md-dark md-inactive">assessment</i>Emitir Relatórios</a>
                     </li>
                     <li>
-                         <a href="#"><i class="material-icons md-dark md-inactive">build</i>Configurações</a>
+                       <a href="/downloads/HeimdallCall.jar"><i class="material-icons md-dark md-inactive">arrow_downward</i>API</a>
+                    </li>
+                    <li>
+                       <a href="/downloads/EyeOfHeimdall.txt" download="EyeOfHeimdall.apk"><i class="material-icons md-dark md-inactive">adb</i>Android APP</a>
                     </li>
                     <li>
                         <i class="material-icons md-dark md-inactive" id="sairIcon">settings_power</i> <asp:LinkButton ID="sair" Text="Sair" OnClick="sair_Click" runat="server" />
