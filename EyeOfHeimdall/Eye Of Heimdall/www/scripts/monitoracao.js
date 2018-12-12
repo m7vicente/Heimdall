@@ -1,4 +1,5 @@
 ﻿var codComputador = parseInt($.cookie('codComputador'));
+
 var lblNomePersonalizado;
 var lblNomeComputador;
 var lblFabricantePc;
@@ -38,14 +39,14 @@ function MostarComponentes(computador) {
     lblVersaoSO.text(computador.OS.versaoSO);
     lblNomeFabricanteCpu.text(computador.processadores.nomeFabricante);
     lblModeloCpu.text(computador.processadores.modelo);
-    lblFrequenciaBase.text(computador.processadores.frequenciaBase.toFixed(1)+" GHz");
+    lblFrequenciaBase.text(computador.processadores.frequenciaBase.toFixed(1) + " GHz");
     lblNucleosCpu.text(computador.processadores.nucleos);
     lblSerialCpu.text(computador.processadores.serial);
     lblProcessosExecucao.text(computador.processadores.processosExecucao);
     lblFrequenciaAtual.text(computador.processadores.velocidade + " GHz");
     lblPorcenUtiizacao.text(computador.processadores.porcentagemUtilizacao + " %");
     lblThreadsExec.text(computador.processadores.threadsExecucao);
-    lblTempoExec.text(computador.processadores.tempoExecucao.replace("days","dias"));
+    lblTempoExec.text(computador.processadores.tempoExecucao.replace("days", "dias"));
     lblTemperaturaCpu.text(computador.processadores.temperaturaCpu + "ºC");
     lblPorcentagemRam.text(computador.RAM.porcentagemUtilizacao + " %");
     lblMemTotal.text(computador.RAM.memoriaTotal + " GB");
@@ -64,9 +65,9 @@ function MostarComponentes(computador) {
 function BuscarComputador() {
       
 
-    //var URL = "http://localhost:52121/api/Monitorar/?id=5&codComputador=" + codComputador + "";
+    var URL = "http://localhost:52121/api/Monitorar/?id=5&codComputador=" + codComputador + "";
 
-    var URL = "https://heimdallview.azurewebsites.net/api/Monitorar/?id=5&codComputador=" + codComputador + "";
+    //var URL = "https://heimdallview.azurewebsites.net/api/Monitorar/?id=5&codComputador=" + codComputador + "";
 
     var settings = {
         "async": true,
