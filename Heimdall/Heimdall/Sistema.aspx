@@ -14,6 +14,8 @@
     <link href="css/sistema.css" rel="stylesheet" />
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
     <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet"/>
+    <link rel="shortcut icon" href="img/heimdall_icone.ico" type="image/x-icon" />
+
 
     <script type="text/javascript" src="js/computadores.js"></script>
     <script type="text/javascript" src="vendor/jquery/jquery.js"></script>

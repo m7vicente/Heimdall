@@ -19,7 +19,7 @@
     <!--Jquery abaixo permite deixar os graficos do google charts 100% resonsivos-->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
-
+    <link rel="shortcut icon" href="img/heimdall_icone.ico" type="image/x-icon" />
 
     <script type="text/javascript" src="js/graficos.js"></script>
     <script src="vendor/jquery/jquery.min.js"></script>

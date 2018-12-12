@@ -28,7 +28,9 @@ function desenharGraficoCpu(valor) {
         vAxis: { minValue: 0 },
         backgroundColor: 'transparent',
         colors: ['#ffc738'],
-        height: '400'
+        legend: { position: 'bottom'},
+        height: '400',
+        fontName: 'Roboto'
 
     });
 
@@ -54,8 +56,9 @@ function desenharGraficoRam(valor) {
         vAxis: { minValue: 0 },
         backgroundColor: 'transparent',
         colors: ['#ffc738'],
+        legend: { position: 'bottom', fontName: 'Roboto' },
         height: '613',
-        font: 'Roboto'
+        fontName: 'Roboto'
     });
 
     ramTotal++;
@@ -92,7 +95,8 @@ function desenharGraficosArmazenamento(armazenamentos) {
                 + "    title: '" + armazenamentos[i].tipoArmazenamento + "',"
                 + "    pieHole: 0.1,"
                 + "    backgroundColor: 'transparent',"
-                + "    colors: ['#ffc738', 'black']"
+                + "    colors: ['#ffc738', 'black'],"
+                + "    fontName: 'Roboto'"
                 + "});"
                 + '</script>');
         }
@@ -115,7 +119,8 @@ function desenharGraficoArmazenamentos(capacidadeTotal, capacidadeUltilizada) {
         + "    title: 'Armazenamento 1',"
         + "    pieHole: 0.1,"
         + "    backgroundColor: 'transparent',"
-        + "    colors: ['#ffc738', 'black']"
+        + "    colors: ['#ffc738', 'black'],"
+        + "    fontName: 'Roboto'"
         + "});"
         + '</script>');
 }
