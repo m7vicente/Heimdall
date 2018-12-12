@@ -100,6 +100,8 @@
     <Content Include="css\sistema.css" />
     <Content Include="css\style.css" />
     <Content Include="Default.aspx" />
+    <Content Include="downloads\EyeOfHeimdall.txt" />
+    <Content Include="downloads\HeimdallCall.txt" />
     <Content Include="Global.asax" />
     <Content Include="img\alice.png" />
     <Content Include="img\bg-sobre.jpg" />
