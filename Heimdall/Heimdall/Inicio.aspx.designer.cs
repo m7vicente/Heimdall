@@ -22,15 +22,6 @@ namespace Heimdall {
         protected global::System.Web.UI.HtmlControls.HtmlForm form1;
         
         /// <summary>
-        /// form_orcamento control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlForm form_orcamento;
-        
-        /// <summary>
         /// txtNome control.
         /// </summary>
         /// <remarks>

@@ -8,7 +8,9 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 <meta http-equiv="X-UA-Compatible" content="ie=edge"/>   
 <link rel="stylesheet" type="text/css" href="css/login.css"/>
+    <link rel="shortcut icon" href="img/heimdall_icone.ico" type="image/x-icon" />
     <title>Heimdall | Login</title>
+    <link rel='shortcut icon' href='img/favicon.ico' type='image/x-icon' />
 </head>
 <body>
       <div class="container">
@@ -17,7 +19,6 @@
             <asp:TextBox ID="txtSenha" TextMode="Password" runat="server" placeholder="Senha"></asp:TextBox><br/><br/>
             <asp:Button ID="btnLogar" runat="server" Text="LOGAR" onclick="btnLogar_Click" />
 			<p class="mensagem">Não é registrado ? <a href="Cadastro.aspx">Crie sua Conta.</a><br/>
-			<a href="#">Recuperação de senha</a></p>
     	</form>
       </div>
 </body>

@@ -1,6 +1,5 @@
 ﻿var codComputador = parseInt($.cookie('codComputador'));
-alert(codComputador);
-$.cookie("codComputador", null);
+
 var lblNomePersonalizado;
 var lblNomeComputador;
 var lblFabricantePc;
@@ -30,7 +29,7 @@ var lblSwapDisponivel;
 
 function MostarComponentes(computador) {
 
-    lblNomePersonalizado.text(computador.nomePersonalizado);
+    lblNomePersonalizado.text(computador.modeloComputador);
     lblNomeComputador.text(computador.nomeComputador);
     lblFabricantePc.text(computador.fabricanteComputador);
     lblIpv4.text(computador.ipv4Computador);
@@ -40,21 +39,21 @@ function MostarComponentes(computador) {
     lblVersaoSO.text(computador.OS.versaoSO);
     lblNomeFabricanteCpu.text(computador.processadores.nomeFabricante);
     lblModeloCpu.text(computador.processadores.modelo);
-    lblFrequenciaBase.text(computador.processadores.frequenciaBase);
+    lblFrequenciaBase.text(computador.processadores.frequenciaBase.toFixed(1) + " GHz");
     lblNucleosCpu.text(computador.processadores.nucleos);
     lblSerialCpu.text(computador.processadores.serial);
     lblProcessosExecucao.text(computador.processadores.processosExecucao);
-    lblFrequenciaAtual.text(computador.processadores.velocidade);
-    lblPorcenUtiizacao.text(computador.processadores.porcentagemUtilizacao);
+    lblFrequenciaAtual.text(computador.processadores.velocidade + " GHz");
+    lblPorcenUtiizacao.text(computador.processadores.porcentagemUtilizacao + " %");
     lblThreadsExec.text(computador.processadores.threadsExecucao);
-    lblTempoExec.text(computador.processadores.tempoExecucao);
-    lblTemperaturaCpu.text(computador.processadores.temperaturaCpu);
-    lblPorcentagemRam.text(computador.RAM.porcentagemUtilizacao);
-    lblMemTotal.text(computador.RAM.memoriaTotal);
-    lblMemUtilizada.text(computador.RAM.memoriaUtilizada);
-    lblMemDisponivel.text(computador.RAM.memoriaDisponivel);
-    lblSwapTotal.text(computador.RAM.swapTotal);
-    lblSwapDisponivel.text(computador.RAM.swapUtilizada);
+    lblTempoExec.text(computador.processadores.tempoExecucao.replace("days", "dias"));
+    lblTemperaturaCpu.text(computador.processadores.temperaturaCpu + "ºC");
+    lblPorcentagemRam.text(computador.RAM.porcentagemUtilizacao + " %");
+    lblMemTotal.text(computador.RAM.memoriaTotal + " GB");
+    lblMemUtilizada.text(computador.RAM.memoriaUtilizada + " MB");
+    lblMemDisponivel.text(computador.RAM.memoriaDisponivel + " MB");
+    lblSwapTotal.text(computador.RAM.swapTotal + " GB");
+    lblSwapDisponivel.text(computador.RAM.swapUtilizada + " GB");
     
     desenharGraficoCpu(parseInt(computador.processadores.porcentagemUtilizacao));
     desenharGraficoRam(parseInt(computador.RAM.porcentagemUtilizacao));

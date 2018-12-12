@@ -16,6 +16,7 @@
     <link href="css/relatorio.css" rel="stylesheet" />
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
     <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet"/>
+    <link rel="shortcut icon" href="img/heimdall_icone.ico" type="image/x-icon" />
 
     <script src="vendor/jquery/jquery.min.js"></script>
     <script src="js/relatorio.js" type="text/javascript"></script>
@@ -26,7 +27,8 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/0.4.1/html2canvas.min.js"></script>
 
 
-    <title>Heimdall || Relatório</title>
+    <title>Heimdall | Relatório</title>
+    <link rel='shortcut icon' href='img/favicon.ico' type='image/x-icon' />
 </head>
 <body>
     <form id="form1" runat="server">
@@ -63,7 +65,10 @@
                         <a href="Relatorio.aspx"><i class="material-icons md-dark md-inactive">assessment</i>Emitir Relatórios</a>
                     </li>
                     <li>
-                        <a href="#"><i class="material-icons md-dark md-inactive">build</i>Configurações</a>
+                       <a href="/downloads/HeimdallCall.jar"><i class="material-icons md-dark md-inactive">arrow_downward</i>API</a>
+                    </li>
+                    <li>
+                       <a href="/downloads/EyeOfHeimdall.txt" download="EyeOfHeimdall.apk"><i class="material-icons md-dark md-inactive">adb</i>Android APP</a>
                     </li>
                     <li>
                         <i class="material-icons md-dark md-inactive">settings_power</i><asp:LinkButton ID="sair" Text="Sair" OnClick="sair_Click" runat="server" />
@@ -112,11 +117,6 @@
                 $("#wrapper").toggleClass("toggled");
             });
         </script>
-
-
-
-
-
     </form>
 </body>
 </html>

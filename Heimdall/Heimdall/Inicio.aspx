@@ -166,6 +166,7 @@
         <section class="contato" id="contato">
             <div class="container contato_form">
                 <h2 class="subtitulo">suporte</h2>
+
                 <form id="form_orcamento" class="contato_form grid-8">
                     <!--label for="nome">nome</!--label-->
                     <asp:TextBox runat="server" ID="txtNome" class="input" placeholder="nome" />>
@@ -182,6 +183,7 @@
                     <!--button type="submit" class="btn">enviar</!--button-->
                     <asp:Button runat="server" ID="btnEnviar" class="btn" Text="enviar" OnClick="btnEnviar_Click" />
                 </form>
+
                 <div class="contato_dados grid-8">
                     <h3>dados</h3>
                     <span>+55 11 98765 4321</span>
