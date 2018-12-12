@@ -28,7 +28,7 @@ function desenharGraficoCpu(valor) {
         vAxis: { minValue: 0 },
         backgroundColor: 'transparent',
         colors: ['#ffc738'],
-        height: '400'
+        height: '200'
 
     });
 
@@ -54,7 +54,7 @@ function desenharGraficoRam(valor) {
         vAxis: { minValue: 0 },
         backgroundColor: 'transparent',
         colors: ['#ffc738'],
-        height: '613',
+        height: '213',
         font: 'Roboto'
     });
 
@@ -115,7 +115,7 @@ function desenharGraficoArmazenamentos(capacidadeTotal, capacidadeUltilizada) {
         + "    title: 'Armazenamento 1',"
         + "    pieHole: 0.1,"
         + "    backgroundColor: 'transparent',"
-        + "    colors: ['#ffc738', 'black']"
+        + "    colors: ['#ffc738', 'black'],"
         + "});"
         + '</script>');
 }

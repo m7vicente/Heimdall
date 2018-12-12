@@ -52,5 +52,5 @@ function success(obj) {
 
 function monitorarProcessador(codComputador) {
     $.cookie('codComputador', codComputador);
-    document.location = "Monitoracao.html";
+    document.location = "monitoracao.html";
 }
