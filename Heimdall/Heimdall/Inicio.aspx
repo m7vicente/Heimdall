@@ -34,7 +34,7 @@
         </header>
 
         <!--home-->
-        <section class="introducao" id="sobre">
+        <section class="introducao">
             <div>
                 <h1 class="compre">bridge to the facility</h1>
                 <blockquote class="quote-externo">
@@ -43,7 +43,7 @@
                     <br />
                     <!--cite>Pai de Todos</!--cite><matem o titulo de uma publicação em italico-->
                 </blockquote>
-                <a href="Login.aspx" class="btn">Heimdall Dashboard</a>
+                <a href="Login.aspx" class="btn">Heimdall  Dashboard</a>
             </div>
         </section>
 
@@ -52,7 +52,7 @@
             <h2 class="subtitulo" id="integrantes">Integrantes</h2>
 
             <ul class="integrantes_lista">
-                <li class="grid-4">
+                <li class="grid-5">
                     <div class="integrantes_icone">
                         <img src="img/alice.jpg" alt="bifrost passeio" />
                     </div>
@@ -62,7 +62,7 @@
                     </p>
                 </li>
 
-                <li class="grid-4">
+                <li class="grid-5">
                     <div class="integrantes_icone">
                         <img src="img/matheus.png" alt="bifrost integrates" />
                     </div>
@@ -72,17 +72,8 @@
                     </p>
                 </li>
 
-                <li class="grid-4">
-                    <div class="integrantes_icone">
-                        <img src="img/pedro.png" alt="bifrost integrates" />
-                    </div>
-                    <h3>Pedro</h3>
-                    <p>
-                        Front End que fica responsável por projetar, construir e otimizar as interfaces de um projeto web.
-                    </p>
-                </li>
 
-                <li class="grid-4">
+                <li class="grid-5">
                     <div class="integrantes_icone">
                         <img src="img/thiago.png" alt="bifrost integrates" />
                     </div>
@@ -108,10 +99,10 @@
                 <h2 class="subtitulo">sistema</h2>
                 <ul class="portifolio_lista">
                     <li class="grid-8">
-                        <img src="img/graficoLine.PNG" alt="Grafico"/></li>
+                        <img src="img/graficoLine.PNG" alt="Grafico" style="height:300px;"/></li>
 
                     <li class="grid-8">
-                        <img src="img/paginaSist.PNG" alt="Bicicleta Passeio"/></li>
+                        <img src="img/paginaSist.PNG" alt="Bicicleta Passeio" style="height:300px;"/></li>
 
                     <li class="grid-16">
                         <img src="img/graficoPizza2.PNG" alt="Bicicleta Esporte"/></li>
@@ -126,7 +117,7 @@
         </section>
 
         <!--qualidades-->
-        <section class="qualidade container">
+        <section class="qualidade container" id="sobre">
             <h2 class="subtitulo">Qualidade</h2>
             <img src="img/heimdall.png" alt="Bikcraft" class="qualidade_bifrost" />
             <ul class="qualidade_lista">
@@ -154,8 +145,8 @@
 
             <!--botão-->
             <div class="call">
-
-                <a href="LocalHeimdall.aspx" class="btn btn-preto">Local Heimdall</a>
+                
+                <!--a href="LocalHeimdall.aspx" class="btn btn-preto">Local Heimdall</a-->
             </div>
         </section>
         <!--fim da qualidade-->
@@ -184,10 +175,8 @@
                 </div>
                 <div class="contato_dados grid-8">
                     <h3>dados</h3>
-                    <span>+55 11 98765 4321</span>
+                    <span>+55 11 40028922</span>
                     <span class="dados_email">suporte@bifrost.com</span>
-                    <span>rua logo ali - paulista</span>
-                    <samp>sao paulo-SP - Brasil</samp>
                     <h3>redes sociais</h3>
                     <ul>
                         <li><a href="http://facebok.com" target="_blank">
