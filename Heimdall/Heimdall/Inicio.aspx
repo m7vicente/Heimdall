@@ -11,6 +11,7 @@
     <link rel="stylesheet" href="css/grid.css" />
     <link rel="stylesheet" href="css/style.css" />
     <link rel="stylesheet" href="css/responsivo.css" />
+    <link rel="shortcut icon" href="img/bifrost_ico.ico" type="image/x-icon" />
 
     <title>Bifrosts</title>
 </head>
@@ -124,7 +125,7 @@
                 <li class="grid-1-3">
                     <h3>Facilidade</h3>
                     <p>
-                        Crie a sua conta a e baixa a API, ja está funcionando não precisa fazer mais nada
+                        Crie sua conta agora mesmo e baixe nossa API que coletará os dados das especificações de seu computador para a monitoração
                     </p>
                 </li>
 
@@ -138,7 +139,7 @@
                 <li class="grid-1-3">
                     <h3>Inovação</h3>
                     <p>
-                        Não presisa nem acessar o site, faça apenas abra o APP e visualize aquilo que é o mais importante para você
+                        Para mais eficiência, criamos uma aplicativo para você, basta entrar no sistema e baixar o app, visualize na palma de sua mão aquilo que é mais importante para você
                     </p>
                 </li>
             </ul>
@@ -159,15 +160,15 @@
                 <h2 class="subtitulo">fale conosco</h2>
                 <div id="form_orcamento" class="contato_form grid-16">
                     <!--label for="nome">nome</!--label-->
-                    <asp:TextBox runat="server" ID="txtNome" class="input" placeholder="nome" />>
+                    <asp:TextBox runat="server" ID="txtNome" class="input" placeholder="Nome" />>
                     <!--input type="text" id="nome"/-->
-                    <asp:TextBox runat="server" ID="txtEmail" class="input" placeholder="email" />>
+                    <asp:TextBox runat="server" ID="txtEmail" class="input" placeholder="E-mail" TextMode="Email" />>
                     <!--label for="email">email</label>
                     <input type="text" id="email"/-->
-                    <asp:TextBox runat="server" ID="txtTel" class="input" placeholder="fone" />>
+                    <asp:TextBox runat="server" ID="txtTel" class="input" placeholder="Telefone" TextMode="Phone" />>
                     <!--label for="telefone">teefone</!--label>
                     <input type="text" id="telefone"/-->
-                    <asp:TextBox runat="server" TextMode="multiline" ID="txtEspec" class="input" placeholder="especificação" />>
+                    <asp:TextBox runat="server" TextMode="multiline" ID="txtEspec" class="input" placeholder="Mensagem" />>
                     <!--label for="espec">especificação</!--label>
                     <textarea id="espec"></textarea-->
                     <!--button type="submit" class="btn">enviar</!--button-->

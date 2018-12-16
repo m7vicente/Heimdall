@@ -110,6 +110,7 @@
     <Content Include="img\bifrost_branco.png" />
     <Content Include="img\bifrost_branco_rela.png" />
     <Content Include="img\Bifrost_Bridge.png" />
+    <Content Include="img\bifrost_ico.ico" />
     <Content Include="img\BPMN ProjetoPreview.png" />
     <Content Include="img\computador.png" />
     <Content Include="img\eu-sou-o-groot.png" />
