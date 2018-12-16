@@ -20,22 +20,22 @@
         <!-- menu do site-->
         <header class="header">
             <div>
-                <a href="index.html" class="grid-4">
-                    <img src="img/bifrost.png" alt="Bifrost" class="header-logo" /><!--logo bifrost-->
+                <a href="#introducao" class="grid-4">
+                    <img src="img/bifrost.png" alt="Bifrost" class="header-logo"  /><!--logo bifrost-->
                 </a>
                 <nav class="grid-12 header_menu">
                     <ul>
                         <li><a href="#sobre">Sobre</a></li>
                         <li><a href="#integrantes">Integrantes</a></li>
                         <li><a href="#contato">Contato</a></li>
-                        <li><a href="Login.aspx">Heimdall</a></li>
+                        <li><a href="Login.aspx" target="_blank">Heimdall</a></li>
                     </ul>
                 </nav>
             </div>
         </header>
 
         <!--home-->
-        <section class="introducao">
+        <section class="introducao" id="introducao">
             <div>
                 <h1 class="compre">bridge to the facility</h1>
                 <blockquote class="quote-externo">
@@ -44,7 +44,7 @@
                     <br />
                     <!--cite>Pai de Todos</!--cite><matem o titulo de uma publicação em italico-->
                 </blockquote>
-                <a href="Login.aspx" class="btn">Heimdall  Dashboard</a>
+                <a href="Login.aspx" class="btn" target="_blank">Heimdall  Dashboard</a>
             </div>
         </section>
 
