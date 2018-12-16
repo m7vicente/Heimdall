@@ -92,8 +92,8 @@ img {
     position: fixed;
     top: 0;
     width: 100%;
-    background: #000; /*azul*/
-    padding: 15px 0;
+    background: rgb(1, 23, 58); /*azul*/
+    padding: 10px 0;
     z-index: 10;
 }
 
@@ -112,12 +112,13 @@ img {
             font-weight: bold;
             text-transform: uppercase;
             font-size: 16px;
-            line-height: 20px;
-            padding: 10px 0;
+            line-height: 60px;
+            padding: 15px 0;
         }
 
             .header_menu ul li a:hover {
                 color: #fec63e; /*amarelo*/
+                transition: all 0.5s;
             }
 
 .header-logo {
@@ -324,6 +325,13 @@ img {
 
 /*contatinho*/
 /*Formulario*/
+.contato .subtitulo {
+    color: #fec63e;
+}
+
+.contato .subtitulo:after {
+    background: #fec63e;
+}
 
 .contato {
     background: #000;
@@ -342,16 +350,19 @@ img {
 
 .contato_form {
     padding-right: 60px;
+    
+}
+
+#form_orcamento {
+    font-family: Arial, "Times New Roman", serif;
 }
 
 .contato_form label {
     display: block;
     color: #fff;
-    font-family: Georgia, "Times New Roman", serif;
     font-size: 18px;
     line-height: 25px;
     margin-bottom: 4px;
- 
 }
 
     .contato_form input {
@@ -364,7 +375,6 @@ img {
         margin-bottom: 10px;
         outline: none;
         font-size: 14px;
-        font-family: Georgia, "Times New Roman", serif;
         
     }
 
@@ -379,7 +389,6 @@ img {
         margin-bottom: 10px;
         outline: none;
         font-size: 14px;
-        font-family: Georgia, "Times New Roman", serif;
     }
 
     .contato_form button {
