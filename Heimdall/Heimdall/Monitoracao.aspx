@@ -24,13 +24,19 @@
     <script type="text/javascript" src="js/graficos.js"></script>
     <script src="vendor/jquery/jquery.min.js"></script>
     <script type="text/javascript" src="js/monitoracao.js"></script>
-
+    <script src="https://wchat.freshchat.com/js/widget.js"></script>
     <title>Heimdall | Monitoração</title>
     <link rel='shortcut icon' href='img/favicon.ico' type='image/x-icon' />
 
 </head>
 
 <body>
+    <script>
+        window.fcWidget.init({
+            token: "2ddae1e4-25e7-42a4-9b4f-d8d83fe569e1",
+            host: "https://wchat.freshchat.com"
+        });
+    </script>
     <form id="form1" runat="server">
         <div id="menuSuperior">
             <a href="#menu-toggle" class="btn btn-secondary" id="menu-toggle">&#9776</a>
