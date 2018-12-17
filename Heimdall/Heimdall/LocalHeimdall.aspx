@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Inicio.aspx.cs" Inherits="Heimdall.Inicio" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="LocalHeimdall.aspx.cs" Inherits="Heimdall.LocalHeimdall" %>
 
 <!DOCTYPE html>
 
@@ -9,9 +9,8 @@
     <link rel="stylesheet" href="css/normalize.css" />
     <link rel="stylesheet" href="css/reset.css" />
     <link rel="stylesheet" href="css/grid.css" />
-    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/styleHeimdall.css" />
     <link rel="stylesheet" href="css/responsivo.css" />
-    <link rel="shortcut icon" href="img/bifrost_ico.ico" type="image/x-icon" />
 
     <title>Bifrosts</title>
 </head>
@@ -20,31 +19,29 @@
         <!-- menu do site-->
         <header class="header">
             <div>
-                <a href="#introducao" class="grid-4">
-                    <img src="img/bifrost.png" alt="Bifrost" class="header-logo"  /><!--logo bifrost-->
+                <a href="index.html" class="grid-4">
+                    <img src="img/heimdall_logo.png" alt="Bifrost" class="header-logo" /><!--logo bifrost-->
                 </a>
                 <nav class="grid-12 header_menu">
-                    <ul>
-                        <li><a href="#sobre">Sobre</a></li>
+                    <ul>   
                         <li><a href="#integrantes">Integrantes</a></li>
-                        <li><a href="#contato">Contato</a></li>
-                        <li><a href="Login.aspx" target="_blank">Heimdall</a></li>
+                        <li><a href="Login.aspx">Heimdall</a></li>
                     </ul>
                 </nav>
             </div>
         </header>
 
         <!--home-->
-        <section class="introducao" id="introducao">
+        <section class="introducao" id="sobre">
             <div>
                 <h1 class="compre">bridge to the facility</h1>
                 <blockquote class="quote-externo">
                     <!--permite citações de texto-->
-                    <!--p>"buscamos oferecer"</p-->
+                    <p>"Um rei sábio nunca almeja guerra, mas deve estar sempre pronto para ela."</p>
                     <br />
-                    <!--cite>Pai de Todos</!--cite><matem o titulo de uma publicação em italico-->
+                    <cite>Pai de Todos</cite><!--matem o titulo de uma publicação em italico-->
                 </blockquote>
-                <a href="Login.aspx" class="btn" target="_blank">Heimdall  Dashboard</a>
+                <a href="Login.aspx" class="btn">Heimdall Dashboard</a>
             </div>
         </section>
 
@@ -53,7 +50,7 @@
             <h2 class="subtitulo" id="integrantes">Integrantes</h2>
 
             <ul class="integrantes_lista">
-                <li class="grid-5">
+                <li class="grid-4">
                     <div class="integrantes_icone">
                         <img src="img/alice.jpg" alt="bifrost passeio" />
                     </div>
@@ -63,7 +60,7 @@
                     </p>
                 </li>
 
-                <li class="grid-5">
+                <li class="grid-4">
                     <div class="integrantes_icone">
                         <img src="img/matheus.png" alt="bifrost integrates" />
                     </div>
@@ -73,8 +70,17 @@
                     </p>
                 </li>
 
+                <li class="grid-4">
+                    <div class="integrantes_icone">
+                        <img src="img/pedro.png" alt="bifrost integrates" />
+                    </div>
+                    <h3>Pedro</h3>
+                    <p>
+                        Front End que fica responsável por projetar, construir e otimizar as interfaces de um projeto web.
+                    </p>
+                </li>
 
-                <li class="grid-5">
+                <li class="grid-4">
                     <div class="integrantes_icone">
                         <img src="img/thiago.png" alt="bifrost integrates" />
                     </div>
@@ -87,10 +93,10 @@
             </ul>
 
             <!--botão-
-        <div class="call" >
-            <p>Clique aqui e veja o detalhe sobre o produto</p>
-            <a href="produtos.html" class="btn btn-preto">Produtos</a>
-</div-->
+                    <div class="call" >
+                        <p>Clique aqui e veja o detalhe sobre o produto</p>
+                        <a href="produtos.html" class="btn btn-preto">Produtos</a>
+            </div-->
 
         </section>
         <!--fecha produto-->
@@ -100,13 +106,25 @@
                 <h2 class="subtitulo">sistema</h2>
                 <ul class="portifolio_lista">
                     <li class="grid-8">
-                        <img src="img/graficoLine.PNG" alt="Grafico" style="height:300px;"/></li>
+                        <img src="img/graficoLine.PNG" style="height:310px;" alt="Grafico" />
+                    </li>
 
                     <li class="grid-8">
-                        <img src="img/paginaSist.PNG" alt="Bicicleta Passeio" style="height:300px;"/></li>
+                        <img src="img/paginaSist.PNG" alt="Bicicleta Passeio" />
+                    </li>
 
                     <li class="grid-16">
-                        <img src="img/graficoPizza2.PNG" alt="Bicicleta Esporte"/></li>
+                        <img src="img/graficoPizza2.PNG" alt="Bicicleta Esporte" />
+                    </li>
+
+
+                    <!--li class="grid-16">
+                        <img src="img/BPMN ProjetoPreview.png" alt="Bicicleta Esporte" />
+                    </li>
+
+                    <li class="grid-16">
+                        <img src="img/UseCaseWeb.png" style="width:940px;" alt="Bicicleta Esporte" />
+                    </li>
 
                     <!--botão-->
                     <!--div-- class="call">
@@ -118,14 +136,14 @@
         </section>
 
         <!--qualidades-->
-        <section class="qualidade container" id="sobre">
+        <section class="qualidade container">
             <h2 class="subtitulo">Qualidade</h2>
             <img src="img/heimdall.png" alt="Bikcraft" class="qualidade_bifrost" />
             <ul class="qualidade_lista">
                 <li class="grid-1-3">
                     <h3>Facilidade</h3>
                     <p>
-                        Crie sua conta agora mesmo e baixe nossa API que coletará os dados das especificações de seu computador para a monitoração
+                        Crie a sua conta a e baixa a API, ja está funcionando não precisa fazer mais nada
                     </p>
                 </li>
 
@@ -139,57 +157,15 @@
                 <li class="grid-1-3">
                     <h3>Inovação</h3>
                     <p>
-                        Para mais eficiência, criamos uma aplicativo para você, basta entrar no sistema e baixar o app, visualize na palma de sua mão aquilo que é mais importante para você
+                        Não presisa nem acessar o site, faça apenas abra o APP e visualize aquilo que é o mais importante para você
                     </p>
                 </li>
             </ul>
 
-            <!--botão-->
-            <div class="call">
-                
-                <!--a href="LocalHeimdall.aspx" class="btn btn-preto">Local Heimdall</a-->
-            </div>
+            <div class="call"></div>
         </section>
         <!--fim da qualidade-->
-
         <!--FORMULARIO-->
-
-
-        <section class="contato" id="contato">
-            <div class="container contato_form">
-                <h2 class="subtitulo">fale conosco</h2>
-                <div id="form_orcamento" class="contato_form grid-16">
-                    <!--label for="nome">nome</!--label-->
-                    <asp:TextBox runat="server" ID="txtNome" class="input" placeholder="Nome" />>
-                    <!--input type="text" id="nome"/-->
-                    <asp:TextBox runat="server" ID="txtEmail" class="input" placeholder="E-mail" TextMode="Email" />>
-                    <!--label for="email">email</label>
-                    <input type="text" id="email"/-->
-                    <asp:TextBox runat="server" ID="txtTel" class="input" placeholder="Telefone" TextMode="Phone" />>
-                    <!--label for="telefone">teefone</!--label>
-                    <input type="text" id="telefone"/-->
-                    <asp:TextBox runat="server" TextMode="multiline" ID="txtEspec" class="input" placeholder="Mensagem" />>
-                    <!--label for="espec">especificação</!--label>
-                    <textarea id="espec"></textarea-->
-                    <!--button type="submit" class="btn">enviar</!--button-->
-                    <asp:Button runat="server" ID="btnEnviar" class="btn btn-branco" Text="enviar" OnClick="btnEnviar_Click" />
-                </div>
-                <div class="contato_dados grid-8">
-                    <h3>dados</h3>
-                    <span>+55 11 40028922</span>
-                    <span class="dados_email">suporte@bifrost.com</span>
-                    <h3>redes sociais</h3>
-                    <ul>
-                        <li><a href="http://facebok.com" target="_blank">
-                            <img src="img/facebook.png" alt="Facebook bifrost" /></a></li>
-                        <li><a href="http://instagram.com" target="_blank">
-                            <img src="img/instagram.png" alt="Instagran bifrost" /></a></li>
-                        <li><a href="http://twitter.com" target="_blank">
-                            <img src="img/twitter.png" alt="Twitter bifrost" /></a></li>
-                    </ul>
-                </div>
-            </div>
-        </section>
 
         <footer>
             <div class="copy">
