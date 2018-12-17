@@ -15,14 +15,22 @@
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
     <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet"/>
     <link rel="shortcut icon" href="img/heimdall_icone.ico" type="image/x-icon" />
-
-
+    <script src="https://wchat.freshchat.com/js/widget.js"></script>
     <script type="text/javascript" src="js/computadores.js"></script>
     <script type="text/javascript" src="vendor/jquery/jquery.js"></script>
     <title>Heimdall | Computadores</title>
     <link rel='shortcut icon' href='img/favicon.ico' type='image/x-icon' />
 </head>
 <body>
+
+    <!--Propriedade que deve ser escrita no body para gerar freshChat na tela-->
+    <script>
+        window.fcWidget.init({
+            token: "2ddae1e4-25e7-42a4-9b4f-d8d83fe569e1",
+            host: "https://wchat.freshchat.com"
+        });
+    </script>
+
     <form id="form1" runat="server">
         <div id="load" class="page"><img src="img/TSC2.gif"/></div>
         <div id="menuSuperior">

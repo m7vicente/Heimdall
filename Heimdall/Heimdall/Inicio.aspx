@@ -13,6 +13,7 @@
     <link rel="stylesheet" href="css/responsivo.css" />
     <link rel="shortcut icon" href="img/bifrost_ico.ico" type="image/x-icon" />
 
+
     <title>Bifrosts</title>
 </head>
 <body>
