@@ -39,8 +39,12 @@ public class HistoricoEstadoRam implements Historico {
 
 	}
 
-	public double ObterMemoriaUtilizada() {
-		return ((this.getMemoriaTotal() * 1000) - this.getMemoriaDisponivel());
+	public double ObterMemoriaUtilizada() {		
+		if(this.memoriaTotal < 10.0) {
+			return (this.getMemoriaTotal() * 1000) - this.getMemoriaDisponivel();
+		}else {			
+			return (this.getMemoriaTotal() - this.getMemoriaDisponivel());
+		}
 	}
 
 	public double ObterSwapUtilizada() {
@@ -56,7 +60,12 @@ public class HistoricoEstadoRam implements Historico {
 	}
 
 	public int ObterPorcentagemUtilizacao() {
-		return (int) ((getMemoriaUtilizada() * 0.1) / getMemoriaTotal());
+		if(this.memoriaTotal < 10.0) {
+			return (int) ((getMemoriaUtilizada() * 0.1) / getMemoriaTotal());
+		}else {
+			return (int) (getMemoriaUtilizada() / getMemoriaTotal() * 100);
+		}
+		
 	}
 
 	public double getMemoriaUtilizada() {
