@@ -21,7 +21,7 @@ public class HistoricoEstadoRam implements Historico {
 
 	public HistoricoEstadoRam() {
 		this.memoriaTotal = this.ObterMemoriaTotal();
-		this.memoriaDisponivel = this.ObterMemoriaDisponivel();
+		setMemoriaDisponivel(this.ObterMemoriaDisponivel());
 		this.memoriaUtilizada = this.ObterMemoriaUtilizada();
 		this.swapUtilizada = this.ObterSwapUtilizada();
 		this.swapTotal = this.ObterSwapTotal();
@@ -79,11 +79,19 @@ public class HistoricoEstadoRam implements Historico {
 	}
 
 	public void Atualizar() {
-		this.memoriaDisponivel = this.ObterMemoriaDisponivel();
+		setMemoriaDisponivel(this.ObterMemoriaDisponivel());
 		this.memoriaUtilizada = this.ObterMemoriaUtilizada();
 		this.swapUtilizada = this.ObterSwapUtilizada();
 		this.swapTotal = this.ObterSwapTotal();
 		this.porcentagemUtilizacao = this.ObterPorcentagemUtilizacao();
+	}
+	
+	private void setMemoriaDisponivel(double disponivel) {
+		if (disponivel < 10.0) {
+			this.memoriaDisponivel = (disponivel * 1000);
+		}else {
+			this.memoriaDisponivel = disponivel;
+		}
 	}
 
 }
