@@ -178,7 +178,7 @@
                 <div class="contato_dados grid-8">
                     <h3>dados</h3>
                     <span>+55 11 40028922</span>
-                    <span class="dados_email">suporte@bifrost.com</span>
+                    <span class="dados_email">associacaobifrost@gmail.com</span>
                     <h3>redes sociais</h3>
                     <ul>
                         <li><a href="http://facebok.com" target="_blank">
